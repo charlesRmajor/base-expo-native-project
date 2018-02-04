@@ -17,13 +17,13 @@ import React from 'react';
 // Import Core Project Modules
 import BController from './BController';
 import BRoute from './BRoute';
-import BView from '../views/BView';
 
 // Import App Logic
 import {isObject} from '../../logic/jsExtend/objectMerge';
 
 // Import Other App UI Elements
-import BettermentLabsLandingPage from '../views/BettermentLabsLandingPage';
+import BettermentLabsLandingPage from '../containers/BettermentLabsLandingPage';
+import BView from '../components/BView';
 
 export default class MainController extends React.Component {
   render() {

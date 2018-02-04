@@ -20,7 +20,7 @@ import React from 'react';
 import {getAlertWithVersionInfoContent} from '../../logic/VersionInfo';
 
 // Import Other App UI Elements
-import BView from './BView';
+import BView from '../components/BView';
 import BHeader from '../components/text/BHeader';
 import ImageWithAspect from '../components/ImageWithAspect';
 

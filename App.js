@@ -17,11 +17,13 @@ export Component App.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
 
 // Import Other Node Modules
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 // Import Core Project Modules
+import {store} from './src/logic/model/redux';
 
 // Import General Logic
 
@@ -33,6 +35,9 @@ import {AppSubscribe, AppUnSubscribe} from './src/logic/AppSubscriptions.js';
 import MainController from './src/interface/controllers/MainController';
 
 const getSetStateCallbackFunc = (thisThis) => {return((result) => {console.log("thisThis callback result.newState: "+JSON.stringify(result.newState)); thisThis.setState(result.newState, result.stateSetCallback && result.stateSetCallback())})}
+
+// const store = createStore(reducer, applyMiddleware(...middleware))
+// const store = createStore(() => {});
 
 export default class App extends React.Component {
   state = {
@@ -57,13 +62,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <MainController
-        essentialLoadingComplete={this.state.essentialLoadingComplete || false}
-        nonEssentialLoadingComplete={this.state.nonEssentialLoadingComplete || false}
-        images={this.state.images || null}
-        styles={this.state.styles || null}
-        language={this.state.appLanguage}
-      />
+      <Provider store={store}>
+        <MainController
+          essentialLoadingComplete={this.state.essentialLoadingComplete || false}
+          nonEssentialLoadingComplete={this.state.nonEssentialLoadingComplete || false}
+          images={this.state.images || null}
+          styles={this.state.styles || null}
+          language={this.state.appLanguage}
+        />
+    </Provider>
     );
   }
 }
