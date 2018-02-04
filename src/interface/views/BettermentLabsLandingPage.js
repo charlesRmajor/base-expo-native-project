@@ -27,13 +27,14 @@ const headerText = "Welcome to Betterment Labs's Base Expo/React-Native Project"
 
 export default class BettermentLabsLandingPage extends React.Component {
     render() {
+        const styles = this.props.styles;
         const images = this.props.images;
         const imageLogo = images ? images.logoTextBlack || false : false;
   
       const logoImage = (
           <View
               style={{
-                  flex:5
+                  flex:5,
               }}
           >
           {imageLogo &&
@@ -41,6 +42,9 @@ export default class BettermentLabsLandingPage extends React.Component {
                   source={imageLogo}
               />)}</View>);
   
+        const headerStyles = this.props.styles;
+        headerStyles.viewStyles = {flex:10};
+
         const mainView = 
                   (<View
                       style={{
@@ -49,7 +53,7 @@ export default class BettermentLabsLandingPage extends React.Component {
                     >
                       <View style={{flex:1}}/>
                       <HeaderLarge
-                        styles={{viewStyles: {flex:10}}}
+                        styles={headerStyles}
                         text={headerText}
                       />
                       <View style={{flex:1}}/>

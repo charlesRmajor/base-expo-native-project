@@ -20,13 +20,14 @@ import objectMerge from '../jsExtend/objectMerge';
 import getArrayOfSources from './getArrayOfSources';
 
 // Import Core Project Modules
-import AppStyles from '../../interface/theming/AppStyles';
+import AppStyles, {defaultFontSet} from '../../interface/theming/AppStyles';
 import getThemeFontSet from '../../interface/theming/getThemeFontSet';
 import ChivoFontSet from '../../interface/theming/fontSets/ChivoFontSet';
 import {rawImages, images} from '../../AppAssets';
 
 // Set App Fonts
 const ThemeFontSetIs = ChivoFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/
+// const ThemeFontSetIs = defaultFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/
 const fontsLoadedObjectKey = 'fontsLoaded';
 
 export default loadAppStyles = (inputs) => {

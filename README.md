@@ -1,3 +1,6 @@
+# build by Betterment Labs
+www.bettermentlabs.com
+
 # base-expo-native-project
 Betterment Labs's starter project with expo / native dual dev
 
@@ -6,6 +9,12 @@ Betterment Labs's starter project with expo / native dual dev
     depending on redux, loading in AsyncStorage data (organizing Async Storage data)
 
 -incorporate router
+
+-incorporate strings
+
+-set app language
+
+-"app is dead" trigger
 
 -eject
 

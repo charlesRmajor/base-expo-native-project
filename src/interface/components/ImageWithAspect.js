@@ -40,8 +40,6 @@ export default class ImageWithAspect extends React.Component {
 	}
 
 	render() {
-        console.log('image with aspect this.props.source');
-        console.log(this.props.source);
         const view =
             (<View
                 style={{
