@@ -62,6 +62,7 @@ export default class App extends React.Component {
         nonEssentialLoadingComplete={this.state.nonEssentialLoadingComplete || false}
         images={this.state.images || null}
         styles={this.state.styles || null}
+        language={this.state.appLanguage}
       />
     );
   }

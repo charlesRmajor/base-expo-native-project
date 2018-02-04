@@ -13,13 +13,17 @@ import { Route } from 'react-router-native';
 
 // Import App Logic
 import objectMerge from '../../logic/jsExtend/objectMerge';
+import getPageStrings from '../../logic/strings/stringsFiles';
 
 export default BRoute = (props) => {
     const view = props.view;
+    const allStrings = getPageStrings(view.name);
+    const stringsWithLanguageSet = allStrings.setLanguage(props.language);
     LogRoute(view.name);
+    const propsWithStrings = objectMerge({strings: allStrings}, props);
     return(
         <Route {...props} render={(routeProps) => {
-            return React.createElement(view, objectMerge(routeProps || null, props || null))
+            return React.createElement(view, objectMerge(routeProps || null, propsWithStrings || null))
           }}/>
     )
 }
@@ -27,3 +31,4 @@ export default BRoute = (props) => {
 const LogRoute = (routeName) => {
     console.log("LogRoute: "+routeName);
 }
+

@@ -11,55 +11,59 @@ Component BettermentLabsLandingPage.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
-import { View } from 'react-native';
 
 // Import Other Node Modules
 
 // Import Core Project Modules
 
 // Import App Logic
+import {getAlertWithVersionInfoContent} from '../../logic/VersionInfo';
 
 // Import Other App UI Elements
-import HeaderLarge from '../components/text/HeaderLarge';
+import BView from './BView';
+import BHeader from '../components/text/BHeader';
 import ImageWithAspect from '../components/ImageWithAspect';
 
-const headerText = "Welcome to Betterment Labs's Base Expo/React-Native Project";
+export default BettermentLabsLandingPage = (props) => {
+    // getAlertWithVersionInfoContent();
+        const styles = props.styles;
+        const strings = props.strings;
+        const images = props.images;
+        const imageLogo = images ? images.logoTextWhite || false : false;
 
-export default class BettermentLabsLandingPage extends React.Component {
-    render() {
-        const styles = this.props.styles;
-        const images = this.props.images;
-        const imageLogo = images ? images.logoTextBlack || false : false;
+        const headerText = strings.title;
   
       const logoImage = (
-          <View
+          <BView
               style={{
-                  flex:5,
+                  flex:17,
+                  justifyContent: 'flex-end',
+                  marginBottom: '-2%'
               }}
           >
           {imageLogo &&
               (<ImageWithAspect
                   source={imageLogo}
-              />)}</View>);
+              />)}</BView>);
   
-        const headerStyles = this.props.styles;
+        const headerStyles = styles;
         headerStyles.viewStyles = {flex:10};
+        headerStyles.textStyles = {color: props.styles.color.highlight, fontSize: styles.fontSizes.large}; // fontSize: props.styles.fontSize.large
 
         const mainView = 
-                  (<View
-                      style={{
-                          flex:1,
-                      }}
-                    >
-                      <View style={{flex:1}}/>
-                      <HeaderLarge
+                  (<BView
+                        style={{
+                            backgroundColor: styles.color.background,
+                            justifyContent: 'flex-end'
+                        }}
+                  >
+                      <BView style={{flex:1}}/>
+                      <BHeader
                         styles={headerStyles}
                         text={headerText}
                       />
-                      <View style={{flex:1}}/>
+                      <BView style={{flex:1}}/>
                       {logoImage}
-                      <View style={{flex:1}}/>
-                  </View>)
-      return ( mainView);
-    }
+                  </BView>)
+      return ( mainView)
   }

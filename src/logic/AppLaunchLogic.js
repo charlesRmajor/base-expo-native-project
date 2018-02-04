@@ -31,14 +31,16 @@ import {downloadAllAppImages} from './loading/loadImages';
 
 // Import General Logic
 import objectMerge from './jsExtend/objectMerge';
+import {logVersionInfo} from '../logic/VersionInfo';
 
 // Import App Logic
 
 // here be our functions!
 export const AppLaunch = (inputs) => {
+    // log version info to console
+    logVersionInfo();
     // load fonts (essential)
     loadEssentials({
-        loadingCompleteCallback: getStateSetCallback({callback: inputs.essentialLoadingCompleteCallback || null, newState: {essentialLoadingComplete: true}}),
         stateSetCallback: getStateSetCallback({callback: inputs.essentialLoadingCompleteCallback || null}),
         isDoneLoadingObject: inputs.isDoneLoadingObject || null
     });
@@ -55,6 +57,7 @@ async function loadEssentials (inputs) {
 }
 
 const loadNonEssentials = (callback) => {
+    setAppLanguage(callback);
     downloadAllAppImages(callback);
 }
 
@@ -71,16 +74,12 @@ const getStateSetCallback = (inputs) => {
     )
 }
 
-// const setAppLanguage = () => {
-//     var state = this.state;
-//     state.Strings.setLanguage('en'); // default to English if for some reason app can't read device's language setting
-//     this.setState(state);
-//     Expo.Util.getCurrentLocaleAsync()
-//       .then((result) => {
-//         var state = this.state;
-//         state.Strings.setLanguage(result);
-//         this.setState(state);
-//         console.log("app language read as: ");
-//         console.log(result);
-//     });
-//   }
+const setAppLanguage = (callback) => {
+    Expo.Util.getCurrentLocaleAsync()
+      .then((result) => {
+        console.log("app language read as: ");
+        console.log(result);
+        const newState = {appLanguage: result}
+        callback && callback({newState: newState});
+    });
+  }

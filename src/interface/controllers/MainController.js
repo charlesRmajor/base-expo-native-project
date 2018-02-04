@@ -11,13 +11,13 @@ Component MainController.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
-import { View } from 'react-native';
 
 // Import Other Node Modules
 
 // Import Core Project Modules
-import ControllerBase from './ControllerBase';
+import BController from './BController';
 import BRoute from './BRoute';
+import BView from '../views/BView';
 
 // Import App Logic
 import {isObject} from '../../logic/jsExtend/objectMerge';
@@ -32,23 +32,23 @@ export default class MainController extends React.Component {
         updateStore: null,
         styles: this.props.styles,
         images: this.props.images,
-        strings: null
+        language: this.props.language
     }
     
     const ViewRouter =
-    (<ControllerBase>
+    (<BController>
         <BRoute
             exact
             path="/"
             view={BettermentLabsLandingPage}
             {...propsAllViewsNeed}
             />            
-    </ControllerBase>)
+    </BController>)
 
     const readyToRender = !isObject(this.props.essentialLoadingComplete) ? this.props.essentialLoadingComplete :
         (() => {for (const key in this.props.essentialLoadingComplete) { if (!this.props.essentialLoadingComplete[key]) {return false} else {return true}}})();
         // {readyToRender && ViewRouter}
     
-    return (!readyToRender ? <View/> : ViewRouter);
+    return (!readyToRender ? <BView/> : ViewRouter);
   }
 }

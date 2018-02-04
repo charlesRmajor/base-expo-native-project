@@ -1,10 +1,10 @@
 /*
-  TextBase.js
+  BText.js
     Betterment Labs
     Created by BettermentLabs. 
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-Component TextBase.js
+Component BText.js
   Description:  
 */
 // Import React Modules
@@ -21,7 +21,7 @@ import {mergeStyles} from '../../../logic/jsExtend/objectMerge';
 
 // Import Other App UI Elements
 
-export default TextBase = (props) => {
+export default BText = (props) => {
     const AppStyles = props.AppStyles || defaultAppStyles;
 
     const styles = {

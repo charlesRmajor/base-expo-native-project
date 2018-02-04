@@ -8,12 +8,6 @@ Betterment Labs's starter project with expo / native dual dev
 -incorporate with Redux
     depending on redux, loading in AsyncStorage data (organizing Async Storage data)
 
--incorporate router
-
--incorporate strings
-
--set app language
-
 -"app is dead" trigger
 
 -eject
