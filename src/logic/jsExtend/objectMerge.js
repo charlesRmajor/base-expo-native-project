@@ -33,7 +33,7 @@ export default objectMerge = (target, ...sources) => {
     }
     return objectMerge(target, ...sources);
   }
-  
+  /*
 export const mergeStyles = (defaultStyles, props) => {
   const newStyles = objectMerge(defaultStyles, props.styles || null);
 
@@ -48,3 +48,4 @@ export const mergeStyles = (defaultStyles, props) => {
   }
   return(newProps)
 }
+*/

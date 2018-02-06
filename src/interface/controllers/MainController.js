@@ -17,6 +17,7 @@ Component MainController.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
+import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 // Import Other Node Modules
@@ -35,7 +36,6 @@ import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
-import BView from '../components/BView';
 
 class MainController extends React.Component {
     componentWillMount() {
@@ -65,10 +65,11 @@ class MainController extends React.Component {
                 />            
         </BController>)
 
+            // readyToRender returns true if all store ... loading.essentialState items are true
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
         
-        return (!readyToRender ? <BView/> : ViewRouter);
+        return (!readyToRender ? <View/> : ViewRouter);
     }
 }
 

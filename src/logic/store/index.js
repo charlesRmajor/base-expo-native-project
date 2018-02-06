@@ -20,6 +20,7 @@ import loadingReducer from './loading';
 
 // Action Definitions
 export const setAppLanguageTo = (language) => {return ({type: 'SET_APP_LANGUAGE', language: language})};
+export const setAppStringsTo = (strings) => {return ({type: 'SET_APP_STRINGS', strings: strings})};
 export const setAppImagesTo = (images) => {return ({type: 'SET_APP_IMAGES', images: images})};
 export const setAppStylesTo = (styles) => {return ({type: 'SET_APP_STYLES', styles: styles})};
 export const setUserInfoTo = (userInfo) => {return({type:'SET_USER_INFO_TO', userInfo: userInfo})};
@@ -44,6 +45,8 @@ const stringsReducer = (state = {}, action) => {
   switch (action.type) {
     case setAppLanguageTo().type:
       return Object.assign({}, state, {language: action.language})
+    case setAppStringsTo().type: // not currently used
+      return Object.assign({}, state, action.strings)
   }
   return state
 }

@@ -20,9 +20,9 @@
         "backgroundColor": "#0D0047"
       }
     },
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#0D0047"
     },

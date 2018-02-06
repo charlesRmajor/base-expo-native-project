@@ -37,12 +37,20 @@ import {setAppLanguage} from './strings/setAppLanguage';
 import {downloadAllAppImages} from './loading/loadImages';
 import {loadUserInfoFromStorage} from './loading/asyncStorage';
 
+// import {setAppStringsTo} from './store';
+
 // here be our functions!
 export const AppLaunch = (dispatch) => {
     dispatch && dispatch(appLaunchRan);
     logVersionInfo();
     loadAppStyles(dispatch || null);
     setAppLanguage(dispatch || null);
+    // loadAppStrings(dispatch || null);
     downloadAllAppImages(dispatch || null);
     loadUserInfoFromStorage(dispatch || null);
 }
+
+// const loadAppStrings = (dispatch) => {
+//     const setAppStringsToAction = setAppStringsTo();
+//     dispatch && dispatch(setAppStringsToAction);
+// }

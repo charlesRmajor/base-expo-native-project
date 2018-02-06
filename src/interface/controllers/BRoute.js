@@ -18,7 +18,7 @@ import getPageStrings from '../../logic/strings/stringsFiles';
 export default BRoute = (props) => {
     const view = props.view;
     const allStrings = getPageStrings(view.name);
-    const stringsWithLanguageSet = allStrings.setLanguage(props.language);
+    const stringsWithLanguageSet = allStrings.setLanguage(props.strings.language);
     LogRoute(view.name);
     const propsWithStrings = objectMerge({strings: allStrings}, props);
     return(

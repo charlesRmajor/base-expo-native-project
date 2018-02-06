@@ -15,6 +15,6 @@ export default ColorPalette = {
     LightGray: '#C6C8C7',
     DarkGray: '#434246',
     MidBlue: '#332D8C',
-    DarkBlue: '#0D0047',
+    DarkBlue: "#0d0047",
     White: '#FFFFFF',
 }
