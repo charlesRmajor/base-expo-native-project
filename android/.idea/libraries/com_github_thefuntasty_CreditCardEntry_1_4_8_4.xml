@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.thefuntasty:CreditCardEntry-1.4.8.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CreditCardEntry-1.4.8.4.aar/b5a97c97671a0ad3a95421f91818f85d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/CreditCardEntry-1.4.8.4.aar/b5a97c97671a0ad3a95421f91818f85d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.thefuntasty/CreditCardEntry/1.4.8.4/5ba037e463744589f88c4caa20c8838ea25b4a4f/CreditCardEntry-1.4.8.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

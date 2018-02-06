@@ -18,58 +18,41 @@ import styled from 'styled-components';
 // Import Core Project Modules
 
 // Import App Logic
-import {getAlertWithVersionInfoContent} from '../../logic/VersionInfo';
 
 // Import Other App UI Elements
 import ImageWithAspect from '../components/ImageWithAspect';
+import {defaultAppStyles} from '../theming/AppStyles';
 
 // Interface Styling
-const MainView = styled.View`
-    background: ${p => p.theme.color.background};
+const MainView = styled.View`flex:1;
+    background: ${({theme}) => (theme.color.background)};
+    justify-content: flex-end`;
+
+const ViewSpacer = styled.View`flex:1`;
+
+const Header = styled.Text`flex:10;
+    fontFamily: ${({theme}) => theme.fontStyles.bold};
+    color: ${({theme}) => theme.color.highlight};
+    fontSize: ${({theme}) => theme.fontSizes.large}`
+
+const ImageView = styled.View`flex:17;
     justify-content: flex-end;
-    flex: 1
-    `;
-
-const ViewSpacer = styled.View`
-    flex:1
-`;
-
-const Header = styled.Text`
-    flex:10;
-    fontFamily: ${p => p.theme.fontStyles.bold};
-    color: ${p => p.theme.color.highlight};
-    fontSize: ${p => p.theme.fontSizes.large}
-`
-
-const ImageView = styled.View`
-    flex:17;
-    justify-content: flex-end;
-    marginBottom: -2%;
-`
+    marginBottom: -2%`
     
 export default BettermentLabsLandingPage = (props) => {
-    // getAlertWithVersionInfoContent();
-        const style = props.styles || null;
+        const style = props.styles || defaultAppStyles;
         const strings = props.strings || null;
         const images = props.images || null;
         const imageLogo = images ? images.logoTextWhite || false : false;
 
-        const headerText = strings.title;
+        const logoImage = (<ImageView>{imageLogo && (<ImageWithAspect source={imageLogo} />)}</ImageView>);
 
-        const logoImage = (
-          <ImageView>
-          {imageLogo &&
-              (<ImageWithAspect
-                  source={imageLogo}
-              />)}</ImageView>);
-  
-              const mainView = 
-                  (<MainView theme={style}>
-                      <ViewSpacer/>
-                      <Header theme={style}>{headerText}</Header>
-                      <ViewSpacer/>
-                      <ViewSpacer/>
-                      {logoImage}
-                  </MainView>)
+        const mainView = 
+            (<MainView theme={style}>
+                <ViewSpacer/>
+                <Header theme={style}>{strings.title}</Header>
+                <ViewSpacer/>
+                {logoImage}
+            </MainView>)
       return ( mainView)
   }

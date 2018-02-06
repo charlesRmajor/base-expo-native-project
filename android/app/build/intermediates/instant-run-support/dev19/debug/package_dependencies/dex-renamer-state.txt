@@ -1,0 +1,13 @@
+#Tue Feb 06 15:34:14 MST 2018
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.3=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10
+base.2=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10
+base.1=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10
+base.0=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10
+file.3=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10/classes4.dex
+file.2=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10/classes3.dex
+file.1=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10/classes2.dex
+file.0=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/dev19/debug/10/classes.dex
