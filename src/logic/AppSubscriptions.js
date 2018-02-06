@@ -21,10 +21,14 @@ export Function AppUnSubscribe
     Outputs: see callbacks in the inputs above
 */
 
-export const AppSubscribe = (callback) => {
-    callback && callback({newState: {appIsFullySubscribed: true}, stateSetCallback: (result) => console.log('AppSubscribe state set callback response: '+result)})
+import {completeAppSubscriptions, closeAppSubscriptions} from '../logic/store/loading';
+
+export const AppSubscribe = (dispatch) => {
+    dispatch(completeAppSubscriptions);
+    // callback && callback({newState: {appIsFullySubscribed: true}, stateSetCallback: (result) => console.log('AppSubscribe state set callback response: '+result)})
 }
 
-export const AppUnSubscribe = (callback) => {
-    callback && callback({newState: {appIsFullySubscribed: false}, stateSetCallback: (result) => console.log('AppUnSubscribe state set callback response: '+result)})
+export const AppUnSubscribe = (dispatch) => {
+    dispatch(closeAppSubscriptions);
+    // callback && callback({newState: {appIsFullySubscribed: false}, stateSetCallback: (result) => console.log('AppUnSubscribe state set callback response: '+result)})
 }

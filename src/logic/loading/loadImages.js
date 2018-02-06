@@ -17,10 +17,17 @@ import getArrayOfSources from './getArrayOfSources';
 
 // Import Core Project Modules
 import {images} from '../../AppAssets';
+import {setAppImagesTo} from '../store/';
+import {imagesDoneLoading} from '../store/loading';
 
-export const downloadAllAppImages = (callback) => {
+export const downloadAllAppImages = (dispatch) => {
 	Expo.Asset.loadAsync(getArrayOfSources({rawSourcesObject: images}))
 	  .then((result) => {
-		callback && callback({newState: {images: images}});
-	    });
+      if (result) {
+        if (dispatch) {
+          const setAppImagesToAction = setAppImagesTo(images);
+          dispatch(setAppImagesToAction);
+          dispatch(imagesDoneLoading);
+        }
+      } });
 }

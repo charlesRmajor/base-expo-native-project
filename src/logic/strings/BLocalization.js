@@ -24,19 +24,22 @@
 // Import App Logic
 const thisAppJSON = require('../../../app.json');
 
+const fallBackDefaultLanguage = 'en';
+
 export default class BLocalization {
     constructor(props) {
         //Store locally the passed strings
         this.props = props;
-        this.setLanguage(thisAppJSON.expo.defaultAppLanguage);
+        this.setLanguage(thisAppJSON.expo.extra.defaultAppLanguage || fallBackDefaultLanguage);
     }
 
     _getBestMatchingLanguage(language, props) {
         //If an object with the passed language key exists return it
+        if (language == null || language == undefined || language.constructor != String) { return (thisAppJSON.expo.extra.defaultAppLanguage || fallBackDefaultLanguage) }
         if (props[language]) return language;
         //if the string is multiple tags, try to match without the final tag
         //(en-US --> en, zh-Hans-CN --> zh-Hans)
-        let idx = language.lastIndexOf("-");
+        let idx = language.lastIndexOf("-") ? language.lastIndexOf("-") : -1;
         if (idx >= 0) {
             language = language.substring(0, idx);
             return this._getBestMatchingLanguage(language, props);

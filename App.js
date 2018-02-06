@@ -7,8 +7,6 @@
 export Component App.js
   Description:  main app insertion point
   Essentials:
-          AppLaunchLogic.js   ->  runs in componentWillMount()
-          MainController.js   ->  return in render()
 
   Inputs: N/A
   Outputs: N/A (your app on the screen!)
@@ -19,58 +17,21 @@ export Component App.js
 import React from 'react';
 
 // Import Other Node Modules
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 // Import Core Project Modules
-import {store} from './src/logic/model/redux';
+import store from './src/logic/store';
 
 // Import General Logic
-
-// Import App Logic
-import {AppLaunch} from './src/logic/AppLaunchLogic.js';
-import {AppSubscribe, AppUnSubscribe} from './src/logic/AppSubscriptions.js';
 
 // Import Other App UI Elements
 import MainController from './src/interface/controllers/MainController';
 
-const getSetStateCallbackFunc = (thisThis) => {return((result) => {console.log("thisThis callback result.newState: "+JSON.stringify(result.newState)); thisThis.setState(result.newState, result.stateSetCallback && result.stateSetCallback())})}
-
-// const store = createStore(reducer, applyMiddleware(...middleware))
-// const store = createStore(() => {});
-
-export default class App extends React.Component {
-  state = {
-      essentialLoadingComplete: false, //updated by AppLaunch
-      nonEssentialLoadingComplete: false //updated by AppLaunch
-  }
-
-  componentWillMount() {
-    AppLaunch({
-      isDoneLoadingObject: 'essentialLoadingComplete',
-      essentialLoadingCompleteCallback: getSetStateCallbackFunc(this),
-      nonEssentialLoadingCompleteCallback: getSetStateCallbackFunc(this)});
-  }
-
-  componentDidMount() {
-    AppSubscribe(getSetStateCallbackFunc(this));
-  }
-
-  componentWillUnmount() {
-    AppUnSubscribe(getSetStateCallbackFunc(this));
-  }
-
-  render() {
+// export default class App extends React.Component {
+export default App = (props) => {
     return (
       <Provider store={store}>
-        <MainController
-          essentialLoadingComplete={this.state.essentialLoadingComplete || false}
-          nonEssentialLoadingComplete={this.state.nonEssentialLoadingComplete || false}
-          images={this.state.images || null}
-          styles={this.state.styles || null}
-          language={this.state.appLanguage}
-        />
+        <MainController/>
     </Provider>
     );
-  }
 }

@@ -42,7 +42,7 @@ export default VersionInfo = () => {
         platforms: {fieldName: versionStrings.fieldPlatforms, value: thisAppJSON.expo.platforms},
         version:  {fieldName: versionStrings.fieldVersion, value: thisAppJSON.expo.version},
         devBuild: {fieldName: versionStrings.fieldDevBuild, value: __DEV__},
-        defaultAppLanguage: {fieldName: versionStrings.fieldDefaultAppLanguage, value: thisAppJSON.expo.defaultAppLanguage}
+        defaultAppLanguage: {fieldName: versionStrings.fieldDefaultAppLanguage, value: thisAppJSON.expo.extra.defaultAppLanguage}
     }
     return versionInfo
 }

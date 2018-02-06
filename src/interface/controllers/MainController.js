@@ -5,50 +5,76 @@
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component MainController.js
-  Description:  main app launch logic
+  Description:  main app controller
+  Essentials:
+          AppLaunchLogic.js   ->  runs in componentWillMount()
+          MainController.js   ->  return in render()
+
+  Inputs: N/A
+  Outputs: N/A (your app on the screen!)
 */
 
 // IMPORTS
 // Import React Modules
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Import Other Node Modules
 
 // Import Core Project Modules
-import BController from './BController';
+// import BController, {defaultPropsFromStore} from './BController';
+import BController, {defaultPropsFromStore} from './BController';
 import BRoute from './BRoute';
 
 // Import App Logic
 import {isObject} from '../../logic/jsExtend/objectMerge';
+import {AppLaunch} from '../../logic/AppLaunchLogic.js';
+import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../containers/BettermentLabsLandingPage';
 import BView from '../components/BView';
 
-export default class MainController extends React.Component {
-  render() {
-    const propsAllViewsNeed = {
-        store: null,
-        updateStore: null,
-        styles: this.props.styles,
-        images: this.props.images,
-        language: this.props.language
+class MainController extends React.Component {
+    componentWillMount() {
+        if (this.props.dispatch) {AppLaunch(this.props.dispatch)};
+    }
+  
+    componentDidMount() {
+    //   AppSubscribe(this.props.dispatch);
+    }
+  
+    componentWillUnmount() {
+    //   AppUnSubscribe(this.props.dispatch);
     }
     
-    const ViewRouter =
-    (<BController>
-        <BRoute
-            exact
-            path="/"
-            view={BettermentLabsLandingPage}
-            {...propsAllViewsNeed}
-            />            
-    </BController>)
+    render() {
+        // console.log(this.props);
+        const ViewRouter =
+        (<BController>
+            <BRoute
+                exact
+                path="/"
+                view={BettermentLabsLandingPage}
+                {...this.props}
+                />            
+        </BController>)
 
-    const readyToRender = !isObject(this.props.essentialLoadingComplete) ? this.props.essentialLoadingComplete :
-        (() => {for (const key in this.props.essentialLoadingComplete) { if (!this.props.essentialLoadingComplete[key]) {return false} else {return true}}})();
-        // {readyToRender && ViewRouter}
-    
-    return (!readyToRender ? <BView/> : ViewRouter);
-  }
+        const readyToRender = !isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
+            (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })();
+        
+        return (!readyToRender ? <BView/> : ViewRouter);
+    }
 }
+
+const mapStateToProps = function(store) {
+    // get stores from defaults set in BController
+    const stateToPropsReturn = {};
+    for (key in defaultPropsFromStore) { const storeKey = key+'State'; if (store[storeKey]) { stateToPropsReturn[key] = store[storeKey] } }
+
+    // set any custom stores you want to subscribe to here
+    stateToPropsReturn.loading = store.loadingState;
+    return(stateToPropsReturn);
+  }
+  
+  export default connect(mapStateToProps)(MainController);

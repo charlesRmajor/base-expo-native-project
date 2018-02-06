@@ -26,9 +26,9 @@ import ImageWithAspect from '../components/ImageWithAspect';
 
 export default BettermentLabsLandingPage = (props) => {
     // getAlertWithVersionInfoContent();
-        const styles = props.styles;
-        const strings = props.strings;
-        const images = props.images;
+        const styles = props.styles || null;
+        const strings = props.strings || null;
+        const images = props.images || null;
         const imageLogo = images ? images.logoTextWhite || false : false;
 
         const headerText = strings.title;
@@ -48,12 +48,12 @@ export default BettermentLabsLandingPage = (props) => {
   
         const headerStyles = styles;
         headerStyles.viewStyles = {flex:10};
-        headerStyles.textStyles = {color: props.styles.color.highlight, fontSize: styles.fontSizes.large}; // fontSize: props.styles.fontSize.large
+        headerStyles.textStyles = {color: styles.color.highlight || null, fontSize: styles.fontSizes.large || null}; // fontSize: props.styles.fontSize.large
 
         const mainView = 
                   (<BView
                         style={{
-                            backgroundColor: styles.color.background,
+                            backgroundColor: styles.color.background || null,
                             justifyContent: 'flex-end'
                         }}
                   >

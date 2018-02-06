@@ -27,59 +27,20 @@ export Function AppLaunch
 
 // Import Core Project Modules
 import loadAppStyles from './loading/loadAppStyles';
-import {downloadAllAppImages} from './loading/loadImages';
 
 // Import General Logic
-import objectMerge from './jsExtend/objectMerge';
 import {logVersionInfo} from '../logic/VersionInfo';
+import {appLaunchRan} from '../logic/store/loading';
 
 // Import App Logic
+import {setAppLanguage} from './strings/setAppLanguage';
+import {downloadAllAppImages} from './loading/loadImages';
 
 // here be our functions!
-export const AppLaunch = (inputs) => {
-    // log version info to console
+export const AppLaunch = (dispatch) => {
+    dispatch && dispatch(appLaunchRan);
     logVersionInfo();
-    // load fonts (essential)
-    loadEssentials({
-        stateSetCallback: getStateSetCallback({callback: inputs.essentialLoadingCompleteCallback || null}),
-        isDoneLoadingObject: inputs.isDoneLoadingObject || null
-    });
-    // load images (non-essential) 
-
-    loadNonEssentials(getStateSetCallback({callback: inputs.nonEssentialLoadingCompleteCallback || null, newState: {nonEssentialLoadingComplete: true}}));
+    loadAppStyles(dispatch || null);
+    setAppLanguage(dispatch || null);
+    downloadAllAppImages(dispatch || null);
 }
-
-async function loadEssentials (inputs) {
-    // Set App Language
-    // await loadAppStrings(callback.stateSetCallback && callback.stateSetCallback);
-    await loadAppStyles({callback: inputs.stateSetCallback, isDoneLoadingObject: inputs.isDoneLoadingObject || null});
-    // callbacks.loadingCompleteCallback && callbacks.loadingCompleteCallback();
-}
-
-const loadNonEssentials = (callback) => {
-    setAppLanguage(callback);
-    downloadAllAppImages(callback);
-}
-
-const getStateSetCallback = (inputs) => {
-    return(
-        (result) => {
-            const newState = objectMerge((result? result.newState ? result.newState : {} : {}), (inputs.newState ? inputs.newState : {}));
-            inputs.callback &&
-                inputs.callback({
-                    newState: newState,
-                    stateSetCallback: (inputs.stateSetCallback ? inputs.stateSetCallback : (result) => console.log('stateSetCallback with result: '+result))
-                })
-        }
-    )
-}
-
-const setAppLanguage = (callback) => {
-    Expo.Util.getCurrentLocaleAsync()
-      .then((result) => {
-        console.log("app language read as: ");
-        console.log(result);
-        const newState = {appLanguage: result}
-        callback && callback({newState: newState});
-    });
-  }

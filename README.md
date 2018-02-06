@@ -15,3 +15,6 @@ Betterment Labs's starter project with expo / native dual dev
 -base native projects
 
 -get working with Expo & native at same time
+
+-react-router-redux???
+https://github.com/reactjs/react-router-redux
