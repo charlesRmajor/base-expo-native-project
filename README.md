@@ -5,10 +5,7 @@ www.bettermentlabs.com
 Betterment Labs's starter project with expo / native dual dev
 
 # To-Do's
--incorporate with Redux
-    depending on redux, loading in AsyncStorage data (organizing Async Storage data)
-
--"app is dead" trigger
+-AsyncStorage
 
 -eject
 
@@ -18,3 +15,7 @@ Betterment Labs's starter project with expo / native dual dev
 
 -react-router-redux???
 https://github.com/reactjs/react-router-redux
+
+
+Expo-Project:
+-add expo-based notifications (maybe?)

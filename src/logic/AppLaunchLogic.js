@@ -35,6 +35,7 @@ import {appLaunchRan} from '../logic/store/loading';
 // Import App Logic
 import {setAppLanguage} from './strings/setAppLanguage';
 import {downloadAllAppImages} from './loading/loadImages';
+import {loadUserInfoFromStorage} from './loading/asyncStorage';
 
 // here be our functions!
 export const AppLaunch = (dispatch) => {
@@ -43,4 +44,5 @@ export const AppLaunch = (dispatch) => {
     loadAppStyles(dispatch || null);
     setAppLanguage(dispatch || null);
     downloadAllAppImages(dispatch || null);
+    loadUserInfoFromStorage(dispatch || null);
 }

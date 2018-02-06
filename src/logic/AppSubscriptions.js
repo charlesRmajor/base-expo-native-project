@@ -24,11 +24,11 @@ export Function AppUnSubscribe
 import {completeAppSubscriptions, closeAppSubscriptions} from '../logic/store/loading';
 
 export const AppSubscribe = (dispatch) => {
-    dispatch(completeAppSubscriptions);
+    dispatch && dispatch(completeAppSubscriptions);
     // callback && callback({newState: {appIsFullySubscribed: true}, stateSetCallback: (result) => console.log('AppSubscribe state set callback response: '+result)})
 }
 
 export const AppUnSubscribe = (dispatch) => {
-    dispatch(closeAppSubscriptions);
+    dispatch && dispatch(closeAppSubscriptions);
     // callback && callback({newState: {appIsFullySubscribed: false}, stateSetCallback: (result) => console.log('AppUnSubscribe state set callback response: '+result)})
 }

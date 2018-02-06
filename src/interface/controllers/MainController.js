@@ -23,8 +23,10 @@ import { connect } from 'react-redux';
 
 // Import Core Project Modules
 // import BController, {defaultPropsFromStore} from './BController';
-import BController, {defaultPropsFromStore} from './BController';
+import BController from './BController';
 import BRoute from './BRoute';
+import {defaultInterfacePropsFrom, allStoreSections} from '../../logic/store';
+import {addPropsRequestFromStore} from '../../logic/store/helpers';
 
 // Import App Logic
 import {isObject} from '../../logic/jsExtend/objectMerge';
@@ -32,7 +34,7 @@ import {AppLaunch} from '../../logic/AppLaunchLogic.js';
 import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 
 // Import Other App UI Elements
-import BettermentLabsLandingPage from '../containers/BettermentLabsLandingPage';
+import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
 import BView from '../components/BView';
 
 class MainController extends React.Component {
@@ -41,17 +43,20 @@ class MainController extends React.Component {
     }
   
     componentDidMount() {
-    //   AppSubscribe(this.props.dispatch);
+        if (this.props.dispatch) {AppSubscribe(this.props.dispatch)};
     }
   
     componentWillUnmount() {
-    //   AppUnSubscribe(this.props.dispatch);
+        if (this.props.dispatch) {AppUnSubscribe(this.props.dispatch)};
     }
     
     render() {
+        // console.log("MainController this.props");
         // console.log(this.props);
         const ViewRouter =
-        (<BController>
+        (<BController
+            {...this.props}
+            >
             <BRoute
                 exact
                 path="/"
@@ -60,20 +65,17 @@ class MainController extends React.Component {
                 />            
         </BController>)
 
-        const readyToRender = !isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
-            (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })();
+        const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
+            (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
         
         return (!readyToRender ? <BView/> : ViewRouter);
     }
 }
 
 const mapStateToProps = function(store) {
-    // get stores from defaults set in BController
-    const stateToPropsReturn = {};
-    for (key in defaultPropsFromStore) { const storeKey = key+'State'; if (store[storeKey]) { stateToPropsReturn[key] = store[storeKey] } }
-
-    // set any custom stores you want to subscribe to here
-    stateToPropsReturn.loading = store.loadingState;
+    // get stores from defaults
+    const defaultPropsReturn = defaultInterfacePropsFrom(store);
+    const stateToPropsReturn = addPropsRequestFromStore(defaultPropsReturn, {loading: allStoreSections.loading}, store);
     return(stateToPropsReturn);
   }
   

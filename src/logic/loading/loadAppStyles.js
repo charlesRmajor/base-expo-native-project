@@ -25,7 +25,7 @@ import getThemeFontSet from '../../interface/theming/getThemeFontSet';
 import ChivoFontSet from '../../interface/theming/fontSets/ChivoFontSet';
 import {rawImages, images} from '../../AppAssets';
 import {fontsDoneLoading} from '../store/loading';
-import {setAppStylesTo} from '../store/styles';
+import {setAppStylesTo} from '../store';
 
 // Set App Fonts
 const ThemeFontSetIs = ChivoFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/

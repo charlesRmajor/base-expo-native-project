@@ -11,7 +11,7 @@ Component BView.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
-import { View, StatusBar } from 'react-native';
+import { View } from 'react-native';
 
 // Import Other Node Modules
 
@@ -27,18 +27,10 @@ export default BView = (props) => {
     const defaultViewStyle = {
         flex:1,
     }
-
-    //         statusBarStyle: "light-content"
-
-
     const styleToUse = objectMerge(defaultViewStyle, props.style);
-    const statusBarStyle = styleToUse.statusBarStyle ? styleToUse.statusBarStyle : "light-content";
 
     return(
         <View style={styleToUse}>
-            <StatusBar
-                barStyle={statusBarStyle}
-                />
             {props.children}
         </View>
     )

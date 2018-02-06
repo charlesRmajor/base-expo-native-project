@@ -18,6 +18,7 @@ import React from 'react';
 
 // Import App Logic
 import {getAlertWithVersionInfoContent} from '../../logic/VersionInfo';
+import {mergeStyles} from '../../logic/jsExtend/objectMerge';
 
 // Import Other App UI Elements
 import BView from '../components/BView';
@@ -32,14 +33,17 @@ export default BettermentLabsLandingPage = (props) => {
         const imageLogo = images ? images.logoTextWhite || false : false;
 
         const headerText = strings.title;
+
+
+        const imageViewStyles = mergeStyles(styles || {},{
+            flex:17,
+            justifyContent: 'flex-end',
+            marginBottom: '-2%'
+        });
   
       const logoImage = (
           <BView
-              style={{
-                  flex:17,
-                  justifyContent: 'flex-end',
-                  marginBottom: '-2%'
-              }}
+              style={imageViewStyles}
           >
           {imageLogo &&
               (<ImageWithAspect

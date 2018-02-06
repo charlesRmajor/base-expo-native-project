@@ -75,6 +75,7 @@ const getDefaultAppStyles = () =>{
                 quaternary: ThemeColors.quaternary,
             },
             statusBarHeight: 20,
+            statusBarStyle: 'light-content',
             widthMultiplier: ratioX,
             heightMultiplier: ratioY,
             fontSizes: {
