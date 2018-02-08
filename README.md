@@ -125,9 +125,9 @@ Native Modules's potential lack of existence must be guarded against. When calli
         if (MyModule.myMethod != undefined) {
             MyModule.myMethod(myInputs);
         } else {
-            [... what to do if myMethod is not found ..."]
+            [... what to do if myMethod is not found ...]
         }
-        [... what to do if MyModule is not found ..."]
+        [... what to do if MyModule is not found ...]
     }
 ```
 
