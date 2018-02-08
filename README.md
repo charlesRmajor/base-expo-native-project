@@ -54,7 +54,7 @@ Some native features require these steps too (like notifications, analytics)
     1. Setup:
         1. **get your expo org/slug path**
         2. Get your bundle/package identifiers:
-            * This project assumes that you use the form com.OrganizationID.CanonicalAppID. OrganizationID & CanonicalAppID will have to be entered separately.
+            * This project assumes that you use the form ```com.OrganizationID.CanonicalAppID``` & expo url will be of form ```exp://exp.host/@OrganizationID/CanonicalAppID```. OrganizationID & CanonicalAppID will have to be entered separately.
             1. Android:
             2. iOS:
             3. Facebook App ID: 
@@ -62,14 +62,14 @@ Some native features require these steps too (like notifications, analytics)
     2. **in app.json:** - both app.json.expo && app.json.native
         1. **name**
         2. **slug**
-        3. ios.bundleIdentifier
-        4. android.package
+        3. ios.bundleIdentifier: ```com.OrganizationID.CanonicalAppID```
+        4. android.package: ```com.OrganizationID.CanonicalAppID```
     3. for iOS/Xcode Project:
         1. from ios/ directory, run 'pod install && pod update'
-        2. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path
+        2. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path: ```exp://exp.host/@OrganizationID/CanonicalAppID```
         3. project build settings (click on project name in file navigator)
             1. Under "Targets" (project name) & "General"
-            2. Update "bundle identifier"
+            2. Update "bundle identifier" to ```com.OrganizationID.CanonicalAppID```
             3. Update version info as you choose. NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
     4. for Android Project:
         1. in android/build.gradle,update: 
@@ -195,6 +195,9 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
     * can we get CanonicalAppID, OrganizationID, appVersionName from app.json into gradle?
 * XCode:
     * can we get CanonicalAppID, OrganizationID, appVersionName from app.json into iOS build settings?
+* can app.json have a CanonicalAppID & OrganizationID and then automatically update bundle & package identifiers to match?
+* add general update build instructions to this readme
+* other instructions/troubleshooting notes from my build docs?
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)
