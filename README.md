@@ -8,7 +8,12 @@ Betterment Labs's starter project with expo / native dual dev
 
 # How To Use This
 1. Downlod
-2. Update App Identifiers:
+2. Prepare files for project
+    1. Copy folders inside "defaultFiles" (interface & logic folders) into the "src" folder
+    2. delete src/.gitignore
+    3. delete "defaultFiles"
+    4. PLEASE don't commit those changes to this repo!!!
+3. Update App Identifiers:
     a. Setup:
         i. get your expo org/slug path
         ii. Get your bundle/package identifiers:
@@ -30,10 +35,10 @@ Betterment Labs's starter project with expo / native dual dev
         i. in app/build.gradle, android.defaultConfig.applicationId
         ii. in "...MainActivity.java", update expo org/slug path
             public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }
-3. Get Packages:
+4. Get Packages:
     a. from home directory, run 'yarn'
     b. from ios/ directory, run 'pod install && pod update'
-4. Open!
+5. Open!
     a. XDE
         i. Open
         ii. Load project (this root directory)
@@ -46,7 +51,7 @@ Betterment Labs's starter project with expo / native dual dev
         i. Open XCode
         ii. Open *.xcworkspace file in ios/ folder
         iii. run!
-5. Update Google Play Services:
+6. Update Google Play Services:
     a. Higher versions of Google Play Services require a google-services.json file:
         https://developers.google.com/android/guides/google-services-plugin
     b. Once you add this file to your app/ directory, update google play services version:
