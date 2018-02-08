@@ -133,7 +133,10 @@ See implementation of the following in the files inside defaultFiles
     * src/interface/controllers/MainController.js is the main app insertion point
 
 ### Theming
-* app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use.
+* app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use. And src/interface/mainViews/BettermentLabsLandingPage.js for implementation.
+
+### Styled Components
+* see src/interface/mainViews/BettermentLabsLandingPage.js for example of using styled components with our app themes.
 
 ### Strings
 * Strings (for localization) are handled on a page (or mainView) level.
