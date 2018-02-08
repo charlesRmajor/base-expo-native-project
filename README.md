@@ -60,12 +60,14 @@ Betterment Labs's starter project with expo / native dual dev
 ## Continue to Use Expo To Develop Parts That Don't Need Native Code
 If Expo throws errors, copy app.json (use current version when developing native/using XCode or Android Studio).
 Remove these lines from app.json:
+```javascript
     "isDetached"
     "detach": {
       "scheme":...
       "iosExpoViewUrl":...
       "androidExpoViewUrl": ...
     }
+```
     
 (note: app.json needs to include those lines when developing for native, with Xcode or Android Studio)
 
