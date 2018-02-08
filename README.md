@@ -131,6 +131,9 @@ See implementation of the following in the files inside defaultFiles
 * base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
 * src/ — this is where your app lives. 
     * src/interface/controllers/MainController.js is the main app insertion point
+    * MainController also gives an example of how BController can be used to create new controllers
+
+When building new pages, I recommend you copy src/interface/mainViews/baseMainView.js and go from there -- just make sure to change the name of the view component & file!!!
 
 ### Theming
 * app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use. And src/interface/mainViews/BettermentLabsLandingPage.js for implementation.
@@ -165,3 +168,9 @@ See implementation of the following in the files inside defaultFiles
     * live theme update from in-app 
     * language override
     * more elegant way to handle expo/native builds (different app.json files)
+
+## Freeform Notes on Incorporating into Already Existing Projects:
+* should hopefully be able to largely drop your code into src/
+* and use src/interface/controllers/MainController.js as the main app insertion point
+* kind of what App.js or index.js might have been before … but already has the controller bit and a really basic template for a router
+* so page navigation stuff may need to be updated. You probably can just drop it in as is. But we’ll need to use my BRoute for analytics, strings, and themes
