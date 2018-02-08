@@ -8,10 +8,11 @@ Betterment Labs's starter project with expo / native dual development
 
 # How To Use This File
 * Note: First follow "Project Setup Instructions" below.
-* If you (personally) are only using Expo, you only need to follow these instructions.
+    * If you (personally) are only using Expo, you only need to follow these instructions.
 * If you are going to publish to Expo, you also need to follow the bolded instructions in "Native Development Instructions"
 
 ## Use with Expo
+* Before using with Expo, follow "Project Setup Instructions" below
 * Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
 ## Use with Native Builds
@@ -30,6 +31,8 @@ Betterment Labs's starter project with expo / native dual development
         2. Load project (this root directory)
 
 ## Native Development Instructions
+Only the person on your project responsible for native code development needs to worry about this section. Once your project has been setup by using these instructions once, you should be good to go!
+
 Before Publishing to Expo (**steps in bold**) or Developing Native Apps for App Stores
 Some native features require these steps too (like notifications, analytics)
 1. Update App Identifiers:
@@ -125,12 +128,32 @@ See implementation of the following in the files inside defaultFiles
     * src/base/logic/strings/
 
 # Structure
-/src/
+* base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
+* src/ — this is where your app lives. 
+    * src/interface/controllers/MainController.js is the main app insertion point
 
-contains all javascript source code beyond App.js
+### Theming
+* app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use.
+
+### Strings
+* Strings (for localization) are handled on a page (or mainView) level.
+* See src/logic/strings for use:
+    * make new strings files for each page
+    * these then need to be registered in appStringsFiles.js to be used by your pages
+    * our router (BRoute) automatically calls the strings page registered by appStringsFiles.js (name must match page component name that is put in BRoute)
+    * see BettermentLabsLandingPage for example of how to use these strings
+
+### Redux Store
+* manage app state
+    * automatically uses redux store to manage app theme & strings
+* see src/logic/store/appStoreSections.js && .../setUserInfo.js for template on how to add new stores and src/logic/loading/asyncStorage.js for how to use this implementation
+
+### asyncStorage
+* see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
 
 # To-Do's
 * base native projects
+* should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
 

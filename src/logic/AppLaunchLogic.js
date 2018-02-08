@@ -11,7 +11,9 @@ export Function AppLaunch
 
 // Import Core Project Modules
 import BaseAppLaunch from '../../base/logic/BaseAppLaunchLogic';
+import {loadUserInfoFromStorage} from './loading/asyncStorage';
 
 export default AppLaunch = (dispatch) => {
     BaseAppLaunch(dispatch || null);
+    loadUserInfoFromStorage(dispatch || null);
 }

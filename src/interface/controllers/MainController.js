@@ -25,8 +25,8 @@ import { connect } from 'react-redux';
 // Import Core Project Modules
 import BController from '../../../base/interface/controllers/BController';
 import BRoute from '../../../base/interface/controllers/BRoute';
-import {defaultInterfacePropsFrom, allStoreSections} from '../../logic/store';
-import {addPropsRequestFromStore} from '../../logic/store/helpers';
+import {defaultInterfacePropsFrom, allStoreSections} from '../../../base/logic/store';
+import {addPropsRequestFromStore} from '../../../base/logic/store/helpers';
 
 // Import App Logic
 import {isObject} from '../../../base/logic/jsExtend/objectMerge';

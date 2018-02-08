@@ -15,15 +15,17 @@ import { createStore, combineReducers } from 'redux';
 // import general logic
 import {getStoreSubscriptionObjectFrom, combineReducersObjectFrom, addPropsRequestFromStore} from './helpers';
 
-// Import App Redux Stores
+// Import Base Stores
 import loadingReducer from './loading';
+
+// Import App's Stores
+import appStoreSections from '../../../src/logic/store/appStoreSections';
 
 // Action Definitions
 export const setAppLanguageTo = (language) => {return ({type: 'SET_APP_LANGUAGE', language: language})};
 export const setAppStringsTo = (strings) => {return ({type: 'SET_APP_STRINGS', strings: strings})};
 export const setAppImagesTo = (images) => {return ({type: 'SET_APP_IMAGES', images: images})};
 export const setAppStylesTo = (styles) => {return ({type: 'SET_APP_STYLES', styles: styles})};
-export const setUserInfoTo = (userInfo) => {return({type:'SET_USER_INFO_TO', userInfo: userInfo})};
 
 const stylesReducers = (state = {}, action) => {
   switch (action.type) {
@@ -51,35 +53,26 @@ const stringsReducer = (state = {}, action) => {
   return state
 }
 
-const userInfoReducer = (state = {}, action) => {
-  switch (action.type) {
-    case setUserInfoTo().type:
-      return Object.assign({}, state, action.userInfo)
-  }
-  return state
-}
-
 // export default props to be loaded for all views
 export const loading = {name: 'loadingState', reducer: loadingReducer};
 export const styles = {name: 'stylesState', reducer: stylesReducers};
 export const images = {name: 'imageState', reducer: imagesReducer};
 export const strings = {name: 'stringsState', reducer: stringsReducer};
-export const userInfo = {name: 'userInfoState', reducer: userInfoReducer};
 
-export const allStoreSections = {
+const essentialStoreSections ={
   loading: loading,
   styles: styles,
   images: images,
   strings: strings,
-  userInfo: userInfo
 }
+
+export const allStoreSections = Object.assign({}, essentialStoreSections, (appStoreSections ? appStoreSections : {}));
 
 export const defaultInterfacePropsFrom = (store) => {
   const storeSubscriptionObject = getStoreSubscriptionObjectFrom({
     styles: styles,
     images: images,
     strings: strings,
-    userInfo: userInfo
   }, store);
   return(storeSubscriptionObject)
 }

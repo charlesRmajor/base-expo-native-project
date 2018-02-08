@@ -20,7 +20,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 // Import Core Project Modules
-import store from './src/logic/store';
+import store from './base/logic/store';
 
 // Import General Logic
 

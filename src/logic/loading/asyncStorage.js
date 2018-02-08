@@ -9,10 +9,10 @@
 import { AsyncStorage } from 'react-native';
 
 // Import General Logic
-import {objectKeysToArray, objectValuesToArray, arrayOfArrayPairsToObject} from '../jsExtend/objectArrayManipulation';
+import {objectKeysToArray, objectValuesToArray, arrayOfArrayPairsToObject} from '../../../base/logic/jsExtend/objectArrayManipulation';
 
 // import App Logic
-import {setUserInfoTo} from '../store';
+import {setUserInfoTo} from '../store/setUserInfo';
 
 // Load/Define Data Definitions
 const dateAppLastUsed = 'DATE_APP_LAST_USED';
@@ -35,7 +35,7 @@ const defaultSavedUserData = {
 }
 
 export const loadUserInfoFromStorage = (dispatch) => {
-    // console.log(defaultSavedUserData);
+    if (setUserInfoTo == null || setUserInfoTo == undefined) {return};
     AsyncStorage.multiGet(objectValuesToArray(defaultSavedUserData))
         .then(result => {
             const setUserInfoToAction = setUserInfoTo(arrayOfArrayPairsToObject(result));
