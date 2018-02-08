@@ -2,26 +2,49 @@
 www.bettermentlabs.com
 
 # base-expo-native-project
-Betterment Labs's starter project with expo / native dual dev
+Betterment Labs's starter project with expo / native dual development
 
 # Version Info
 
-# How To Use This
-1. Downlod
+# How To Use This File
+*Note: First follow "Project Setup Instructions" below.
+*If you (personally) are only using Expo, you only need to follow these instructions.
+*If you are going to publish to Expo, you also need to follow the bolded instructions in "Native Development Instructions"
+
+## Use with Expo
+*Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
+
+## Use with Native Builds
+*Before using with Native Builds, follow "Native Development Instructions" below
+*Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
+
+## Project Setup Instructions
+1. Download
 2. Prepare files for project
     1. Copy folders inside "defaultFiles" (interface & logic folders) into the "src" folder
     2. delete src/.gitignore
     3. delete "defaultFiles"
     4. PLEASE don't commit those changes to this repo!!!
-3. Update App Identifiers:
+3. Get Packages
+    1. from home directory, run 'yarn'
+    2. from ios/ directory, run 'pod install && pod update'
+4. Open!
+    1. XDE
+        1. Open
+        2. Load project (this root directory)
+
+## Native Development Instructions
+Before Publishing to Expo (**steps in bold**) or Developing Native Apps for App Stores
+Some native features require these steps too (like notifications, analytics)
+1. Update App Identifiers:
     1. Setup:
-        1. get your expo org/slug path
+        1. **get your expo org/slug path**
         2. Get your bundle/package identifiers:
             1. Android:
             2. iOS:
-    2. in app.json:
-        1. name
-        2. slug
+    2. **in app.json:**
+        1. **name**
+        2. **slug**
         3. ios.bundleIdentifier
         4. android.package
     3. for iOS/Xcode Project:
@@ -35,11 +58,8 @@ Betterment Labs's starter project with expo / native dual dev
         1. in app/build.gradle, android.defaultConfig.applicationId
         2. in "...MainActivity.java", update expo org/slug path
             public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }
-4. Get Packages:
-    1. from home directory, run 'yarn'
-    2. from ios/ directory, run 'pod install && pod update'
-5. Open!
-    1. XDE
+3. Open!
+    1. XDE - must be running before building native versions of apps
         1. Open
         2. Load project (this root directory)
     2. Android Studio
@@ -51,55 +71,62 @@ Betterment Labs's starter project with expo / native dual dev
         1. Open XCode
         2. Open *.xcworkspace file in ios/ folder
         3. run!
-6. Update Google Play Services:
+4. Update Google Play Services:
     1. Higher versions of Google Play Services require a google-services.json file:
         https://developers.google.com/android/guides/google-services-plugin
     2. Once you add this file to your app/ directory, update google play services version:
         i. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18)
-
-# Use with Expo
-Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
-
-# Use with Native Builds
-Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
+            latest version of this writing is 11.8.0
+        ii. find google play services version info here: https://developers.google.com/android/guides/releases
 
 ## Upgrading Packages
-Android:
-    Upgrade Google Play Services:
+*Android
+    *Upgrade Google Play Services: see step 4 in *"Native Development Instructions"* above
+*iOS
+    *from ios/ directory, run 'pod install && pod update' 
 
 ## How to protect against native elements in expo development
--- also helps with expo code updates that don't have the binary update too?
+Native Modules's potential lack of existence must be guarded against as follows:
+```javascript
+    if (NativeModules.MyModule != undefined) {
+        let MyModule = NativeModules.MyModule;
+        if (MyModule.myMethod != undefined) {
+            MyModule.myMethod(myInputs);
+        }
+    }
+```
 
 ## Other Notes
-iOS Permissions:
--When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
+*iOS Permissions:
+    *When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
 
-# Includes These React-Native Packages
-styled-components
-redux
-react-redux
-
-# Includes These Custom Native Modules & Integration
+# Includes These Packages
+*react
+*react-native
+*react-router-native
+*react-redux
+*redux
+*redux-devtools
+*expo
+*styled-components
+*axios
 
 # Includes These Native Packages
 
 # Native Packages To-Add
-react-native-onesignal
-react-native-fbsdk
-
-firebase?
-
-in-app-purchases
-
-
+*react-native-onesignal
+*react-native-fbsdk
+*firebase?
+*in-app-purchases
 
 # Our Logic
-App Theming:
-    /src/interface/theming/
-    AppStyles
+See implementation of the following in the files inside defaultFiles
+*App Theming:
+    */src/base/interface/theming/
+    *AppStyles
 
-Strings:
-    /src/logic/strings/
+*Strings:
+    */src/base/logic/strings/
 
 # Structure
 /src/
@@ -120,3 +147,5 @@ Expo-Project:
 -live theme update from in-app 
 
 -language override
+
+-more elegant way to handle expo/native builds (different app.json files)
