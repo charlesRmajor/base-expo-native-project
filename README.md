@@ -5,6 +5,15 @@ www.bettermentlabs.com
 Betterment Labs's starter project with expo / native dual development
 
 # Version Info
+This was built with
+* Expo: 
+* React-Native: 
+* React: 
+
+Note: When updating these essential packages for Betterment Labs projects, this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
+
+## Updates to this Base Project
+If you find yourself wanting to change any files outside of src/ or the app.json.* files, ask yourself if you **REALLY** need to. If you do, it's likely something that should be changed about this base project — please put in a pull request for the change, or open an issue, or send me a note about the change.
 
 # How To Use This File
 * Note: First follow "Project Setup Instructions" below.
@@ -95,33 +104,12 @@ Native Modules's potential lack of existence must be guarded against as follows:
     }
 ```
 
+# Notes On Adding Additional Native Code/Modules
+[SECTION NEEDS TO BE WRITTEN]
+
 ## Other Notes
 * iOS Permissions:
     * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
-
-# Includes These Packages
-* react
-* react-native
-* react-router-native
-* react-redux
-* redux
-* redux-devtools
-* expo
-* styled-components
-* axios
-
-# Other Packages To Add?
-* redux-thunk
-
-# Native Still To Be Added
-## Packages
-* react-native-onesignal
-* react-native-fbsdk
-* react-native-firebase??? — couldn't get this working with Android before
-
-## Our Code
-* device contacts?
-* in-app-purchases (or can I get the packages I based it on working?)
 
 # Project Structure
 * base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
@@ -152,6 +140,30 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 ### asyncStorage
 * see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
+
+# This Base Project Includes These Packages
+* react
+* react-native
+* react-router-native
+* react-redux
+* redux
+* redux-devtools
+* expo
+* styled-components
+* axios
+
+# Other Packages To Add?
+* redux-thunk
+
+# Native Still To Be Added
+## Packages
+* react-native-onesignal
+* react-native-fbsdk
+* react-native-firebase??? — couldn't get this working with Android before
+
+## Our Code
+* device contacts?
+* in-app-purchases (or can I get the packages I based it on working?)
 
 # To-Do's
 * base native projects
