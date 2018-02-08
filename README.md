@@ -6,9 +6,15 @@ Betterment Labs's starter project with expo / native dual development
 
 # Version Info
 This was built with
-* Expo: 
-* React-Native: 
-* React: 
+* Expo: 25.0.0
+* React-Native: 25.0.0
+* React: 16.2.0
+* Redux: 3.7.2
+* React-Redux: 5.0.6
+* React-Router-Native: 4.2.0
+* Redux-DevTools: 3.4.1
+* Styled-Components: 3.1.6
+* Axios: 0.17.1
 
 Note: When updating these essential packages for Betterment Labs projects, this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
@@ -140,17 +146,6 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 ### asyncStorage
 * see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
-
-# This Base Project Includes These Packages
-* react
-* react-native
-* react-router-native
-* react-redux
-* redux
-* redux-devtools
-* expo
-* styled-components
-* axios
 
 # Other Packages To Add?
 * redux-thunk
