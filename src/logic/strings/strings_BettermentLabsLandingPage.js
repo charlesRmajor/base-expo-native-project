@@ -5,7 +5,7 @@
   Copyright © Betterment Labs 2018. All rights reserved.
 */
 
-import BLocalization from './BLocalization';
+import BLocalization from '../../base/logic/strings/BLocalization';
 
 export default Strings = new BLocalization( {
   en: {

@@ -26,28 +26,23 @@ export Function AppLaunch
 // import {Asset} from 'expo';
 
 // Import Core Project Modules
-import loadAppStyles from './loading/loadAppStyles';
+// import loadAppStyles from './loading/loadAppStyles';
+import BaseAppLaunch from '../base/logic/BaseAppLaunchLogic';
 
 // Import General Logic
-import {logVersionInfo} from '../logic/VersionInfo';
-import {appLaunchRan} from '../logic/store/loading';
+// import {logVersionInfo} from '../logic/VersionInfo';
+// import {appLaunchRan} from '../logic/store/loading';
 
 // Import App Logic
-import {setAppLanguage} from './strings/setAppLanguage';
-import {downloadAllAppImages} from './loading/loadImages';
-import {loadUserInfoFromStorage} from './loading/asyncStorage';
+// import {setAppLanguage} from './strings/setAppLanguage';
+// import {downloadAllAppImages} from './loading/loadImages';
+// import {loadUserInfoFromStorage} from './loading/asyncStorage';
 
 // import {setAppStringsTo} from './store';
 
 // here be our functions!
-export const AppLaunch = (dispatch) => {
-    dispatch && dispatch(appLaunchRan);
-    logVersionInfo();
-    loadAppStyles(dispatch || null);
-    setAppLanguage(dispatch || null);
-    // loadAppStrings(dispatch || null);
-    downloadAllAppImages(dispatch || null);
-    loadUserInfoFromStorage(dispatch || null);
+export default AppLaunch = (dispatch) => {
+    BaseAppLaunch(dispatch || null);
 }
 
 // const loadAppStrings = (dispatch) => {

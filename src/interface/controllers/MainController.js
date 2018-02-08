@@ -23,15 +23,14 @@ import { connect } from 'react-redux';
 // Import Other Node Modules
 
 // Import Core Project Modules
-// import BController, {defaultPropsFromStore} from './BController';
-import BController from './BController';
-import BRoute from './BRoute';
+import BController from '../../base/interface/controllers/BController';
+import BRoute from '../../base/interface/controllers/BRoute';
 import {defaultInterfacePropsFrom, allStoreSections} from '../../logic/store';
 import {addPropsRequestFromStore} from '../../logic/store/helpers';
 
 // Import App Logic
-import {isObject} from '../../logic/jsExtend/objectMerge';
-import {AppLaunch} from '../../logic/AppLaunchLogic.js';
+import {isObject} from '../../base/logic/jsExtend/objectMerge';
+import AppLaunch from '../../logic/AppLaunchLogic.js';
 import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 
 // Import Other App UI Elements

@@ -20,8 +20,9 @@ import styled from 'styled-components';
 // Import App Logic
 
 // Import Other App UI Elements
-import ImageWithAspect from '../components/ImageWithAspect';
-import {defaultAppStyles} from '../theming/AppStyles';
+import ImageWithAspect from '../../base/interface/components/ImageWithAspect';
+// import {defaultAppStyles} from '../theming/AppStyles';
+import {defaultAppStyles} from '../../base/interface/theming/AppStyles';
 
 // Interface Styling
 const MainView = styled.View`flex:1;
