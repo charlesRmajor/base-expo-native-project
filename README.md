@@ -110,24 +110,20 @@ Native Modules's potential lack of existence must be guarded against as follows:
 * styled-components
 * axios
 
-# Includes These Native Packages
+# Other Packages To Add?
+* redux-thunk
 
-# Native Packages To-Add
+# Native Still To Be Added
+## Packages
 * react-native-onesignal
 * react-native-fbsdk
-* firebase?
-* in-app-purchases
+* react-native-firebase??? — couldn't get this working with Android before
 
-# Our Logic
-See implementation of the following in the files inside defaultFiles
-* App Theming:
-    * /src/base/interface/theming/
-    * AppStyles
+## Our Code
+* device contacts?
+* in-app-purchases (or can I get the packages I based it on working?)
 
-* Strings:
-    * src/base/logic/strings/
-
-# Structure
+# Project Structure
 * base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
 * src/ — this is where your app lives. 
     * src/interface/controllers/MainController.js is the main app insertion point

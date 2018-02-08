@@ -5,7 +5,7 @@
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component baseMainView.js
-  Description:  landing page
+  Description:
 */
 
 // IMPORTS
