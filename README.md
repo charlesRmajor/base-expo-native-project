@@ -13,6 +13,7 @@ This was built with
 * React-Redux: 5.0.6
 * React-Router-Native: 4.2.0
 * Redux-DevTools: 3.4.1
+* react-native-onesignal: 3.0.9
 * Styled-Components: 3.1.6
 * Axios: 0.17.1
 
@@ -53,6 +54,7 @@ Some native features require these steps too (like notifications, analytics)
     1. Setup:
         1. **get your expo org/slug path**
         2. Get your bundle/package identifiers:
+            * This project assumes that you use the form com.OrganizationID.CanonicalAppID. OrganizationID & CanonicalAppID will have to be entered separately.
             1. Android:
             2. iOS:
             3. Facebook App ID: 
@@ -171,7 +173,6 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 # Native Still To Be Added
 ## Packages
-* react-native-onesignal
 * react-native-fbsdk && setup analytics
 * react-native-firebase??? — couldn't get this working with Android before
 
@@ -180,7 +181,8 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * in-app-purchases (or can I get the packages I based it on working?)
 
 # To-Do's
-* base native projects
+* base native projects:
+    * react-native-onesignal on iOS
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
@@ -190,7 +192,10 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
     * alias to project files except our custom build.gradle?
         * simple OSX Finder "create alias" of those files didn't work
     * does Android Studio have some way to do this?
-
+    * can we get CanonicalAppID, OrganizationID, appVersionName from app.json into gradle?
+* XCode:
+    * can we get CanonicalAppID, OrganizationID, appVersionName from app.json into iOS build settings?
+                
 * Expo-Project:
     * add expo-based notifications (maybe?)
     * live theme update from in-app 
