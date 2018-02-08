@@ -32,7 +32,7 @@ import Dimensions from 'Dimensions';
 import getThemeFontSet from './getThemeFontSet';
 import {defaultAndroidFonts, defaultIosFonts} from './defaultFonts';
 // import ThemeColors from './ThemeColors';
-import ThemeColors from '../../../interface/theming/ThemeColors';
+import ThemeColors from '../../../src/interface/theming/ThemeColors';
 
 // Import General Logic
 import objectMerge from '../../logic/jsExtend/objectMerge';

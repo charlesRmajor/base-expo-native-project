@@ -16,7 +16,7 @@ local Function downloadAllAppImages
 import getArrayOfSources from './getArrayOfSources';
 
 // Import Core Project Modules
-import {images} from '../../../AppAssets';
+import {images} from '../../../src/AppAssets';
 import {setAppImagesTo} from '../store/';
 import {imagesDoneLoading} from '../store/loading';
 

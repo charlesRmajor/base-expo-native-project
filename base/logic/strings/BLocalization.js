@@ -22,7 +22,7 @@
 'use strict';
 
 // Import App Logic
-const thisAppJSON = require('../../../../app.json');
+const thisAppJSON = require('../../../app.json');
 
 const fallBackDefaultLanguage = 'en';
 

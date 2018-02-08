@@ -20,11 +20,7 @@ Betterment Labs's starter project with expo / native dual development
 
 ## Project Setup Instructions
 1. Download
-2. Prepare files for project
-    1. Copy folders inside "defaultFiles" (interface & logic folders) into the "src" folder
-    2. delete src/.gitignore
-    3. delete "defaultFiles"
-    4. PLEASE don't commit those changes to this repo!!!
+2. files in src/ are basic templates for you to use to build your app on. Pay attention to the (few) times they directly call base/ code. It's important.
 3. Get Packages
     1. from home directory, run 'yarn'
     2. from ios/ directory, run 'pod install && pod update'
@@ -42,7 +38,7 @@ Some native features require these steps too (like notifications, analytics)
         2. Get your bundle/package identifiers:
             1. Android:
             2. iOS:
-    2. **in app.json:**
+    2. **in app.json:** - both app.json.expo && app.json.native
         1. **name**
         2. **slug**
         3. ios.bundleIdentifier

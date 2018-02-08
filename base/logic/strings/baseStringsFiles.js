@@ -6,7 +6,7 @@
 
   define app's needed string files here
 */
-import stringsFiles from '../../../logic/strings/appStringsFiles';
+import stringsFiles from '../../../src/logic/strings/appStringsFiles';
 
 const baseStringsFiles = {
     VersionInfo: require('./strings_VersionInfo')

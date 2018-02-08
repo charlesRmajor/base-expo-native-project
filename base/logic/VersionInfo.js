@@ -9,7 +9,7 @@
 // Import App Logic
 import getPageStrings from './strings/getPageStrings';
 
-const thisAppJSON = require('../../../app.json');
+const thisAppJSON = require('../../app.json');
 
 export const getAlertWithVersionInfoContent = () => {
     const versionStrings = getPageStrings('VersionInfo');

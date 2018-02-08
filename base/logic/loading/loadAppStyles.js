@@ -22,13 +22,14 @@ import getArrayOfSources from './getArrayOfSources';
 // Import Core Project Modules
 import AppStyles, {defaultFontSet} from '../../interface/theming/AppStyles';
 import getThemeFontSet from '../../interface/theming/getThemeFontSet';
-import ChivoFontSet from '../../../interface/theming/fontSets/ChivoFontSet';
-import {rawImages, images} from '../../../AppAssets';
+import {rawImages, images} from '../../../src/AppAssets';
 import {fontsDoneLoading} from '../store/loading';
 import {setAppStylesTo} from '../store';
 
+// Import Current Font Set From App Properties
+import ThemeFontSet from '../../../src/interface/theming/ThemeFont';
 // Set App Fonts
-const ThemeFontSetIs = ChivoFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/
+// const ThemeFontSetIs = ChivoFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/
 // const ThemeFontSetIs = defaultFontSet;//defaultFontSet; /* e.g. "ChivoFontSet" //*/
 
 export default loadAppStyles = (dispatch) => {
@@ -36,6 +37,7 @@ export default loadAppStyles = (dispatch) => {
 }
 
 const downloadAllFonts = (dispatch) => {
+  const ThemeFontSetIs = ThemeFontSet ? ThemeFontSet : defaultFontSet;
   const FontsToLoad = getThemeFontSet(ThemeFontSetIs);
   const needsLoading = FontsToLoad.needsLoading;
   delete FontsToLoad.needsLoading;
