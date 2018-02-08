@@ -1,5 +1,6 @@
 package host.exp.exponent;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import com.facebook.react.ReactPackage;
@@ -15,7 +16,7 @@ public class MainActivity extends DetachActivity {
 
   @Override
   public String publishedUrl() {
-    return "exp://exp.host/@sosappsinc/base-expo-native-project";
+    return "exp://exp.host/@";//+BuildConfig.OrganizationID+"/"+BuildConfig.CanonicalAppID;
   }
 
   @Override

@@ -55,6 +55,8 @@ Some native features require these steps too (like notifications, analytics)
         2. Get your bundle/package identifiers:
             1. Android:
             2. iOS:
+            3. Facebook App ID: 
+            4. OneSignal App ID: 
     2. **in app.json:** - both app.json.expo && app.json.native
         1. **name**
         2. **slug**
@@ -68,9 +70,26 @@ Some native features require these steps too (like notifications, analytics)
             2. Update "bundle identifier"
             3. Update version info as you choose. NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
     4. for Android Project:
-        1. in app/build.gradle, android.defaultConfig.applicationId
-        2. in "...MainActivity.java", update expo org/slug path
-            ```public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }```
+        1. in android/build.gradle,update: 
+            * the fields below
+            ```java
+            ext {
+                ...
+                OneSignal_AppID = ''
+                Google_Project_Number = ''
+                CanonicalAppID = 'CanonicalAppID'
+                OrganizationID = 'OrganizationID'
+                appVersionCode = 1
+                appVersionName = '0.1.0'
+            }
+                ```
+            * NOTE: appVersionCode uploaded to play store must be unique for this com.OrganizationID.CanonicalAppID
+        2. If your expo link DOES NOT fit the form "exp://exp.host/@OrganizationID/CanonicalAppID", then you must update this:
+            * in "...MainActivity.java", update expo org/slug path
+                ```public String publishedUrl() { return "exp://exp.host/@OrganizationID/CanonicalAppID"; }```
+        4. If you don't want to force Portrait device, orientation remove or change (to "landscape") this line in AndroidManifest.xml:
+        ```xml android:screenOrientation="portrait"```
+        5. When you run gradle sync, you'll probably get a bunch of errors for the modules the project depends on. Follow the prompts to update the build SDK settings to match the project's current build SDK version. You'll have to do this everytime after running yarn. (coming up with a more elegant solution is a to-do for this proejct)
 2. Open!
     1. XDE - must be running before building native versions of apps
         1. Open
@@ -91,19 +110,22 @@ Some native features require these steps too (like notifications, analytics)
     * Update Google Play Services:
         1. Higher versions of Google Play Services require a google-services.json file: https://developers.google.com/android/guides/google-services-plugin
         2. Once you add this file to your app/ directory, update google play services version:
-            1. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18). latest version of this writing is 11.8.0
+            1. in android/build.gradle, update playServicesVersion number inside the ext {} (around line 3). latest version of this writing is 11.8.0
             2. find google play services version info here: https://developers.google.com/android/guides/releases
 * iOS
     * from ios/ directory, run 'pod install && pod update' 
 
 ## How to protect against native elements in expo development
-Native Modules's potential lack of existence must be guarded against as follows:
+Native Modules's potential lack of existence must be guarded against. When calling Native Modules, use the following check to fail gracefully.
 ```javascript
     if (NativeModules.MyModule != undefined) {
         let MyModule = NativeModules.MyModule;
         if (MyModule.myMethod != undefined) {
             MyModule.myMethod(myInputs);
+        } else {
+            [... what to do if myMethod isn't found ..."]
         }
+        [... what to do if MyModule isn't found ..."]
     }
 ```
 
@@ -150,7 +172,7 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 # Native Still To Be Added
 ## Packages
 * react-native-onesignal
-* react-native-fbsdk
+* react-native-fbsdk && setup analytics
 * react-native-firebase??? — couldn't get this working with Android before
 
 ## Our Code
@@ -162,12 +184,22 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
+* app store signing
+* android studio: override module dependencies gradle/sdk version info:
+    * script to do so automatically after running yarn?
+    * alias to project files except our custom build.gradle?
+        * simple OSX Finder "create alias" of those files didn't work
+    * does Android Studio have some way to do this?
 
 * Expo-Project:
     * add expo-based notifications (maybe?)
     * live theme update from in-app 
     * language override
     * more elegant way to handle expo/native builds (different app.json files)
+
+# Questions:
+* does this part of AndroidManifest.xml need to be updated for a new project?
+        ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```
 
 ## Freeform Notes on Incorporating into Already Existing Projects:
 * should hopefully be able to largely drop your code into src/

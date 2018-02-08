@@ -3075,6 +3075,12 @@ react-native-maps@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.19.0.tgz#ce94fad1cf360e335cb4338a68c95f791e869074"
 
+react-native-onesignal@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.0.9.tgz#b98285afd9fa2e08eea6c5fac76f2f8104610175"
+  dependencies:
+    invariant "^2.2.2"
+
 react-native-safe-module@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-module/-/react-native-safe-module-1.2.0.tgz#a23824ca24edc2901913694a76646475113d570d"

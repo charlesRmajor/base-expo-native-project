@@ -1,4 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    playServicesVersion = '9.8.0'
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    targetSdkVersion = 26
+    minSdkVersion = 19
+    OneSignal_AppID = ''
+    Google_Project_Number = ''
+    CanonicalAppID = 'CanonicalAppID'
+    OrganizationID = 'OrganizationID'
+    appVersionCode = 1
+    appVersionName = '0.1.0'
+}
 
 buildscript {
   repositories {
