@@ -130,22 +130,16 @@ See implementation of the following in the files inside defaultFiles
 
 # Structure
 /src/
+
 contains all javascript source code beyond App.js
 
 # To-Do's
--base native projects
+* base native projects
+* get working with Expo & native at same time
+* react-router-redux??? https://github.com/reactjs/react-router-redux
 
--get working with Expo & native at same time
-
--react-router-redux???
-https://github.com/reactjs/react-router-redux
-
-
-Expo-Project:
--add expo-based notifications (maybe?)
-
--live theme update from in-app 
-
--language override
-
--more elegant way to handle expo/native builds (different app.json files)
+* Expo-Project:
+    * add expo-based notifications (maybe?)
+    * live theme update from in-app 
+    * language override
+    * more elegant way to handle expo/native builds (different app.json files)
