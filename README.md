@@ -14,47 +14,47 @@ Betterment Labs's starter project with expo / native dual dev
     3. delete "defaultFiles"
     4. PLEASE don't commit those changes to this repo!!!
 3. Update App Identifiers:
-    a. Setup:
-        i. get your expo org/slug path
-        ii. Get your bundle/package identifiers:
-            A. Android:
-            B. iOS:
-    b. in app.json:
-        i. name
-        ii. slug
-        iii. ios.bundleIdentifier
-        iv. android.package
-    c. for iOS/Xcode Project:
-        i. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path
-        ii. project build settings (click on project name in file navigator)
-            a. Under "Targets" (project name) & "General"
-            b. Update "bundle identifier"
-            c. Update version info as you choose
+    1. Setup:
+        1. get your expo org/slug path
+        2. Get your bundle/package identifiers:
+            1. Android:
+            2. iOS:
+    2. in app.json:
+        1. name
+        2. slug
+        3. ios.bundleIdentifier
+        4. android.package
+    3. for iOS/Xcode Project:
+        1. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path
+        2. project build settings (click on project name in file navigator)
+            1. Under "Targets" (project name) & "General"
+            2. Update "bundle identifier"
+            3. Update version info as you choose
                 NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
-    d. for Android Project:
-        i. in app/build.gradle, android.defaultConfig.applicationId
-        ii. in "...MainActivity.java", update expo org/slug path
+    4. for Android Project:
+        1. in app/build.gradle, android.defaultConfig.applicationId
+        2. in "...MainActivity.java", update expo org/slug path
             public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }
 4. Get Packages:
-    a. from home directory, run 'yarn'
-    b. from ios/ directory, run 'pod install && pod update'
+    1. from home directory, run 'yarn'
+    2. from ios/ directory, run 'pod install && pod update'
 5. Open!
-    a. XDE
-        i. Open
-        ii. Load project (this root directory)
-    b. Android Studio
-        i. Open
-        ii. Load Project (android folder in root directory)
-        iii. sync Gradle
-        iv. Run!
-    c. XCode (for iOS Development)
-        i. Open XCode
-        ii. Open *.xcworkspace file in ios/ folder
-        iii. run!
+    1. XDE
+        1. Open
+        2. Load project (this root directory)
+    2. Android Studio
+        1. Open
+        2. Load Project (android folder in root directory)
+        3. sync Gradle
+        4. Run!
+    3. XCode (for iOS Development)
+        1. Open XCode
+        2. Open *.xcworkspace file in ios/ folder
+        3. run!
 6. Update Google Play Services:
-    a. Higher versions of Google Play Services require a google-services.json file:
+    1. Higher versions of Google Play Services require a google-services.json file:
         https://developers.google.com/android/guides/google-services-plugin
-    b. Once you add this file to your app/ directory, update google play services version:
+    2. Once you add this file to your app/ directory, update google play services version:
         i. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18)
 
 ## Continue to Use Expo To Develop Parts That Don't Need Native Code
