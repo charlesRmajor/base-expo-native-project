@@ -57,19 +57,11 @@ Betterment Labs's starter project with expo / native dual dev
     2. Once you add this file to your app/ directory, update google play services version:
         i. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18)
 
-## Continue to Use Expo To Develop Parts That Don't Need Native Code
-If Expo throws errors, copy app.json (use current version when developing native/using XCode or Android Studio).
-Remove these lines from app.json:
-```javascript
-    "isDetached"
-    "detach": {
-      "scheme":...
-      "iosExpoViewUrl":...
-      "androidExpoViewUrl": ...
-    }
-```
-    
-(note: app.json needs to include those lines when developing for native, with Xcode or Android Studio)
+# Use with Expo
+Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
+
+# Use with Native Builds
+Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
 ## Upgrading Packages
 Android:
