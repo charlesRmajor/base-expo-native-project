@@ -125,9 +125,9 @@ Native Modules's potential lack of existence must be guarded against. When calli
         if (MyModule.myMethod != undefined) {
             MyModule.myMethod(myInputs);
         } else {
-            [... what to do if myMethod isn't found ..."]
+            [... what to do if myMethod is not found ..."]
         }
-        [... what to do if MyModule isn't found ..."]
+        [... what to do if MyModule is not found ..."]
     }
 ```
 
@@ -182,7 +182,9 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 # To-Do's
 * base native projects:
-    * react-native-onesignal on iOS
+    * react-native-onesignal
+        * iOS
+        * test
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
@@ -198,6 +200,7 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * can app.json have a CanonicalAppID & OrganizationID and then automatically update bundle & package identifiers to match?
 * add general update build instructions to this readme
 * other instructions/troubleshooting notes from my build docs?
+* separate out iOS/Android studio instructions above
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)
