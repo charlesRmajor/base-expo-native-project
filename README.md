@@ -7,16 +7,16 @@ Betterment Labs's starter project with expo / native dual development
 # Version Info
 
 # How To Use This File
-*Note: First follow "Project Setup Instructions" below.
-*If you (personally) are only using Expo, you only need to follow these instructions.
-*If you are going to publish to Expo, you also need to follow the bolded instructions in "Native Development Instructions"
+* Note: First follow "Project Setup Instructions" below.
+* If you (personally) are only using Expo, you only need to follow these instructions.
+* If you are going to publish to Expo, you also need to follow the bolded instructions in "Native Development Instructions"
 
 ## Use with Expo
-*Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
+* Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
 ## Use with Native Builds
-*Before using with Native Builds, follow "Native Development Instructions" below
-*Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
+* Before using with Native Builds, follow "Native Development Instructions" below
+* Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
 ## Project Setup Instructions
 1. Download
@@ -80,10 +80,10 @@ Some native features require these steps too (like notifications, analytics)
         ii. find google play services version info here: https://developers.google.com/android/guides/releases
 
 ## Upgrading Packages
-*Android
-    *Upgrade Google Play Services: see step 4 in *"Native Development Instructions"* above
-*iOS
-    *from ios/ directory, run 'pod install && pod update' 
+* Android
+    * Upgrade Google Play Services: see step 4 in *"Native Development Instructions"* above
+* iOS
+    * from ios/ directory, run 'pod install && pod update' 
 
 ## How to protect against native elements in expo development
 Native Modules's potential lack of existence must be guarded against as follows:
@@ -97,36 +97,36 @@ Native Modules's potential lack of existence must be guarded against as follows:
 ```
 
 ## Other Notes
-*iOS Permissions:
-    *When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
+* iOS Permissions:
+    * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
 
 # Includes These Packages
-*react
-*react-native
-*react-router-native
-*react-redux
-*redux
-*redux-devtools
-*expo
-*styled-components
-*axios
+* react
+* react-native
+* react-router-native
+* react-redux
+* redux
+* redux-devtools
+* expo
+* styled-components
+* axios
 
 # Includes These Native Packages
 
 # Native Packages To-Add
-*react-native-onesignal
-*react-native-fbsdk
-*firebase?
-*in-app-purchases
+* react-native-onesignal
+* react-native-fbsdk
+* firebase?
+* in-app-purchases
 
 # Our Logic
 See implementation of the following in the files inside defaultFiles
-*App Theming:
-    */src/base/interface/theming/
-    *AppStyles
+* App Theming:
+    * /src/base/interface/theming/
+    * AppStyles
 
-*Strings:
-    */src/base/logic/strings/
+* Strings:
+    * src/base/logic/strings/
 
 # Structure
 /src/
