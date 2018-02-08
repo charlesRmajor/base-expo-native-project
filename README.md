@@ -16,7 +16,7 @@ This was built with
 * Styled-Components: 3.1.6
 * Axios: 0.17.1
 
-Note: When updating these essential packages for Betterment Labs projects, this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
+Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
 ## Updates to this Base Project
 If you find yourself wanting to change any files outside of src/ or the app.json.* files, ask yourself if you **REALLY** need to. If you do, it's likely something that should be changed about this base project — please put in a pull request for the change, or open an issue, or send me a note about the change.
@@ -39,7 +39,6 @@ If you find yourself wanting to change any files outside of src/ or the app.json
 2. files in src/ are basic templates for you to use to build your app on. Pay attention to the (few) times they directly call base/ code. It's important.
 3. Get Packages
     1. from home directory, run 'yarn'
-    2. from ios/ directory, run 'pod install && pod update'
 4. Open!
     1. XDE
         1. Open
@@ -62,17 +61,17 @@ Some native features require these steps too (like notifications, analytics)
         3. ios.bundleIdentifier
         4. android.package
     3. for iOS/Xcode Project:
-        1. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path
-        2. project build settings (click on project name in file navigator)
+        1. from ios/ directory, run 'pod install && pod update'
+        2. Supporting/EXShell.plist ... manifestURL updated with your Expo org/slug path
+        3. project build settings (click on project name in file navigator)
             1. Under "Targets" (project name) & "General"
             2. Update "bundle identifier"
-            3. Update version info as you choose
-                NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
+            3. Update version info as you choose. NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
     4. for Android Project:
         1. in app/build.gradle, android.defaultConfig.applicationId
         2. in "...MainActivity.java", update expo org/slug path
-            public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }
-3. Open!
+            ```public String publishedUrl() { return "exp://exp.host/@sosappsinc/base-expo-native-project"; }```
+2. Open!
     1. XDE - must be running before building native versions of apps
         1. Open
         2. Load project (this root directory)
@@ -85,17 +84,15 @@ Some native features require these steps too (like notifications, analytics)
         1. Open XCode
         2. Open *.xcworkspace file in ios/ folder
         3. run!
-4. Update Google Play Services:
-    1. Higher versions of Google Play Services require a google-services.json file:
-        https://developers.google.com/android/guides/google-services-plugin
-    2. Once you add this file to your app/ directory, update google play services version:
-        i. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18)
-            latest version of this writing is 11.8.0
-        ii. find google play services version info here: https://developers.google.com/android/guides/releases
+3. For Google Play Services, including Firebase & Android Notifications, you need to update Google Play Services (see section in *Upgrading Packages* below)
 
 ## Upgrading Packages
 * Android
-    * Upgrade Google Play Services: see step 4 in *"Native Development Instructions"* above
+    * Update Google Play Services:
+        1. Higher versions of Google Play Services require a google-services.json file: https://developers.google.com/android/guides/google-services-plugin
+        2. Once you add this file to your app/ directory, update google play services version:
+            1. in app/build.gradle, update playServicesVersion number inside the ext {} (around line 18). latest version of this writing is 11.8.0
+            2. find google play services version info here: https://developers.google.com/android/guides/releases
 * iOS
     * from ios/ directory, run 'pod install && pod update' 
 
