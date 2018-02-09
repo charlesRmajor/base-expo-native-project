@@ -71,6 +71,8 @@ Some native features require these steps too (like notifications, analytics)
             1. Under "Targets" (project name) & "General"
             2. Update "bundle identifier" to ```com.OrganizationID.CanonicalAppID```
             3. Update version info as you choose. NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
+            4. Update OneSignalID: 
+                * AppDelegate.m — ```NSString *OneSignal_AppID = @"OneSignal_AppID";```
     4. for Android Project:
         1. in android/build.gradle,update: 
             * the fields below
@@ -170,25 +172,32 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 # Other Packages To Add?
 * redux-thunk
-
-# Native Still To Be Added
-## Packages
-* react-native-fbsdk && setup analytics
-* react-native-firebase??? — couldn't get this working with Android before
-
-## Our Code
-* device contacts?
-* in-app-purchases (or can I get the packages I based it on working?)
+* react-native-firebase
 
 # To-Do's
 * base native projects:
     * react-native-onesignal
         * iOS
+            *   podfile: pod 'OneSignal', '>= 2.6.2', '< 3.0'
+        *  RN integration
         * test
+    * react-native-fbsdk
+        * iOS
+        * Android
+        * RN integration
+        * test (setup?)
+* Betterment Labs Code:
+    * getting device contacts
+    * in app purchases? (can we use the packages this was based on before?)
+
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
-* app store signing
+* app store signing:
+    * Android: https://developer.android.com/studio/build/build-variants.html
+        * https://medium.com/react-native-training/fastlane-for-react-native-ios-android-app-devops-8ca85bee614e
+        * probably needs to be more careful about securely storing passwords???
+    * General: 
 * android studio: override module dependencies gradle/sdk version info:
     * script to do so automatically after running yarn?
     * alias to project files except our custom build.gradle?
@@ -201,6 +210,12 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * add general update build instructions to this readme
 * other instructions/troubleshooting notes from my build docs?
 * separate out iOS/Android studio instructions above
+* add table of contents to this readme
+* Setup ViewController types:
+    * swipeable tutorial/wizard style
+    * nested hierarchies
+    * standardize passing navigation links (redux state)
+* add instructions for cloning this repo, getting cocoapods, more detail using yarn, etc.
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)

@@ -4,6 +4,8 @@
 #import "ExpoKit.h"
 #import "EXViewController.h"
 
+NSString *OneSignal_AppID = @"OneSignal_AppID";
+
 @interface AppDelegate ()
 
 @property (nonatomic, strong) EXViewController *rootViewController;
@@ -11,6 +13,8 @@
 @end
 
 @implementation AppDelegate
+
+@synthesize oneSignal = _oneSignal;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,6 +26,11 @@
     
     [_rootViewController loadReactApplication];
     [_window makeKeyAndVisible];
+    
+    // For requiring push notification permissions manually.
+    self.oneSignal = [[RCTOneSignal alloc] initWithLaunchOptions:launchOptions
+                                                           appId:OneSignal_AppID
+                                                        settings:@{kOSSettingsKeyAutoPrompt: @false}];
     
     return YES;
 }
