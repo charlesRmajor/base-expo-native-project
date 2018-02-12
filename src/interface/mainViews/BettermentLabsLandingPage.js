@@ -13,15 +13,17 @@ Component BettermentLabsLandingPage.js
 import React from 'react';
 
 // Import Other Node Modules
-import styled from 'styled-components';
+import styled, {ThemeProvider} from 'styled-components';
 
 // Import Core Project Modules
 
 // Import App Logic
+import {requestNotifications} from '../../../base/logic/permissions';
 
 // Import Other App UI Elements
 import ImageWithAspect from '../../../base/interface/components/ImageWithAspect';
 import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
+import BButton from '../components/BButton';
 
 // Interface Styling
 const MainView = styled.View`flex:1;
@@ -48,11 +50,18 @@ export default BettermentLabsLandingPage = (props) => {
         const logoImage = (<ImageView>{imageLogo && (<ImageWithAspect source={imageLogo} />)}</ImageView>);
 
         const mainView = 
-            (<MainView theme={style}>
-                <ViewSpacer/>
-                <Header theme={style}>{strings.title}</Header>
-                <ViewSpacer/>
-                {logoImage}
-            </MainView>)
+            (<ThemeProvider theme={style}>
+                <MainView>
+                    <ViewSpacer/>
+                    <Header>{strings.title}</Header>
+                    <ViewSpacer/>
+                    <BButton
+                        flex={2}
+                        text={strings.notificationsRequestButton}
+                        onPress={requestNotifications}
+                    />
+                    {logoImage}
+                </MainView>
+            </ThemeProvider>)
       return ( mainView)
   }

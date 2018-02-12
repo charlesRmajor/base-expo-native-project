@@ -9,7 +9,8 @@ import BLocalization from '../../../base/logic/strings/BLocalization';
 
 export default Strings = new BLocalization( {
   en: {
-    title: "Welcome to Betterment Labs's Base Expo/React-Native Project"
+    title: "Welcome to Betterment Labs's Base Expo/React-Native Project",
+    notificationsRequestButton: "Get Notifications Permission"
   },
   es: {
     title: "SPANISH: Welcome to Betterment Labs's Base Expo/React-Native Project"

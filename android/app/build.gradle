@@ -93,6 +93,7 @@ preBuild.dependsOn exponentPrebuildStep
 
 
 dependencies {
+    compile project(':react-native-fbsdk')
     compile project(':react-native-onesignal')
   compile project(':react-native-onesignal')
   compile fileTree(include: ['*.jar'], dir: 'libs')

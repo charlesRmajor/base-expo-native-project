@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F6213A25F3FE7B25718FCB2CB1A3E19A'
+               BlueprintIdentifier = 'E6C4ACBE22D6F8DF90C6E98F6305BDB8'
                BlueprintName = 'react-native-onesignal'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libreact-native-onesignal.a'>

@@ -4,7 +4,9 @@
 #import "ExpoKit.h"
 #import "EXViewController.h"
 
-NSString *OneSignal_AppID = @"OneSignal_AppID";
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
+NSString *OneSignal_AppID = @"70028655-b534-42b0-9ad8-04d6fb014371";
 
 @interface AppDelegate ()
 
@@ -27,6 +29,10 @@ NSString *OneSignal_AppID = @"OneSignal_AppID";
     [_rootViewController loadReactApplication];
     [_window makeKeyAndVisible];
     
+    // Facebook Analytics
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
     // For requiring push notification permissions manually.
     self.oneSignal = [[RCTOneSignal alloc] initWithLaunchOptions:launchOptions
                                                            appId:OneSignal_AppID
@@ -35,10 +41,28 @@ NSString *OneSignal_AppID = @"OneSignal_AppID";
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    // Add any custom logic here.
+    return handled;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
+}
+
 #pragma mark - Handling URLs
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
 {
+    
     return [[ExpoKit sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 

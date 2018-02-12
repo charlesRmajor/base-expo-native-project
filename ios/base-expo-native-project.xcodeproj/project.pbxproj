@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7B420DE202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7B420D6202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		49523E114674674A69532960 /* libPods-base-expo-native-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C571661844272791833DF15 /* libPods-base-expo-native-project.a */; };
+		A7AB9B48202F99DF00C356DF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7B420D6202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7AB9B4F202F9EAC00C356DF /* PermissionsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */; };
+		A7AB9B52203247B800C356DF /* InAppPurchasesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B51203247B800C356DF /* InAppPurchasesModule.m */; };
+		A7AB9B552032486200C356DF /* SKProduct+StringPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B542032486100C356DF /* SKProduct+StringPrice.m */; };
 		A7B420E2202E3E9A00D37537 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B420B8202E38FA00D37537 /* UIKit.framework */; };
 		A7B420E3202E3E9E00D37537 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B420BA202E390100D37537 /* SystemConfiguration.framework */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
@@ -25,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7B420DC202E3E4700D37537 /* PBXContainerItemProxy */ = {
+		A7AB9B49202F99DF00C356DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B56386391DB9693800A0598C /* Project object */;
 			proxyType = 1;
@@ -35,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A7B420B7202E38BF00D37537 /* Embed App Extensions */ = {
+		A7AB9B4B202F99DF00C356DF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A7B420DE202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+				A7AB9B48202F99DF00C356DF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +54,14 @@
 
 /* Begin PBXFileReference section */
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-base-expo-native-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-base-expo-native-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-base-expo-native-project/Pods-base-expo-native-project.debug.xcconfig"; sourceTree = "<group>"; };
+		5C571661844272791833DF15 /* libPods-base-expo-native-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-base-expo-native-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-base-expo-native-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-base-expo-native-project.release.xcconfig"; path = "Pods/Target Support Files/Pods-base-expo-native-project/Pods-base-expo-native-project.release.xcconfig"; sourceTree = "<group>"; };
+		A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsModule.m; sourceTree = "<group>"; };
+		A7AB9B4E202F9EAC00C356DF /* PermissionsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsModule.h; sourceTree = "<group>"; };
+		A7AB9B50203247B800C356DF /* InAppPurchasesModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchasesModule.h; sourceTree = "<group>"; };
+		A7AB9B51203247B800C356DF /* InAppPurchasesModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchasesModule.m; sourceTree = "<group>"; };
+		A7AB9B532032486100C356DF /* SKProduct+StringPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+StringPrice.h"; sourceTree = "<group>"; };
+		A7AB9B542032486100C356DF /* SKProduct+StringPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+StringPrice.m"; sourceTree = "<group>"; };
 		A7B420A6202E352800D37537 /* base-expo-native-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "base-expo-native-project.entitlements"; sourceTree = "<group>"; };
 		A7B420B8202E38FA00D37537 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7B420BA202E390100D37537 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -90,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49523E114674674A69532960 /* libPods-base-expo-native-project.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +114,7 @@
 				A7B420C0202E3DA500D37537 /* libOneSignal.a */,
 				A7B420BA202E390100D37537 /* SystemConfiguration.framework */,
 				A7B420B8202E38FA00D37537 /* UIKit.framework */,
+				5C571661844272791833DF15 /* libPods-base-expo-native-project.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +138,13 @@
 			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
+		A7B420E4202E412800D37537 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		B56386381DB9693800A0598C = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +153,8 @@
 				B56386421DB9693800A0598C /* Products */,
 				5B29BC350A332C58878A9F13 /* Pods */,
 				1A42804E64B7E9E0AB8B6799 /* Frameworks */,
+				ED8FE9424B8C4928AC80D9E4 /* Libraries */,
+				A7B420E4202E412800D37537 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +182,12 @@
 		B563865B1DB96A5E00A0598C /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				A7AB9B532032486100C356DF /* SKProduct+StringPrice.h */,
+				A7AB9B542032486100C356DF /* SKProduct+StringPrice.m */,
+				A7AB9B50203247B800C356DF /* InAppPurchasesModule.h */,
+				A7AB9B51203247B800C356DF /* InAppPurchasesModule.m */,
+				A7AB9B4E202F9EAC00C356DF /* PermissionsModule.h */,
+				A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */,
 				B5693E8F1FABD46800307FA4 /* launch_background_image.png */,
 				B5693E901FABD46800307FA4 /* launch_icon.png */,
 				B5693E8D1FABD16A00307FA4 /* LaunchScreen.xib */,
@@ -173,6 +201,13 @@
 				B563865E1DB96A5E00A0598C /* main.m */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		ED8FE9424B8C4928AC80D9E4 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,12 +241,12 @@
 				B563863F1DB9693800A0598C /* Resources */,
 				8D34C7FE3D99F20E5EA1B18A /* [CP] Embed Pods Frameworks */,
 				AA38385B7D8D0854176B72FC /* [CP] Copy Pods Resources */,
-				A7B420B7202E38BF00D37537 /* Embed App Extensions */,
+				A7AB9B4B202F99DF00C356DF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A7B420DD202E3E4700D37537 /* PBXTargetDependency */,
+				A7AB9B4A202F99DF00C356DF /* PBXTargetDependency */,
 			);
 			name = "base-expo-native-project";
 			productName = "base-expo-native-project";
@@ -224,17 +259,17 @@
 		B56386391DB9693800A0598C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 900;
 				ORGANIZATIONNAME = "650 Industries, Inc.";
 				TargetAttributes = {
 					A7B420D5202E3E4700D37537 = {
 						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = C8D8QTF339;
+						DevelopmentTeam = QGU4HX8P85;
 						ProvisioningStyle = Automatic;
 					};
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = C8D8QTF339;
+						DevelopmentTeam = QGU4HX8P85;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -394,7 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7AB9B4F202F9EAC00C356DF /* PermissionsModule.m in Sources */,
+				A7AB9B52203247B800C356DF /* InAppPurchasesModule.m in Sources */,
 				B56386611DB96A5E00A0598C /* main.m in Sources */,
+				A7AB9B552032486200C356DF /* SKProduct+StringPrice.m in Sources */,
 				B56386491DB9693800A0598C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,10 +440,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A7B420DD202E3E4700D37537 /* PBXTargetDependency */ = {
+		A7AB9B4A202F99DF00C356DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7B420D5202E3E4700D37537 /* OneSignalNotificationServiceExtension */;
-			targetProxy = A7B420DC202E3E4700D37537 /* PBXContainerItemProxy */;
+			targetProxy = A7AB9B49202F99DF00C356DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -418,13 +456,17 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = QGU4HX8P85;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OrganizationID.CanonicalAppID.OneSignalNotificationServiceExtension;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,13 +481,17 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = QGU4HX8P85;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OrganizationID.CanonicalAppID.OneSignalNotificationServiceExtension;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -561,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "base-expo-native-project/base-expo-native-project.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = QGU4HX8P85;
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/boost\"",
 					"$(inherited)",
@@ -593,16 +639,21 @@
 					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
 					"\"${PODS_ROOT}/Headers/Public/JKBigInteger2\"",
 					"\"${PODS_ROOT}/Headers/Public/OneSignal\"",
-					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"/**",
 					"\"${PODS_ROOT}/Headers/Public/boost\"",
 					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-onesignal\"",
 					"\"${PODS_ROOT}/Headers/Public/yoga\"",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/base-expo-native-project/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OrganizationID.CanonicalAppID;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -615,7 +666,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "base-expo-native-project/base-expo-native-project.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = C8D8QTF339;
+				DEVELOPMENT_TEAM = QGU4HX8P85;
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/boost\"",
 					"$(inherited)",
@@ -647,16 +698,21 @@
 					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
 					"\"${PODS_ROOT}/Headers/Public/JKBigInteger2\"",
 					"\"${PODS_ROOT}/Headers/Public/OneSignal\"",
-					"\"${PODS_ROOT}/Headers/Public/React\"",
+					"\"${PODS_ROOT}/Headers/Public/React\"/**",
 					"\"${PODS_ROOT}/Headers/Public/boost\"",
 					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-onesignal\"",
 					"\"${PODS_ROOT}/Headers/Public/yoga\"",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/base-expo-native-project/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OrganizationID.CanonicalAppID;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

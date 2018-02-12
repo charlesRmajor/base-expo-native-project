@@ -57,8 +57,15 @@ Some native features require these steps too (like notifications, analytics)
             * This project assumes that you use the form ```com.OrganizationID.CanonicalAppID``` & expo url will be of form ```exp://exp.host/@OrganizationID/CanonicalAppID```. OrganizationID & CanonicalAppID will have to be entered separately.
             1. Android:
             2. iOS:
-            3. Facebook App ID: 
+            3. Facebook:
+                * Get these:
+                    * FacebookAppID: 
+                    * FacebookDisplayName:
+                * From Step 1 of Getting Started Guide: https://developers.facebook.com/docs/ios/getting-started
             4. OneSignal App ID: 
+                * run setup for Apple & Android platforms
+                * Apple:
+                    * included p12 password: ixrrxffalj 
     2. **in app.json:** - both app.json.expo && app.json.native
         1. **name**
         2. **slug**
@@ -73,6 +80,16 @@ Some native features require these steps too (like notifications, analytics)
             3. Update version info as you choose. NOTE: "Build" numbers uploaded to iTunes store must be unique for the bundle identifer
             4. Update OneSignalID: 
                 * AppDelegate.m — ```NSString *OneSignal_AppID = @"OneSignal_AppID";```
+                * OneSignalNotificationServiceExtension:
+                    * this allows for notifications with full formatting & media included
+                    * you can delete it if not needed (not recommended)
+                    * bundle ID needs to be updated to match your ```com.OrganizationID.CanonicalAppID```
+            5. Update Facebook App Info:
+                * open ./Supporting/Info.plist
+                * update these:
+                    * FacebookAppID: {your-app-id}
+                    * FacebookDisplayName: {your-app-name}
+                    * replace numbers after "fb" with your app id! here: ```URL types -> Item 0 -> URL Schemes -> Item 0 -> fb{your-app-id}```
     4. for Android Project:
         1. in android/build.gradle,update: 
             * the fields below
@@ -177,18 +194,20 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 # To-Do's
 * base native projects:
     * react-native-onesignal
-        * iOS
-            *   podfile: pod 'OneSignal', '>= 2.6.2', '< 3.0'
         *  RN integration
         * test
     * react-native-fbsdk
-        * iOS
         * Android
         * RN integration
         * test (setup?)
 * Betterment Labs Code:
     * getting device contacts
     * in app purchases? (can we use the packages this was based on before?)
+        * iOS: 
+            * InAppUtils not kept up ... use our own version -- need to test
+        * Android:
+* publish to expo with screen that says it needs to be updated to whatever the person wants!!!
+
 
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
@@ -216,12 +235,24 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
     * nested hierarchies
     * standardize passing navigation links (redux state)
 * add instructions for cloning this repo, getting cocoapods, more detail using yarn, etc.
+* add default fallbacks for styled components
+
+* change theme in app
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)
     * live theme update from in-app 
     * language override
     * more elegant way to handle expo/native builds (different app.json files)
+
+* In App Purchases:
+    * RN: get IAP purchase options dynamically
+
+* process of testing after setup to make sure everything is working correctly:
+    * in app purchases:
+        * purchase
+        * subscription
+        * restore
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
@@ -232,3 +263,12 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * and use src/interface/controllers/MainController.js as the main app insertion point
 * kind of what App.js or index.js might have been before … but already has the controller bit and a really basic template for a router
 * so page navigation stuff may need to be updated. You probably can just drop it in as is. But we’ll need to use my BRoute for analytics, strings, and themes
+
+# Trouble Shooting
+## iOS/XCode
+* If XCode can't find the "Pods" project:
+    1. make sure you opened the *.xcworkspace file
+    2. if you did, close it, try opening the *.xcodeproj file. Ignore all the errors. But let XCode do any syncing it needs to do.
+    3. Then close and open the *.xcworkspace  file again.
+* General Troubleshooting Suggestions:
+    * clean project (get instructions from past build instructions file)

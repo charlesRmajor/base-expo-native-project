@@ -34,8 +34,8 @@ PODS:
   - CocoaLumberjack/Default (3.2.1)
   - CocoaLumberjack/Extensions (3.2.1):
     - CocoaLumberjack/Default
-  - Crashlytics (3.9.3):
-    - Fabric (~> 1.7.2)
+  - Crashlytics (3.10.0):
+    - Fabric (~> 1.7.3)
   - DoubleConversion (1.1.5)
   - ExpoKit/Core (2.3.3):
     - Amplitude-iOS (~> 3.8)
@@ -97,6 +97,20 @@ PODS:
   - OneSignal (2.6.2)
   - React (0.52.0):
     - React/Core (= 0.52.0)
+  - react-native-fbsdk (0.7.0):
+    - React
+    - react-native-fbsdk/Core (= 0.7.0)
+    - react-native-fbsdk/Login (= 0.7.0)
+    - react-native-fbsdk/Share (= 0.7.0)
+  - react-native-fbsdk/Core (0.7.0):
+    - FBSDKCoreKit
+    - React
+  - react-native-fbsdk/Login (0.7.0):
+    - FBSDKLoginKit
+    - React
+  - react-native-fbsdk/Share (0.7.0):
+    - FBSDKShareKit
+    - React
   - react-native-onesignal (3.0.9):
     - OneSignal
     - React
@@ -155,6 +169,7 @@ DEPENDENCIES:
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - GLog (from `../node_modules/react-native/third-party-podspecs/GLog.podspec`)
   - OneSignal (< 3.0, >= 2.6.2)
+  - react-native-fbsdk (from `../node_modules/react-native-fbsdk/ios`)
   - react-native-onesignal (from `../node_modules/react-native-onesignal`)
   - React/ART (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
@@ -183,6 +198,8 @@ EXTERNAL SOURCES:
     :podspec: ../node_modules/react-native/third-party-podspecs/GLog.podspec
   React:
     :path: ../node_modules/react-native
+  react-native-fbsdk:
+    :path: ../node_modules/react-native-fbsdk/ios
   react-native-onesignal:
     :path: ../node_modules/react-native-onesignal
   yoga:
@@ -201,7 +218,7 @@ SPEC CHECKSUMS:
   boost: 30a15ffb6d9aa4646dd3caffc960753f4cb4ca4e
   Branch: f63d9cf82ac09747349a73184a0b739d28781c4d
   CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
-  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Crashlytics: a989ef242b66605577a425733797f810bd2725eb
   DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
   ExpoKit: b322775eb089a18e60ddc2b785d00a0aa08ad316
   Fabric: bb495bb9a7a7677c6d03a1f8b83d95bc49b47e41
@@ -224,9 +241,10 @@ SPEC CHECKSUMS:
   lottie-ios: 836cdbba92f62f3c6a00e37a4ce485321fe317cf
   OneSignal: 95127bce89b9e495079e7205e3d47c88590b5750
   React: 43e97926f429d846050880666de1809e22dd5cc5
+  react-native-fbsdk: 8a738a123494ae9ba69482a5a8e88aa2108b8245
   react-native-onesignal: 799a5cb9639b476b0f939e1e90eae917711f8bff
   yoga: 55da126afc384965b96bff46652464373b330add
 
-PODFILE CHECKSUM: 3e22aba7c8db3079926084bed418f00aa0acd2ee
+PODFILE CHECKSUM: 67a694b98abd92090329752b7b0d3ee16e0fab73
 
 COCOAPODS: 1.4.0
