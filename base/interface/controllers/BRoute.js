@@ -10,6 +10,7 @@ Component BRoute.js
 // Import React Modules
 import React from 'react';
 import { Route } from 'react-router-native';
+import { connect } from 'react-redux';
 
 // Import App Logic
 import objectMerge from '../../logic/jsExtend/objectMerge';
@@ -18,12 +19,13 @@ import getPageStrings from '../../logic/strings/getPageStrings';
 export default BRoute = (props) => {
     const view = props.view;
     const allStrings = getPageStrings(view.name);
-    const stringsWithLanguageSet = allStrings.setLanguage(props.strings.language);
+    allStrings.setLanguage(props.strings.language);
     LogRoute(view.name);
     const propsWithStrings = objectMerge({strings: allStrings}, props);
+    const viewToRender = (props.mapStateToProps) ? connect(props.mapStateToProps)(view) : view;
     return(
-        <Route {...props} render={(routeProps) => {
-            return React.createElement(view, objectMerge(routeProps || null, propsWithStrings || null))
+        <Route render={(routeProps) => {
+            return React.createElement(viewToRender, objectMerge(routeProps || null, propsWithStrings || null))
           }}/>
     )
 }

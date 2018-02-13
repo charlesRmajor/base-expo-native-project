@@ -8,11 +8,19 @@
 */
 // Action Definitions
 export const addContactToAppPhonebook = (contact) => {return({type:'ADD_CONTACT_TO_APP_PHONEBOOK', contact: contact})};
+export const removeContactFromAppPhonebook = (contactIndex) => {return({type: 'REMOVE_CONTACT_FROM_APP_PHONEBOOK', contactIndex: contactIndex})}
 
-const appPhonebookReducer = (state = {}, action) => {
+export const getRemoveContactFromAppPhonebookWithDispatch = ({contactIndex, dispatcher}) => {return(() => {dispatcher && dispatcher(removeContactFromAppPhonebook(contactIndex))})}
+
+const appPhonebookReducer = (state = [], action) => {
+  const newState = state.slice();
   switch (action.type) {
     case addContactToAppPhonebook().type:
-      return Object.assign({}, state, action.contact)
+      newState.push(action.contact);
+      return newState
+    case removeContactFromAppPhonebook().type:
+      newState.splice(action.contactIndex,1);
+      return newState
   }
   return state
 }

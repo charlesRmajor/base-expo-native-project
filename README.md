@@ -281,6 +281,8 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 * add visual response to clicking on BButton
 
+* animated transitions: https://github.com/Traviskn/react-router-native-stack
+
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
         ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```

@@ -34,7 +34,8 @@ import AppLaunch from '../../logic/AppLaunchLogic.js';
 import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 
 // Import Other App UI Elements
-import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
+// import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
+import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
 
 class MainController extends React.Component {
     componentWillMount() {
@@ -56,12 +57,7 @@ class MainController extends React.Component {
         (<BController
             {...this.props}
             >
-            <BRoute
-                exact
-                path="/"
-                view={BettermentLabsLandingPage}
-                {...this.props}
-                />            
+            <BettermentLabsLandingContainer {...this.props} />
         </BController>)
 
             // readyToRender returns true if all store ... loading.essentialState items are true

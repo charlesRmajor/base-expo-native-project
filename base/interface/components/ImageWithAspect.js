@@ -6,7 +6,7 @@
 	Copyright © 2017 BettermentLabs. All rights reserved.
 */
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 import ResolveAssetSource from 'resolveAssetSource';
 
 export default class ImageWithAspect extends React.Component {
@@ -29,8 +29,8 @@ export default class ImageWithAspect extends React.Component {
 		newState.height = imageDims.height;
 		newState.aspectRatio = aspectRatio;
 
-		if (aspectRatio > 1.0) {
-			newState.heightStyle = (1/aspectRatio * 100 + '%') ;
+		if (aspectRatio < 1.0) {
+			newState.heightStyle = (1/aspectRatio * 100 + '%');
 		} else {
 			newState.widthStyle = (aspectRatio * 100 + '%');
 		}
@@ -41,25 +41,17 @@ export default class ImageWithAspect extends React.Component {
 
 	render() {
         const view =
-            (<View
-                style={{
-                        width: this.state.widthStyle,
-                        height: this.state.heightStyle,
-                        aspectRatio: this.state.aspectRatio,
-                        alignSelf: 'center'
-                    }}
-                >
-                {!(this.props.source == null || this.props.source == undefined) &&
+                (this.props.source == null || this.props.source == undefined) ? null :
                     <Image
                         style={{
-                            width: '100%',
-                            height: '100%',
-                        }}
+							width: this.state.widthStyle,
+							height: this.state.heightStyle,
+							aspectRatio: this.state.aspectRatio,
+							alignSelf: 'center',
+							}}
                         source={this.props.source}
                         resizeMode='contain'
                     />
-                }
-                </View>)
 		return (view)
 	}
 }

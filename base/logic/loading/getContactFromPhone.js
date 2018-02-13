@@ -15,8 +15,6 @@ import {getContactFromPhonesPhoneBook} from '../nativeBridge/nativePhoneBook';
 export default getContactFromPhone = (callback) => {
   getContactFromPhonesPhoneBook((error, contact) => {
     if (error==null) {
-      console.log("contact has made it back to manageContactsEmergencyContacts: ");
-      console.log(contact);
       const callbackResponse = {
         error: false,
         errorMessage: '',
