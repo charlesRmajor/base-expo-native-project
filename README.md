@@ -154,8 +154,22 @@ Native Modules's potential lack of existence must be guarded against. When calli
 [SECTION NEEDS TO BE WRITTEN]
 
 ## Other Notes
-* iOS Permissions:
+#### iOS Permissions:
     * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
+
+#### Callbacks:
+###### This code uses the following callback structure for function foo();
+```javascript
+const myCallback = (result) => {... do something with result};
+foo(myCallback);
+
+----------------------
+result is an object with the structure:
+{   error: bool,
+    errorMessage: string,
+    content: {type depends on function}
+}
+```
 
 # Project Structure
 * base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
@@ -202,12 +216,18 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
         * test (setup?)
 * Betterment Labs Code:
     * getting device contacts
+        * iOS: 
+            * added native code
+        * Android: 
+        * RN implementation:
     * in app purchases? (can we use the packages this was based on before?)
         * iOS: 
             * InAppUtils not kept up ... use our own version -- need to test
+            * Added to binary
+            * Need to test after uploading binary to app store
         * Android:
+            * 
 * publish to expo with screen that says it needs to be updated to whatever the person wants!!!
-
 
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
@@ -235,9 +255,12 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
     * nested hierarchies
     * standardize passing navigation links (redux state)
 * add instructions for cloning this repo, getting cocoapods, more detail using yarn, etc.
+    * using your own in app purchases
+    * stripping out un-needed code
 * add default fallbacks for styled components
 
-* change theme in app
+* change theme in app:
+    * add other themes
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)
@@ -253,6 +276,10 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
         * purchase
         * subscription
         * restore
+
+* add permissions tracking to redux/OneSignal/FB Analytics
+
+* add visual response to clicking on BButton
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?

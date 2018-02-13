@@ -7,6 +7,7 @@
 */
 
 // Import Store Files
-import setUserInfoSection from './setUserInfo';
+import setUserInfoSection from './userInfo';
+import setAppPhonebookSection from './appPhonebook';
 
-export default appStoreSections = Object.assign({}, setUserInfoSection);
+export default appStoreSections = Object.assign({}, setUserInfoSection, setAppPhonebookSection);

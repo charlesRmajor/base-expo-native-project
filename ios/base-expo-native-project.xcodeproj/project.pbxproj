@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		49523E114674674A69532960 /* libPods-base-expo-native-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C571661844272791833DF15 /* libPods-base-expo-native-project.a */; };
+		A71416332033464F00D4EBA0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71416322033464F00D4EBA0 /* StoreKit.framework */; };
+		A714163C203347F400D4EBA0 /* iosContactsManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A714163A203347F300D4EBA0 /* iosContactsManagerBridge.m */; };
+		A714163D203347F400D4EBA0 /* iosContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714163B203347F400D4EBA0 /* iosContactsManager.swift */; };
 		A7AB9B48202F99DF00C356DF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7B420D6202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7AB9B4F202F9EAC00C356DF /* PermissionsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */; };
 		A7AB9B52203247B800C356DF /* InAppPurchasesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B51203247B800C356DF /* InAppPurchasesModule.m */; };
@@ -56,6 +59,10 @@
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-base-expo-native-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-base-expo-native-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-base-expo-native-project/Pods-base-expo-native-project.debug.xcconfig"; sourceTree = "<group>"; };
 		5C571661844272791833DF15 /* libPods-base-expo-native-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-base-expo-native-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-base-expo-native-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-base-expo-native-project.release.xcconfig"; path = "Pods/Target Support Files/Pods-base-expo-native-project/Pods-base-expo-native-project.release.xcconfig"; sourceTree = "<group>"; };
+		A71416322033464F00D4EBA0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A7141639203347F300D4EBA0 /* safeonscene-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "safeonscene-Bridging-Header.h"; sourceTree = "<group>"; };
+		A714163A203347F300D4EBA0 /* iosContactsManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosContactsManagerBridge.m; sourceTree = "<group>"; };
+		A714163B203347F400D4EBA0 /* iosContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosContactsManager.swift; sourceTree = "<group>"; };
 		A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsModule.m; sourceTree = "<group>"; };
 		A7AB9B4E202F9EAC00C356DF /* PermissionsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsModule.h; sourceTree = "<group>"; };
 		A7AB9B50203247B800C356DF /* InAppPurchasesModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchasesModule.h; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49523E114674674A69532960 /* libPods-base-expo-native-project.a in Frameworks */,
+				A71416332033464F00D4EBA0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,7 @@
 		1A42804E64B7E9E0AB8B6799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A71416322033464F00D4EBA0 /* StoreKit.framework */,
 				A7B420C0202E3DA500D37537 /* libOneSignal.a */,
 				A7B420BA202E390100D37537 /* SystemConfiguration.framework */,
 				A7B420B8202E38FA00D37537 /* UIKit.framework */,
@@ -173,6 +182,9 @@
 				A7B420A6202E352800D37537 /* base-expo-native-project.entitlements */,
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
+				A714163B203347F400D4EBA0 /* iosContactsManager.swift */,
+				A714163A203347F300D4EBA0 /* iosContactsManagerBridge.m */,
+				A7141639203347F300D4EBA0 /* safeonscene-Bridging-Header.h */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
 				B563865B1DB96A5E00A0598C /* Supporting */,
 			);
@@ -270,8 +282,12 @@
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QGU4HX8P85;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -433,6 +449,8 @@
 				A7AB9B52203247B800C356DF /* InAppPurchasesModule.m in Sources */,
 				B56386611DB96A5E00A0598C /* main.m in Sources */,
 				A7AB9B552032486200C356DF /* SKProduct+StringPrice.m in Sources */,
+				A714163D203347F400D4EBA0 /* iosContactsManager.swift in Sources */,
+				A714163C203347F400D4EBA0 /* iosContactsManagerBridge.m in Sources */,
 				B56386491DB9693800A0598C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +623,7 @@
 			baseConfigurationReference = 2C1548D9E4CB1AEFA5CCAE6D /* Pods-base-expo-native-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "base-expo-native-project/base-expo-native-project.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QGU4HX8P85;
@@ -655,6 +674,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -664,6 +685,7 @@
 			baseConfigurationReference = A47FE4D7F70906B7DC8CE39B /* Pods-base-expo-native-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "base-expo-native-project/base-expo-native-project.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QGU4HX8P85;
@@ -714,6 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

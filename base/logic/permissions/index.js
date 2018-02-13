@@ -15,3 +15,4 @@ Component index.js
 import requestNotificationsPermissions from '../nativeBridge/permissions/notificationsPermissions';
 
 export const requestNotifications = (callback) => requestNotificationsPermissions(requestNotificationsPermissions);
+export const requestContacts = (callback) => {console.log('automatically requested when phone book is attempted to be accessed. Nothing done now.'); callback && callback(true)}

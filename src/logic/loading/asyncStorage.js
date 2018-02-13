@@ -12,7 +12,7 @@ import { AsyncStorage } from 'react-native';
 import {objectKeysToArray, objectValuesToArray, arrayOfArrayPairsToObject} from '../../../base/logic/jsExtend/objectArrayManipulation';
 
 // import App Logic
-import {setUserInfoTo} from '../store/setUserInfo';
+import {setUserInfoTo} from '../store/userInfo';
 
 // Load/Define Data Definitions
 const dateAppLastUsed = 'DATE_APP_LAST_USED';

@@ -79,4 +79,4 @@ const mapStateToProps = function(store) {
     return(stateToPropsReturn);
   }
   
-  export default connect(mapStateToProps)(MainController);
+export default connect(mapStateToProps)(MainController);
