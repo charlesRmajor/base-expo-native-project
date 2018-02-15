@@ -11,7 +11,6 @@
 		A71416332033464F00D4EBA0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71416322033464F00D4EBA0 /* StoreKit.framework */; };
 		A714163C203347F400D4EBA0 /* iosContactsManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A714163A203347F300D4EBA0 /* iosContactsManagerBridge.m */; };
 		A714163D203347F400D4EBA0 /* iosContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714163B203347F400D4EBA0 /* iosContactsManager.swift */; };
-		A7AB9B48202F99DF00C356DF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7B420D6202E3E4700D37537 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7AB9B4F202F9EAC00C356DF /* PermissionsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B4D202F9EAC00C356DF /* PermissionsModule.m */; };
 		A7AB9B52203247B800C356DF /* InAppPurchasesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B51203247B800C356DF /* InAppPurchasesModule.m */; };
 		A7AB9B552032486200C356DF /* SKProduct+StringPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB9B542032486100C356DF /* SKProduct+StringPrice.m */; };
@@ -30,30 +29,6 @@
 		B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047E1F3A684600E91581 /* shell-app-manifest.json */; };
 		B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047F1F3A684600E91581 /* shell-app.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A7AB9B49202F99DF00C356DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B56386391DB9693800A0598C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7B420D5202E3E4700D37537;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A7AB9B4B202F99DF00C356DF /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				A7AB9B48202F99DF00C356DF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-base-expo-native-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-base-expo-native-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-base-expo-native-project/Pods-base-expo-native-project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -253,12 +228,10 @@
 				B563863F1DB9693800A0598C /* Resources */,
 				8D34C7FE3D99F20E5EA1B18A /* [CP] Embed Pods Frameworks */,
 				AA38385B7D8D0854176B72FC /* [CP] Copy Pods Resources */,
-				A7AB9B4B202F99DF00C356DF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A7AB9B4A202F99DF00C356DF /* PBXTargetDependency */,
 			);
 			name = "base-expo-native-project";
 			productName = "base-expo-native-project";
@@ -457,14 +430,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A7AB9B4A202F99DF00C356DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7B420D5202E3E4700D37537 /* OneSignalNotificationServiceExtension */;
-			targetProxy = A7AB9B49202F99DF00C356DF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		A7B420E0202E3E4700D37537 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -473,12 +438,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QGU4HX8P85;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,6 +452,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,12 +466,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QGU4HX8P85;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-onesignal/ios/**";
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BettermentLabs.base-expo-native-project.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

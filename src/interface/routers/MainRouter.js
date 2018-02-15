@@ -1,14 +1,14 @@
 /*
-  MainController.js
+  MainRouter.js
     CanonicalAppName
     Created by BettermentLabs. 
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-Component MainController.js
+Component MainRouter.js
   Description:  main app controller
   Essentials:
           AppLaunchLogic.js   ->  runs in componentWillMount()
-          MainController.js   ->  return in render()
+          MainRouter.js   ->  return in render()
 
   Inputs: N/A
   Outputs: N/A (your app on the screen!)
@@ -23,8 +23,8 @@ import { connect } from 'react-redux';
 // Import Other Node Modules
 
 // Import Core Project Modules
-import BController from '../../../base/interface/controllers/BController';
-import BRoute from '../../../base/interface/controllers/BRoute';
+import BController from '../../../base/interface/routers/BRouter';
+import BRoute from '../../../base/interface/routers/BRoute';
 import {defaultInterfacePropsFrom, allStoreSections} from '../../../base/logic/store';
 import {addPropsRequestFromStore} from '../../../base/logic/store/helpers';
 
@@ -37,7 +37,7 @@ import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 // import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
 import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
 
-class MainController extends React.Component {
+class MainRouter extends React.Component {
     componentWillMount() {
         if (this.props.dispatch) {AppLaunch(this.props.dispatch)};
     }
@@ -51,7 +51,7 @@ class MainController extends React.Component {
     }
     
     render() {
-        // console.log("MainController this.props");
+        // console.log("MainRouter this.props");
         // console.log(this.props);
         const ViewRouter =
         (<BController
@@ -75,4 +75,4 @@ const mapStateToProps = function(store) {
     return(stateToPropsReturn);
   }
   
-export default connect(mapStateToProps)(MainController);
+export default connect(mapStateToProps)(MainRouter);

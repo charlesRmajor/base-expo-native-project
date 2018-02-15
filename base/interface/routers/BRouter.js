@@ -1,10 +1,10 @@
 /*
-  BController.js
+  BRouter.js
     CanonicalAppName
     Created by BettermentLabs. 
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-Component BController.js
+Component BRouter.js
   Description:  base controller to componentize
 */
 // IMPORTS
@@ -17,7 +17,7 @@ import { NativeRouter, Switch, AndroidBackButton } from 'react-router-native';
 // Import App Logic
 import {objectMerge} from '../../logic/jsExtend/objectMerge';
 
-export default BController = (props) => {
+export default BRouter = (props) => {
     const statusBarStyle = (props && props.styles && props.styles.statusBarStyle) ? props.styles.statusBarStyle : "light-content";
     return (
         (<NativeRouter>

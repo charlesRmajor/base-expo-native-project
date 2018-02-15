@@ -37,7 +37,6 @@ const GeneralText = styled.Text`height: 20px;
     fontSize: ${({theme}) => theme.fontSizes.small}`
 
 export default getContactCard = ({contact, index, removeContactFromPhonesPhoneBook}) => {
-    console.log("getContactCard contact "+contact);
     return(
         <TouchableWithoutFeedback
             key={index}

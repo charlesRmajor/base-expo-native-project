@@ -26,6 +26,8 @@ export const setAppLanguageTo = (language) => {return ({type: 'SET_APP_LANGUAGE'
 export const setAppStringsTo = (strings) => {return ({type: 'SET_APP_STRINGS', strings: strings})};
 export const setAppImagesTo = (images) => {return ({type: 'SET_APP_IMAGES', images: images})};
 export const setAppStylesTo = (styles) => {return ({type: 'SET_APP_STYLES', styles: styles})};
+export const setAppAvailablePurchasesTo = (purchases) => {return ({type: 'SET_AVAILABLE_PURCHASES', purchases: purchases})};
+export const setAppAvailableSubscriptionsTo = (subscriptions) => {return ({type: 'SET_AVAILABLE_SUBSCRIPTIONS', subscriptions: subscriptions})};
 
 const stylesReducers = (state = {}, action) => {
   switch (action.type) {
@@ -53,17 +55,34 @@ const stringsReducer = (state = {}, action) => {
   return state
 }
 
+const defaultMarketState = {
+  availablePurchases : [],
+  availableSubscriptions: []
+}
+
+const marketReducer = (state = defaultMarketState, action) => {
+  switch (action.type) {
+    case setAppAvailablePurchasesTo().type:
+      return Object.assign({}, state, {purchases: action.purchases})
+    case setAppAvailableSubscriptionsTo().type:
+      return Object.assign({}, state, {subscriptions: action.subscriptions})
+  }
+  return state
+}
+
 // export default props to be loaded for all views
 export const loading = {name: 'loadingState', reducer: loadingReducer};
 export const styles = {name: 'stylesState', reducer: stylesReducers};
 export const images = {name: 'imageState', reducer: imagesReducer};
 export const strings = {name: 'stringsState', reducer: stringsReducer};
+export const market = {name: 'marketState', reducer: marketReducer};
 
 const essentialStoreSections ={
   loading: loading,
   styles: styles,
   images: images,
   strings: strings,
+  market: market
 }
 
 export const allStoreSections = Object.assign({}, essentialStoreSections, (appStoreSections ? appStoreSections : {}));

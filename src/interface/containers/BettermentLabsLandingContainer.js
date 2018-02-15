@@ -12,7 +12,7 @@ Component BettermentLabsLandingContainer.js
 import React from 'react';
 
 // Import Core Project Modules
-import BRoute from '../../../base/interface/controllers/BRoute';
+import BRoute from '../../../base/interface/routers/BRoute';
 
 // Import App Logic
 import {appPhonebook} from '../../logic/store/appPhonebook';
@@ -21,7 +21,7 @@ import saveContactFromPhonesPhoneBook from '../../logic/loading/saveContactFromP
 import {getRemoveContactFromAppPhonebookWithDispatch} from '../../logic/store/appPhonebook';
 
 // Import Other App UI Elements
-import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
+import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
 
 export default BettermentLabsLandingContainer = (props) => {
     console.log("rendering BettermentLabsLandingContainer");

@@ -188,8 +188,8 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 ### Strings
 * Strings (for localization) are handled on a page (or mainView) level.
 * See src/logic/strings for use:
-    * make new strings files for each page
-    * these then need to be registered in appStringsFiles.js to be used by your pages
+    * make new strings files for each page (format: strings_PageName.js)
+    * these then need to be registered in appStringsFiles.js to be used by your pages (PageName: require('./strings_PageName')
     * our router (BRoute) automatically calls the strings page registered by appStringsFiles.js (name must match page component name that is put in BRoute)
     * see BettermentLabsLandingPage for example of how to use these strings
 
@@ -216,10 +216,7 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
         * test (setup?)
 * Betterment Labs Code:
     * getting device contacts
-        * iOS: 
-            * added native code
-        * Android: 
-        * RN implementation:
+        * Android native module still needed
     * in app purchases? (can we use the packages this was based on before?)
         * iOS: 
             * InAppUtils not kept up ... use our own version -- need to test

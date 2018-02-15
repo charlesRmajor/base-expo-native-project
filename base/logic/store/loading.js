@@ -14,6 +14,7 @@ import { combineReducers } from 'redux';
 // Action Definitions
 export const fontsDoneLoading = {type: 'FONTS_DONE_LOADING'};
 export const imagesDoneLoading = {type: 'IMAGES_DONE_LOADING'};
+export const marketDoneLoading = {type: 'MARKET_DONE_LOADING'};
 export const appLaunchRan = {type: 'APP_LAUNCH_RAN'};
 
 export const completeAppSubscriptions = {type: 'COMPLETE_APP_SUBSCRIPTIONS'};
@@ -43,7 +44,9 @@ const nonEssentialLoadingReducer = (state, action) => {
     }
     switch(action.type) {
         case imagesDoneLoading.type:
-        return Object.assign({}, state, {imagesLoaded: true})
+            return Object.assign({}, state, {imagesLoaded: true})
+        case marketDoneLoading.type:
+            return Object.assign({}, state, {marketLoaded: true})
     }
     return state
 }
