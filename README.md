@@ -4,48 +4,118 @@ www.bettermentlabs.com
 # base-expo-native-project
 Betterment Labs's starter project with expo / native dual development
 
-# Version Info
-This was built with
-* Expo: 25.0.0
-* React-Native: 25.0.0
-* React: 16.2.0
-* Redux: 3.7.2
-* React-Redux: 5.0.6
-* React-Router-Native: 4.2.0
-* Redux-DevTools: 3.4.1
-* react-native-onesignal: 3.0.9
-* Styled-Components: 3.1.6
-* Axios: 0.17.1
+# TUTORIAL
+Learn how to use all essential elements of this project by following our tutorial to add a location tracker. In this tutorial, you will learn how to:
+1. Add a new Redux Store to your app
+2. Effectively use this redux store
+3. Create a new dumb component & dumb view
+4. Create a new container to connect your dumb view to the new redux store
+5. Create a new router & connect it to MainRouter.js
 
-Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
+#### Before beginning the tutorial, go through "Project Setup Instructions" & "How to Use with Expo" below
+### Tutorial Link: https://github.com/charlesRmajor/base-expo-native-project/blob/master/TUTORIAL.md
 
-## Updates to this Base Project
+# Overview
+## This README:
+* Essential Glossary
+* Base Project Use
+* Project Structure - how this project is organized
+* Project Setup Instructions - essential setup before doing anything else. Enough to use Expo for project development.
+* Native Development Setup Instructions - needed before developing any new native code or building native apps or publishing to Expo
+* Upgrading Packages - instructions for updating yarn/npm packages
+* Add Additional Native Code/Modules - how to add new native code/modules
+* Troubleshooting
+* Detailed Documentation
+
+##### NOTE: if you want to use this base project with a project that already exists, see "Freeform Notes on Incorporating into Already Existing Projects" section at bottom of this README for some guidance.
+
+### Essential Glossary:
+* dumb component: contains only styling, no logic. Another component or container must tell it what it's displaying/doing.
+* container: (like a controller or viewController in a MVC model) connects dumb view components to data structures & logic
+
+# Base Project Use
+
+## Interface:
+### Building a New Router - see Tutorial from link above
+### Building a New Dumb View - see Tutorial from link above
+### Building a New Smart (connected) Container - see Tutorial from link above
+
+### Theming
+* app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use. And src/interface/mainViews/BettermentLabsLandingPage.js for implementation.
+
+### Styled Components
+* see src/interface/mainViews/BettermentLabsLandingPage.js for example of using styled components with our app themes.
+
+### Strings
+* Strings (for localization) are handled on a page (or mainView) level.
+* See src/logic/strings for use:
+    * make new strings files for each page (format: strings_PageName.js)
+    * these then need to be registered in appStringsFiles.js to be used by your pages (PageName: require('./strings_PageName')
+    * our router (BRoute) automatically calls the strings page registered by appStringsFiles.js (name must match page component name that is put in BRoute)
+    * see BettermentLabsLandingPage for example of how to use these strings
+
+### Redux Store
+* manage app state
+    * automatically uses redux store to manage app theme & strings
+* see src/logic/store/appStoreSections.js && .../setUserInfo.js for template on how to add new stores and src/logic/loading/asyncStorage.js for how to use this implementation
+
+### asyncStorage
+* see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
+
+## Project Structure
+###### see full project structure for detailed notes: https://github.com/charlesRmajor/base-expo-native-project/blob/master/FullProjectDirectoryStructure.md
+* base/ & src/ folders contain all project javascript & react-native code (beyond App.js as the app launcher — don't use app.js)
+    * #### base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
+        * src/AppAssets.js - this is where path info about static app assets (images, videos, audio files, etc -- not fonts) goes
+    * #### src/ — this is where your app lives.
+    * ### both base/ & src/ folders have the following structure:
+        * #### interface/ has all user interface (UX) code
+            * ##### components: for simple dumb components (like buttons)
+            * ##### containers: connect dumb view components to data structures & logic 
+            * ##### dumbViews: full views (views that could conceivably be an entire page) - dumb, with no logic
+            * ##### routers: components that keep track of the full page views and navigation
+            * ##### theming: code related to theming
+                * ###### fontSets: see ChivoFontSet.js for example on how to add new font sets
+            * src/.../ColorPalette.js - example app color palette. Don't change. Make a new one with same format & link to ThemeColors.js
+            * src/.../ThemeColors.js - tells theme how to use the ColorPalette
+            * src/.../ThemeFont.js - set the current Theme's font
+        * #### logic/ has all non-interface app logic
+            * ##### jsExtend: javascript-only functions (don't use any react/react-native)
+            * ##### loading: functions that assist with loading the app (setting up redux store, app themes, fonts, etc)
+            * ##### nativeBridge: functions that link to the native code (see full directory structure doc linked above for details on native code)
+            * ##### permissions: functions that assist with getting permisison from user for using app features
+            * ##### store: redux store functions
+            * ##### strings: functions for loading & setting app strings
+            * base/.../AppLaunchLogic.js - add any additional initial app launch loading that is needed
+            * base/.../AppSubscriptions.js - add (and remove) any subscriptions needed by the whole app (such as app notifications)
+        * src/interface/routers/MainRouter.js is the main app insertion point
+        * MainRouter also gives an example of how BRouter can be used to create new routers
+
+When building new pages, I recommend you copy src/interface/mainViews/baseMainView.js and go from there -- just make sure to change the name of the view component & file!!!
+
+### Updates to this Base Project
 If you find yourself wanting to change any files outside of src/ or the app.json.* files, ask yourself if you **REALLY** need to. If you do, it's likely something that should be changed about this base project — please put in a pull request for the change, or open an issue, or send me a note about the change.
-
-# How To Use This File
-* Note: First follow "Project Setup Instructions" below.
-    * If you (personally) are only using Expo, you only need to follow these instructions.
-* If you are going to publish to Expo, you also need to follow the bolded instructions in "Native Development Instructions"
-
-## Use with Expo
-* Before using with Expo, follow "Project Setup Instructions" below
-* Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
-
-## Use with Native Builds
-* Before using with Native Builds, follow "Native Development Instructions" below
-* Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
 ## Project Setup Instructions
 1. Download
 2. files in src/ are basic templates for you to use to build your app on. Pay attention to the (few) times they directly call base/ code. It's important.
 3. Get Packages
     1. from home directory, run 'yarn'
-4. Open!
+4. setup for Expo or Native use (see sections below -- if you are developing for Native, you also need to follow directions under "Native Development Setup Instructions" below)
+5. Open!
     1. XDE
         1. Open
         2. Load project (this root directory)
 
-## Native Development Instructions
+### How to Use with Expo
+* Before using with Expo, follow "Project Setup Instructions" below
+* Copy "app.json.expo" and rename to "app.json" (if you already have an app.json, it can be deleted)
+
+### How to Use with Native Builds
+* Before using with Native Builds, follow "Native Development Instructions" below
+* Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
+
+## Native Development Setup Instructions
 Only the person on your project responsible for native code development needs to worry about this section. Once your project has been setup by using these instructions once, you should be good to go!
 
 Before Publishing to Expo (**steps in bold**) or Developing Native Apps for App Stores
@@ -136,7 +206,10 @@ Some native features require these steps too (like notifications, analytics)
 * iOS
     * from ios/ directory, run 'pod install && pod update' 
 
-## How to protect against native elements in expo development
+# Add Additional Native Code/Modules
+[SECTION NEEDS TO BE WRITTEN]
+
+## NOTE: How to protect against native elements in expo development
 Native Modules's potential lack of existence must be guarded against. When calling Native Modules, use the following check to fail gracefully.
 ```javascript
     if (NativeModules.MyModule != undefined) {
@@ -149,14 +222,19 @@ Native Modules's potential lack of existence must be guarded against. When calli
         [... what to do if MyModule is not found ...]
     }
 ```
-
-# Notes On Adding Additional Native Code/Modules
-[SECTION NEEDS TO BE WRITTEN]
-
-## Other Notes
-#### iOS Permissions:
+## iOS Permissions:
     * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
 
+# Troubleshooting
+## iOS/XCode
+* If XCode can't find the "Pods" project:
+    1. make sure you opened the *.xcworkspace file
+    2. if you did, close it, try opening the *.xcodeproj file. Ignore all the errors. But let XCode do any syncing it needs to do.
+    3. Then close and open the *.xcworkspace  file again.
+* General Troubleshooting Suggestions:
+    * clean project (get instructions from past build instructions file)
+
+# Detailed Documentation
 #### Callbacks:
 ###### This code uses the following callback structure for function foo();
 ```javascript
@@ -171,41 +249,23 @@ result is an object with the structure:
 }
 ```
 
-# Project Structure
-* base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
-* src/ — this is where your app lives. 
-    * src/interface/controllers/MainController.js is the main app insertion point
-    * MainController also gives an example of how BController can be used to create new controllers
+### Version Info
+This was built with
+* Expo: 25.0.0
+* React-Native: 25.0.0
+* React: 16.2.0
+* Redux: 3.7.2
+* React-Redux: 5.0.6
+* React-Router-Native: 4.2.0
+* Redux-DevTools: 3.4.1
+* react-native-onesignal: 3.0.9
+* Styled-Components: 3.1.6
+* Axios: 0.17.1
 
-When building new pages, I recommend you copy src/interface/mainViews/baseMainView.js and go from there -- just make sure to change the name of the view component & file!!!
-
-### Theming
-* app theme is set in src/interface/theming: ThemeColors.js & ThemeFont.js. See these examples for how to use. And src/interface/mainViews/BettermentLabsLandingPage.js for implementation.
-
-### Styled Components
-* see src/interface/mainViews/BettermentLabsLandingPage.js for example of using styled components with our app themes.
-
-### Strings
-* Strings (for localization) are handled on a page (or mainView) level.
-* See src/logic/strings for use:
-    * make new strings files for each page (format: strings_PageName.js)
-    * these then need to be registered in appStringsFiles.js to be used by your pages (PageName: require('./strings_PageName')
-    * our router (BRoute) automatically calls the strings page registered by appStringsFiles.js (name must match page component name that is put in BRoute)
-    * see BettermentLabsLandingPage for example of how to use these strings
-
-### Redux Store
-* manage app state
-    * automatically uses redux store to manage app theme & strings
-* see src/logic/store/appStoreSections.js && .../setUserInfo.js for template on how to add new stores and src/logic/loading/asyncStorage.js for how to use this implementation
-
-### asyncStorage
-* see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
-
-# Other Packages To Add?
-* redux-thunk
-* react-native-firebase
+Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
 # To-Do's
+### BETTER ORGANIZE THIS TO-DO LIST
 * base native projects:
     * react-native-onesignal
         *  RN integration
@@ -225,6 +285,10 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
         * Android:
             * 
 * publish to expo with screen that says it needs to be updated to whatever the person wants!!!
+
+### Other Packages To Add?
+* redux-thunk
+* react-native-firebase
 
 * should essential logic of MainController be abstracted away from app insertion point?
 * get working with Expo & native at same time
@@ -280,6 +344,8 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 
 * animated transitions: https://github.com/Traviskn/react-router-native-stack
 
+* add OneSignal subscriptions to AppSubscriptions.js
+
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
         ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```
@@ -289,12 +355,3 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 * and use src/interface/controllers/MainController.js as the main app insertion point
 * kind of what App.js or index.js might have been before … but already has the controller bit and a really basic template for a router
 * so page navigation stuff may need to be updated. You probably can just drop it in as is. But we’ll need to use my BRoute for analytics, strings, and themes
-
-# Trouble Shooting
-## iOS/XCode
-* If XCode can't find the "Pods" project:
-    1. make sure you opened the *.xcworkspace file
-    2. if you did, close it, try opening the *.xcodeproj file. Ignore all the errors. But let XCode do any syncing it needs to do.
-    3. Then close and open the *.xcworkspace  file again.
-* General Troubleshooting Suggestions:
-    * clean project (get instructions from past build instructions file)
