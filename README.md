@@ -17,23 +17,24 @@ Learn how to use all essential elements of this project by following our tutoria
 
 # Overview
 ## This README:
-* Essential Glossary
-* Base Project Use
-* Project Structure - how this project is organized
-* Project Setup Instructions - essential setup before doing anything else. Enough to use Expo for project development.
-* Native Development Setup Instructions - needed before developing any new native code or building native apps or publishing to Expo
-* Upgrading Packages - instructions for updating yarn/npm packages
-* Add Additional Native Code/Modules - how to add new native code/modules
-* Troubleshooting
-* Detailed Documentation
+1. Essential Glossary
+2. Base Project Use
+3. Project Structure - how this project is organized
+4. Project Setup Instructions - essential setup before doing anything else. Enough to use Expo for project development.
+5. Native Development Setup Instructions - needed before developing any new native code or building native apps or publishing to Expo
+6. Upgrading Packages - instructions for updating yarn/npm packages
+7. Add Additional Native Code/Modules - how to add new native code/modules
+8. Troubleshooting
+9. Detailed Documentation
+10. TO-DO's: what we're still working on for this project
 
 ##### NOTE: if you want to use this base project with a project that already exists, see "Freeform Notes on Incorporating into Already Existing Projects" section at bottom of this README for some guidance.
 
-### Essential Glossary:
+### 1. Essential Glossary:
 * dumb component: contains only styling, no logic. Another component or container must tell it what it's displaying/doing.
 * container: (like a controller or viewController in a MVC model) connects dumb view components to data structures & logic
 
-# Base Project Use
+# 2. Base Project Use
 
 ## Interface:
 ### Building a New Router - see Tutorial from link above
@@ -62,7 +63,7 @@ Learn how to use all essential elements of this project by following our tutoria
 ### asyncStorage
 * see src/logic/loading/asyncStorage.js for a template on how to use asyncStorage with Redux Store
 
-## Project Structure
+## 3. Project Structure
 ###### see full project structure for detailed notes: https://github.com/charlesRmajor/base-expo-native-project/blob/master/FullProjectDirectoryStructure.md
 * base/ & src/ folders contain all project javascript & react-native code (beyond App.js as the app launcher — don't use app.js)
     * #### base/ — contains essential Betterment Labs code for theming, strings, redux store management, and native modules integration
@@ -96,7 +97,7 @@ When building new pages, I recommend you copy src/interface/mainViews/baseMainVi
 ### Updates to this Base Project
 If you find yourself wanting to change any files outside of src/ or the app.json.* files, ask yourself if you **REALLY** need to. If you do, it's likely something that should be changed about this base project — please put in a pull request for the change, or open an issue, or send me a note about the change.
 
-## Project Setup Instructions
+## 4. Project Setup Instructions
 1. Download
 2. files in src/ are basic templates for you to use to build your app on. Pay attention to the (few) times they directly call base/ code. It's important.
 3. Get Packages
@@ -115,7 +116,7 @@ If you find yourself wanting to change any files outside of src/ or the app.json
 * Before using with Native Builds, follow "Native Development Instructions" below
 * Copy "app.json.native" and rename to "app.json" (if you already have an app.json, it can be deleted)
 
-## Native Development Setup Instructions
+## 5. Native Development Setup Instructions
 Only the person on your project responsible for native code development needs to worry about this section. Once your project has been setup by using these instructions once, you should be good to go!
 
 Before Publishing to Expo (**steps in bold**) or Developing Native Apps for App Stores
@@ -196,7 +197,7 @@ Some native features require these steps too (like notifications, analytics)
         3. run!
 3. For Google Play Services, including Firebase & Android Notifications, you need to update Google Play Services (see section in *Upgrading Packages* below)
 
-## Upgrading Packages
+## 6. Upgrading Packages
 * Android
     * Update Google Play Services:
         1. Higher versions of Google Play Services require a google-services.json file: https://developers.google.com/android/guides/google-services-plugin
@@ -206,7 +207,7 @@ Some native features require these steps too (like notifications, analytics)
 * iOS
     * from ios/ directory, run 'pod install && pod update' 
 
-# Add Additional Native Code/Modules
+# 7. Add Additional Native Code/Modules
 [SECTION NEEDS TO BE WRITTEN]
 
 ## NOTE: How to protect against native elements in expo development
@@ -225,7 +226,7 @@ Native Modules's potential lack of existence must be guarded against. When calli
 ## iOS Permissions:
     * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
 
-# Troubleshooting
+# 8. Troubleshooting
 ## iOS/XCode
 * If XCode can't find the "Pods" project:
     1. make sure you opened the *.xcworkspace file
@@ -234,7 +235,7 @@ Native Modules's potential lack of existence must be guarded against. When calli
 * General Troubleshooting Suggestions:
     * clean project (get instructions from past build instructions file)
 
-# Detailed Documentation
+# 9. Detailed Documentation
 #### Callbacks:
 ###### This code uses the following callback structure for function foo();
 ```javascript
@@ -264,7 +265,7 @@ This was built with
 
 Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
-# To-Do's
+# 10. To-Do's
 ### BETTER ORGANIZE THIS TO-DO LIST
 * base native projects:
     * react-native-onesignal
