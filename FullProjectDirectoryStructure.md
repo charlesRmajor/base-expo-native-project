@@ -28,7 +28,7 @@ This is for all non-server/database code, focused on React Native
 
     * More project parameters
 
-### android/
+* ### android/
 
     * (REACT-NATIVE ONLY)
 
@@ -40,7 +40,7 @@ This is for all non-server/database code, focused on React Native
 
     * Android build (gradle) files
 
-### assets/
+* ### assets/
 
     * Project assets
 
@@ -56,7 +56,7 @@ This is for all non-server/database code, focused on React Native
 
         * Project videos
 
-### ios/
+* ### ios/
 
     * (REACT-NATIVE ONLY)
 
@@ -76,11 +76,11 @@ This is for all non-server/database code, focused on React Native
 
         * Dependencies installed by cocoapods (like yarn but for iOS)
 
-### node_modules/
+* ### node_modules/
 
     * Yarn adds this when you add modules. Make sure to do so from the client/* or home/* directory
 
-### src/ && base/
+* ### src/ && base/
 
     * ##### src/ is where you put your app code
 
