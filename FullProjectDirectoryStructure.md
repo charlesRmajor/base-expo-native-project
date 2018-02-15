@@ -1,25 +1,15 @@
 This is for all non-server/database code, focused on React Native
 
 ## Home/client/*
-
 * Project code
-
 * App.js
-
     * Project entry point
-
     * Calls essential lifecycle methods
-
     * Calls AppLaunch (AppLaunchLogic.js) in componentWillMount
-
         * Callback function that waits for elements necessary for launch before render
-
     * Calls AppSubscribe (AppSubscriptions.js) in componentDidMount
-
     * Calls AppUnSubscribe (AppSubscriptions.js) in componentWillUnmount 
-
     * Renders MainController.js
-
 * app.json
 
     * Project parameters
