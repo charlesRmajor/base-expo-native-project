@@ -17,54 +17,54 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
 #### Before beginning the tutorial, go through "Project Setup Instructions" & "How to Use with Expo" from this project's README: https://github.com/charlesRmajor/base-expo-native-project/blob/master/README.md
 
 # 1. Add a new Redux Store to your app
-    1. Create & setup new store file:
-        1. in src/logic/store/, create your file: "userLocation.js"
-        2. use userInfo.js as a template for this file
-        3. create comment header
-        4. NOTE: user's location consists of two properties: latitude and longitude
-        5. You'll need action definitions like the following:
-        ```javascript
-            export const setUserLongitudeTo = (longitude) => {return({type:'SET_USER_LONGITUDE_TO', longitude: longitude})};
-            export const setUserLatitudeTo = (latitude) => {return({type:'SET_USER_LATITUDE_TO', latitude: latitude})};
-        ```
-        6. since this part of our redux store has definite properties, we will want to declare their default values (in this case, null - we have no location meaning without getting some location from the user's device):
-        ```javascript
-            const defaultLocationState = {longitude: null, latitude: null};
-        ```
-        7. then you'll use these actions to create your reducer function (note use of default state):
-        ```javascript
-            const userLocationReducer = (state = defaultLocationState, action) => {
-            switch (action.type) {
-                case setUserLongitudeTo().type:
-                    return Object.assign({}, state, {longitude: action.longitude})
-                case setUserLatitudeTo().type:
-                    return Object.assign({}, state, {latitude: action.latitude})
-                }
-            return state
+1. Create & setup new store file:
+    1. in src/logic/store/, create your file: "userLocation.js"
+    2. use userInfo.js as a template for this file
+    3. create comment header
+    4. NOTE: user's location consists of two properties: latitude and longitude
+    5. You'll need action definitions like the following:
+    ```javascript
+        export const setUserLongitudeTo = (longitude) => {return({type:'SET_USER_LONGITUDE_TO', longitude: longitude})};
+        export const setUserLatitudeTo = (latitude) => {return({type:'SET_USER_LATITUDE_TO', latitude: latitude})};
+    ```
+    6. since this part of our redux store has definite properties, we will want to declare their default values (in this case, null - we have no location meaning without getting some location from the user's device):
+    ```javascript
+        const defaultLocationState = {longitude: null, latitude: null};
+    ```
+    7. then you'll use these actions to create your reducer function (note use of default state):
+    ```javascript
+        const userLocationReducer = (state = defaultLocationState, action) => {
+        switch (action.type) {
+            case setUserLongitudeTo().type:
+                return Object.assign({}, state, {longitude: action.longitude})
+            case setUserLatitudeTo().type:
+                return Object.assign({}, state, {latitude: action.latitude})
             }
-        ```
-        8. This part of the store now needs to be exported in this project's format to be added to the store correctly:
-        ```javascript
-            // export default props to be loaded for all views
-            export const userLocation = {name: 'userLocationState', reducer: userLocationReducer};
+        return state
+        }
+    ```
+    8. This part of the store now needs to be exported in this project's format to be added to the store correctly:
+    ```javascript
+        // export default props to be loaded for all views
+        export const userLocation = {name: 'userLocationState', reducer: userLocationReducer};
 
-            export default userLocationSection = {
-                userLocation: userLocation
-            }
-        ```
-        9. Save your userLocation.js!
-    2. Import your new store file into your app:
-        1. in src/logic/store/, open appStoreSections.js
-        2. Use the format there to import your userLocation store
-        3. When you are finished, your appStoreSections.js file should look like this (not including comment header):
-        ```javascript
-            // Import Store Files
-            import setUserInfoSection from './userInfo';
-            import setAppPhonebookSection from './appPhonebook';
-            import userLocationSection from './userLocation';
+        export default userLocationSection = {
+            userLocation: userLocation
+        }
+    ```
+    9. Save your userLocation.js!
+2. Import your new store file into your app:
+    1. in src/logic/store/, open appStoreSections.js
+    2. Use the format there to import your userLocation store
+    3. When you are finished, your appStoreSections.js file should look like this (not including comment header):
+    ```javascript
+        // Import Store Files
+        import setUserInfoSection from './userInfo';
+        import setAppPhonebookSection from './appPhonebook';
+        import userLocationSection from './userLocation';
 
-            export default appStoreSections = Object.assign({}, setUserInfoSection, setAppPhonebookSection, userLocationSection);
-        ```
+        export default appStoreSections = Object.assign({}, setUserInfoSection, setAppPhonebookSection, userLocationSection);
+    ```
 
 # 2. Effectively use this redux store
 
