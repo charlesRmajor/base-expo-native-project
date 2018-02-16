@@ -31,6 +31,8 @@ export const updateStoreWithCurrentLocation = (dispatch) => {
     // then we'll make our callback funtions
     const callbackFunc = (result) => {
         if (result.error) {
+            // we still need to tell our store that we're no longer checking for the location
+            dispatch && dispatch(setDeviceIsNotFetchingLocation);            
             console.log("Failed to get device location with error: "+result.errorMessage);
         } else {
             const content = result.content;
