@@ -1,11 +1,10 @@
 # TUTORIAL
 Learn how to use all essential elements of this project by following our tutorial to add a location tracker. In this tutorial, you will learn how to:
 1. Add a new Redux Store to your app
-2. Effectively use this redux store
-3. Create a new dumb component
-4. Create a new container to connect your dumb view to the new redux store
-5. Setup Location Services & Redux Store
-6. Track Location On New Page
+2. Create a new dumb component
+3. Create a new container to connect your dumb view to the new redux store
+4. Setup Location Services & Redux Store
+5. Track Location On New Page
 
 6. Create a new router & connect it to MainRouter.js
 7. Bonus: create a new page
@@ -66,10 +65,7 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         export default appStoreSections = Object.assign({}, setUserInfoSection, setAppPhonebookSection, userLocationSection);
     ```
 
-# 2. Effectively use this redux store
-
-
-# 3. Create a new dumb component
+# 2. Create a new dumb component
 1. Our app will start by simply displaying the user's location instead of the current banner
     1. So let's create a new component that will display this nicely. We'll want it to look something like:
     ```
@@ -213,7 +209,7 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
             <RowSection><Label>Longitude:</Label><ValueLabel>120.123</ValueLabel></RowSection>
         ```
 
-# 4. Create a new container to connect your dumb view to the new redux store
+# 3. Create a new container to connect your dumb view to the new redux store
     1. Now we have to think about how we're going to wire up our dumb component to the location information saved in our store.
         * the way to approach this is to ask what the highest level that needs access to this data is (is it only a single component? Or will several components on the page need access to it?)
         * for our location-info header, only that header itself needs to access the location info
@@ -273,7 +269,7 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         ```
         4. If you haven't wired up the "getting location" side of things, you can test this integration by changing your default location in src/logic/store/userLocation.js and verifying that the values you give show up!
 
-# 5. Setup Location Services & Redux Store
+# 4. Setup Location Services & Redux Store
     1. Add button string to strings_BettermentLabsLandingPage
     2. Helper function & redux integration. Open src/logic/store/userLocation.js
         1. We will now set the store option of "deviceIsGettingLocation". This will make sure we only call our location getter if it's not currently running. This structure is an excellent use of redux to ensure that async functions don't pile up.
@@ -375,7 +371,7 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         ```
         You should be able to see your new button [2.png] and clicking on it should update the location in the header! [3.png]
 
-# 6. Track Location On New Page
+# 5. Track Location On New Page
 
 
 ### Questions:
