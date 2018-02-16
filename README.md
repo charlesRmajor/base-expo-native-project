@@ -350,6 +350,8 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 
 * check issues with getting permissions for OneSignal (iOS)
 
+* fix app icons -- and add instructions for updating icons (XCode & Android Studio)
+
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
         ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```
