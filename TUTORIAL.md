@@ -210,166 +210,166 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         ```
 
 # 3. Create a new container to connect your dumb view to the new redux store
-    1. Now we have to think about how we're going to wire up our dumb component to the location information saved in our store.
-        * the way to approach this is to ask what the highest level that needs access to this data is (is it only a single component? Or will several components on the page need access to it?)
-        * for our location-info header, only that header itself needs to access the location info
-        * the temptation, then, is to add the link to the store into the LocationTextDisplay component
-        * but remember! this a *dumb* component
-        * so what do we do if all we need is a dumb component wired directly up to our data source? . . . 
-    2. We will create a container LocationTextDisplayContainer around our dumb component.
-    3. Check out src/interface/containers/BettermentLabsLandingContainer.js for an example on how to do this.
-        * note that this container also includes the BRoute info (this is because it contains an entire view that will be directly accessed by a router) -- this will not be needed for our LocationTextDisplayContainer
-    4. Let's make this new container with our basic starting comment header, imports (w/ dumb component), and function declaration. To start with, this won't look like we've done much at all!
-        ```javascript
-            /*
-            LocationTextDisplayContainer.js
-                Betterment Labs
-                Created by BettermentLabs. 
-                Copyright © 2018 Betterment Labs, LLC. All rights reserved.
+1. Now we have to think about how we're going to wire up our dumb component to the location information saved in our store.
+    * the way to approach this is to ask what the highest level that needs access to this data is (is it only a single component? Or will several components on the page need access to it?)
+    * for our location-info header, only that header itself needs to access the location info
+    * the temptation, then, is to add the link to the store into the LocationTextDisplay component
+    * but remember! this a *dumb* component
+    * so what do we do if all we need is a dumb component wired directly up to our data source? . . . 
+2. We will create a container LocationTextDisplayContainer around our dumb component.
+3. Check out src/interface/containers/BettermentLabsLandingContainer.js for an example on how to do this.
+    * note that this container also includes the BRoute info (this is because it contains an entire view that will be directly accessed by a router) -- this will not be needed for our LocationTextDisplayContainer
+4. Let's make this new container with our basic starting comment header, imports (w/ dumb component), and function declaration. To start with, this won't look like we've done much at all!
+    ```javascript
+        /*
+        LocationTextDisplayContainer.js
+            Betterment Labs
+            Created by BettermentLabs. 
+            Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-            Component LocationTextDisplayContainer.js
-            Description:
-            */
-            // IMPORTS
-            // Import React Modules
-            import React from 'react';
+        Component LocationTextDisplayContainer.js
+        Description:
+        */
+        // IMPORTS
+        // Import React Modules
+        import React from 'react';
 
-            // Import App Logic
+        // Import App Logic
 
-            // Import Other App UI Elements
-            import LocationTextDisplay from '../components/LocationTextDisplay';
+        // Import Other App UI Elements
+        import LocationTextDisplay from '../components/LocationTextDisplay';
 
-            export default LocationTextDisplayContainer = (props) => {
-                return(
-                    <LocationTextDisplay />
-                )
-            }
-        ```
-    5. Back in BettermentLabsLandingPage, change the references from LocationTextDisplay to LocationTextDisplayContainer. This page should refresh error-free in your simulator. [1.png]
-    6. Now we'll want to send the location (latitude & longitude) info from the container to the dumb component. In our container, then, change ```<LocationTextDisplay />``` to ```<LocationTextDisplay lat={props.lat} lon={props.lon} />```
-        * and back in the dumb component, update the text inside the ValueLabel tags to match these (props.lon & props.lat)
-        * when you refresh now, you'll see the numbers after the "Latitude: " & "Longitude: " labels are gone. This is because we're not yet passing any values down, so they're null and there's nothing to render. You can try sending a test value from the Container to make sure it's working okay.
-    7. Wire up the redux side of our container:
-        1. Add these redux imports to the container:
-        ```javascript
-            // Import React Modules
-            ...
-            import { connect } from 'react-redux';
-            // Import App Logic
-            import {allStoreSections} from '../../../base/logic/store';
-        ```
-        2. change our container declaration to: ```export const LocationTextDisplayContainer = (props) => {```
-        3. add mapStateToProps function & export the connect:
-        ```javascript
-            const mapStateToProps = function(store) {
-                return({location: store[allStoreSections.userLocation.name]}) // as set in src/logic/store/userLocation.js
-            }
-            
-            export default connect(mapStateToProps)(LocationTextDisplayContainer);
-        ```
-        4. If you haven't wired up the "getting location" side of things, you can test this integration by changing your default location in src/logic/store/userLocation.js and verifying that the values you give show up!
+        export default LocationTextDisplayContainer = (props) => {
+            return(
+                <LocationTextDisplay />
+            )
+        }
+    ```
+5. Back in BettermentLabsLandingPage, change the references from LocationTextDisplay to LocationTextDisplayContainer. This page should refresh error-free in your simulator. [1.png]
+6. Now we'll want to send the location (latitude & longitude) info from the container to the dumb component. In our container, then, change ```<LocationTextDisplay />``` to ```<LocationTextDisplay lat={props.lat} lon={props.lon} />```
+    * and back in the dumb component, update the text inside the ValueLabel tags to match these (props.lon & props.lat)
+    * when you refresh now, you'll see the numbers after the "Latitude: " & "Longitude: " labels are gone. This is because we're not yet passing any values down, so they're null and there's nothing to render. You can try sending a test value from the Container to make sure it's working okay.
+7. Wire up the redux side of our container:
+    1. Add these redux imports to the container:
+    ```javascript
+        // Import React Modules
+        ...
+        import { connect } from 'react-redux';
+        // Import App Logic
+        import {allStoreSections} from '../../../base/logic/store';
+    ```
+    2. change our container declaration to: ```export const LocationTextDisplayContainer = (props) => {```
+    3. add mapStateToProps function & export the connect:
+    ```javascript
+        const mapStateToProps = function(store) {
+            return({location: store[allStoreSections.userLocation.name]}) // as set in src/logic/store/userLocation.js
+        }
+        
+        export default connect(mapStateToProps)(LocationTextDisplayContainer);
+    ```
+    4. If you haven't wired up the "getting location" side of things, you can test this integration by changing your default location in src/logic/store/userLocation.js and verifying that the values you give show up!
 
 # 4. Setup Location Services & Redux Store
-    1. Add button string to strings_BettermentLabsLandingPage
-    2. Helper function & redux integration. Open src/logic/store/userLocation.js
-        1. We will now set the store option of "deviceIsGettingLocation". This will make sure we only call our location getter if it's not currently running. This structure is an excellent use of redux to ensure that async functions don't pile up.
-        2. Add the following action definitions:
-        ```javascript
-            export const setDeviceIsFetchingLocation = ({type:'SET_DEVICE_IS_FETCHING_LOCATION'});
-            export const setDeviceIsNotFetchingLocation = ({type:'SET_DEVICE_IS_NOT_FETCHING_LOCATION'});
-        ```
-        3. And the following reducer possibilities:
-        ```javascript
-            case setDeviceIsFetchingLocation.type:
-            return Object.assign({}, state, {deviceIsGettingLocation: true})
-            case setDeviceIsNotFetchingLocation.type:
-            return Object.assign({}, state, {deviceIsGettingLocation: false})
-        ```
-    3. Get device's location (Expo has made this super easy!!!) and setup actions to update redux store as appropriate. Here's the commented code:
-        ```javascript
-            /* 
-                locationServices.js
-                Betterment Labs
-                Updated by Charles Major on 2/1/18. 
-                Copyright © 2018 Betterment Labs. All rights reserved.
-            */
-            // Import App Logic
-            import {setUserLongitudeTo,
-                    setUserLatitudeTo,
-                    setDeviceIsFetchingLocation,
-                    setDeviceIsNotFetchingLocation} from '../store/userLocation';
+1. Add button string to strings_BettermentLabsLandingPage
+2. Helper function & redux integration. Open src/logic/store/userLocation.js
+    1. We will now set the store option of "deviceIsGettingLocation". This will make sure we only call our location getter if it's not currently running. This structure is an excellent use of redux to ensure that async functions don't pile up.
+    2. Add the following action definitions:
+    ```javascript
+        export const setDeviceIsFetchingLocation = ({type:'SET_DEVICE_IS_FETCHING_LOCATION'});
+        export const setDeviceIsNotFetchingLocation = ({type:'SET_DEVICE_IS_NOT_FETCHING_LOCATION'});
+    ```
+    3. And the following reducer possibilities:
+    ```javascript
+        case setDeviceIsFetchingLocation.type:
+        return Object.assign({}, state, {deviceIsGettingLocation: true})
+        case setDeviceIsNotFetchingLocation.type:
+        return Object.assign({}, state, {deviceIsGettingLocation: false})
+    ```
+3. Get device's location (Expo has made this super easy!!!) and setup actions to update redux store as appropriate. Here's the commented code:
+    ```javascript
+        /* 
+            locationServices.js
+            Betterment Labs
+            Updated by Charles Major on 2/1/18. 
+            Copyright © 2018 Betterment Labs. All rights reserved.
+        */
+        // Import App Logic
+        import {setUserLongitudeTo,
+                setUserLatitudeTo,
+                setDeviceIsFetchingLocation,
+                setDeviceIsNotFetchingLocation} from '../store/userLocation';
 
-            const getCurrentLocation = (callback) => {
-                console.log("getCurrentLocation");
-                navigator.geolocation.getCurrentPosition(
-                    // position is an object with property coords: {latitude: #, longitude: #}
-                (position) => {
-                    callback && callback({error: false, content: position})
-                },
-                (error) =>
-                    callback && callback({error: true, errorMessage: error})
-                ,
-                { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
-                );
-            }
+        const getCurrentLocation = (callback) => {
+            console.log("getCurrentLocation");
+            navigator.geolocation.getCurrentPosition(
+                // position is an object with property coords: {latitude: #, longitude: #}
+            (position) => {
+                callback && callback({error: false, content: position})
+            },
+            (error) =>
+                callback && callback({error: true, errorMessage: error})
+            ,
+            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+            );
+        }
 
-            // this function takes a redux store dispatcher as its input
-            export const updateStoreWithCurrentLocation = (dispatch) => {
-                // first we'll tell the store we're going to try to update the location
-                dispatch && dispatch(setDeviceIsFetchingLocation);
-                // then we'll make our callback funtions
-                const callbackFunc = (result) => {
-                    if (result.error) {
-                        console.log("Failed to get device location with error: "+result.errorMessage);
-                    } else {
-                        const content = result.content;
-                        // get redux actions to set longitude & latitude
-                        const setUserLongitudeToAction = setUserLongitudeTo(content.coords.longitude);
-                        const setUserLatitudeToAction = setUserLatitudeTo(content.coords.latitude);
-                        dispatch && dispatch(setUserLongitudeToAction);
-                        dispatch && dispatch(setUserLatitudeToAction);
-                        // and we need to tell our store that we're no longer checking for the location
-                        dispatch && dispatch(setDeviceIsNotFetchingLocation);            
-                    }
-                };
-                // and call!
-                getCurrentLocation(callbackFunc);
-            }
+        // this function takes a redux store dispatcher as its input
+        export const updateStoreWithCurrentLocation = (dispatch) => {
+            // first we'll tell the store we're going to try to update the location
+            dispatch && dispatch(setDeviceIsFetchingLocation);
+            // then we'll make our callback funtions
+            const callbackFunc = (result) => {
+                if (result.error) {
+                    console.log("Failed to get device location with error: "+result.errorMessage);
+                } else {
+                    const content = result.content;
+                    // get redux actions to set longitude & latitude
+                    const setUserLongitudeToAction = setUserLongitudeTo(content.coords.longitude);
+                    const setUserLatitudeToAction = setUserLatitudeTo(content.coords.latitude);
+                    dispatch && dispatch(setUserLongitudeToAction);
+                    dispatch && dispatch(setUserLatitudeToAction);
+                    // and we need to tell our store that we're no longer checking for the location
+                    dispatch && dispatch(setDeviceIsNotFetchingLocation);            
+                }
+            };
+            // and call!
+            getCurrentLocation(callbackFunc);
+        }
 
-            // function to get the function with dispatch needed to update the store (for passing to dumb components)
-            export const getUpdateStoreWithCurrentLocationFunc = (dispatch) => {
-                return(
-                    () => updateStoreWithCurrentLocation(dispatch)
-                )
-            }
-        ```
-    3. In BettermentLabsLandingContainer.js (remember how to get there yet?), add a new function import:
-        ```javascript
-            // Import App Logic
-            ...
-            import {getUpdateStoreWithCurrentLocationFunc} from '../../logic/location/locationServices';
-        ```
-        the following function-with-dispatch-included before the return()
-        ```javascript
-            const thisUpdateStoreWithCurrentLocation = props.dispatch ? getUpdateStoreWithCurrentLocationFunc(props.dispatch) : null;
-        ```
-        and the follow prop to the BRoute:
-        ```javascript
-            <BRoute ...
-                updateStoreWithCurrentLocation={thisUpdateStoreWithCurrentLocation}
-                {...props}
-                />
-        ```
-    4. In BettermentLabsLandingPage.js, add the button:
-        ```javascript
-            <ViewSpacer/>
-            <BButton
-                flex={2}
-                text={strings.getLocationButton}
-                onPress={props.updateStoreWithCurrentLocation}
+        // function to get the function with dispatch needed to update the store (for passing to dumb components)
+        export const getUpdateStoreWithCurrentLocationFunc = (dispatch) => {
+            return(
+                () => updateStoreWithCurrentLocation(dispatch)
+            )
+        }
+    ```
+3. In BettermentLabsLandingContainer.js (remember how to get there yet?), add a new function import:
+    ```javascript
+        // Import App Logic
+        ...
+        import {getUpdateStoreWithCurrentLocationFunc} from '../../logic/location/locationServices';
+    ```
+    the following function-with-dispatch-included before the return()
+    ```javascript
+        const thisUpdateStoreWithCurrentLocation = props.dispatch ? getUpdateStoreWithCurrentLocationFunc(props.dispatch) : null;
+    ```
+    and the follow prop to the BRoute:
+    ```javascript
+        <BRoute ...
+            updateStoreWithCurrentLocation={thisUpdateStoreWithCurrentLocation}
+            {...props}
             />
-        ```
-        You should be able to see your new button [2.png] and clicking on it should update the location in the header! [3.png]
+    ```
+4. In BettermentLabsLandingPage.js, add the button:
+    ```javascript
+        <ViewSpacer/>
+        <BButton
+            flex={2}
+            text={strings.getLocationButton}
+            onPress={props.updateStoreWithCurrentLocation}
+        />
+    ```
+    You should be able to see your new button [2.png] and clicking on it should update the location in the header! [3.png]
 
 # 5. Track Location On New Page
 
