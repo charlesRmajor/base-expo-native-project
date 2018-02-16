@@ -5,9 +5,14 @@
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component BButton.js
-  Description:  
-  Inputs: 
+  Description: Displays basic themed button
+
+  Inputs: object 'props'
+    includes all typical React & base project props
+    onPress: function that pressing on button calls (should be redux store action)
+
   Outputs: 
+    renders button per description above
 */
 
 // IMPORTS
@@ -18,6 +23,9 @@ import {TouchableWithoutFeedback, View, Text} from 'react-native';
 // Import Other Node Modules
 import styled from 'styled-components';
 
+// Import Other App UI Elements
+import BText from './BText';
+
 const ButtonView = styled.View`flex:${({flex}) => flex || 1};
     align-self: center;
     justify-content: center;
@@ -27,11 +35,8 @@ const ButtonView = styled.View`flex:${({flex}) => flex || 1};
     borderRadius: 15px;
     backgroundColor: ${({theme}) => theme.color.title};`
 
-const ButtonText = styled.Text`
-    text-align: center;
-    fontFamily: ${({theme}) => theme.fontStyles.bold};
-    color: ${({theme}) => theme.color.highlight};
-    fontSize: ${({theme}) => theme.fontSizes.base}`
+const ButtonText = BText.extend`
+    text-align: center;`
 
 export default BButton = (props) => {
     return(

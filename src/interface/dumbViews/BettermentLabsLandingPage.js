@@ -20,7 +20,8 @@ import styled, {ThemeProvider} from 'styled-components';
 // Import Other App UI Elements
 import ImageWithAspect from '../../../base/interface/components/ImageWithAspect';
 import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
-import BButton from '../components/BButton';
+import BButton from '../../../base/interface/components/BButton';
+import LocationTextDisplayContainer from '../../../src/interface/containers/LocationTextDisplayContainer';
 import getContactCard from '../components/getContactCard';
 
 // Interface Styling
@@ -32,11 +33,6 @@ const MainView = styled.View`flex:1;
 const ScrollView = styled.ScrollView`flex:15;`;
 
 const ViewSpacer = styled.View`height: 20px`;
-
-const Header = styled.Text`height: 200px;
-    fontFamily: ${({theme}) => theme.fontStyles.bold};
-    color: ${({theme}) => theme.color.highlight};
-    fontSize: ${({theme}) => theme.fontSizes.large}`
 
 const ImageView = styled.View`flex:5;
     justify-content: flex-end;
@@ -57,7 +53,7 @@ export default BettermentLabsLandingPage = (props) => {
             <MainView>
                 <ScrollView>
                     <ViewSpacer/>
-                    <Header>{strings.title}</Header>
+                    <LocationTextDisplayContainer />
                     <ViewSpacer/>
                     <BButton
                         flex={2}
@@ -69,6 +65,12 @@ export default BettermentLabsLandingPage = (props) => {
                         flex={2}
                         text={strings.getContactButton}
                         onPress={props.saveContactFromPhonesPhoneBook}
+                    />
+                    <ViewSpacer/>
+                    <BButton
+                        flex={2}
+                        text={strings.getLocationButton}
+                        onPress={props.updateStoreWithCurrentLocation}
                     />
                     <ViewSpacer/>
                     {contacts.map((contact, index) => getContactCard({contact: contact, index: index, removeContactFromPhonesPhoneBook: props.removeContactFromPhonesPhoneBook || null}))}

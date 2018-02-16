@@ -323,6 +323,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 
 * change theme in app:
     * add other themes
+    * fix app icon
                 
 * Expo-Project:
     * add expo-based notifications (maybe?)
@@ -346,6 +347,8 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * animated transitions: https://github.com/Traviskn/react-router-native-stack
 
 * add OneSignal subscriptions to AppSubscriptions.js
+
+* check issues with getting permissions for OneSignal (iOS)
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
