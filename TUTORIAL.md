@@ -16,24 +16,6 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
 
 #### Before beginning the tutorial, go through "Project Setup Instructions" & "How to Use with Expo" from this project's README: https://github.com/charlesRmajor/base-expo-native-project/blob/master/README.md
 
-# Add & use location gathering component
-1. Expo makes gathering the device location super easy!
-2. Let's make a new helper function to cover the backend logic. Let's make a new folder "location" under src/logic/ and then a locationServices.js file inside that.
-3. Copy the following in to locationServices.js:
-    ```javascript
-        export const getCurrentLocation = (callback) => {
-            navigator.geolocation.getCurrentPosition(
-            (position) => {
-                callback && callback({error: false; content: position});
-            },
-            (error) =>
-                callback && callback({error: true; errorMessage: error});
-            ,
-            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
-            );
-        }
-    ```
-
 # 1. Add a new Redux Store to your app
     1. Create & setup new store file:
         1. in src/logic/store/, create your file: "userLocation.js"
