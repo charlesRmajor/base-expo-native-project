@@ -170,10 +170,6 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
             justify-content: center;
             width: ${({width}) => width || '80%'};`
 
-        const RowSection = styled.View`flex: 1;
-            flex-direction: row;
-            justify-content: center;`
-
         const Label = BText.extend`
             text-align: right;`
 
@@ -183,8 +179,8 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         export default LocationTextDisplay = (props) => {
             return(
                 <LocationView flex={props.flex || null} width={props.width || null}>
-                    <RowSection><Label>{viewStrings.labelLatitude}:</Label><ValueLabel>10.213</ValueLabel></RowSection>
-                    <RowSection><Label>{viewStrings.labelLatitude}:</Label><ValueLabel>120.123</ValueLabel></RowSection>
+                    <Label>{viewStrings.labelLatitude}:</Label><ValueLabel>10.213</ValueLabel>
+                    <Label>{viewStrings.labelLatitude}:</Label><ValueLabel>120.123</ValueLabel>
                 </LocationView>
             )
         }
