@@ -46,15 +46,11 @@ import getPageStrings from '../../../base/logic/strings/getPageStrings';
 // Import Other App UI Elements
 // import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
 import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
-import LocationView from '../dumbViews/LocationView';
 
 export const MainRoutes = {
     RoutesName: 'MainRoutes',
     Home: {
         view: BettermentLabsLandingContainer,
-    },
-    LocationView: {
-        view: LocationView
     }
 }
 

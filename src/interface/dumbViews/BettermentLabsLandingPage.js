@@ -18,10 +18,10 @@ import styled, {ThemeProvider} from 'styled-components';
 // Import Core Project Modules
 
 // Import Other App UI Elements
+import {BHeader} from '../../../base/interface/components/BText';
 import ImageWithAspect from '../../../base/interface/components/ImageWithAspect';
 import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
 import BRoundedButton from '../../../base/interface/components/BRoundedButton';
-import LocationTextDisplayContainer from '../../../src/interface/containers/LocationTextDisplayContainer';
 import getContactCard from '../components/getContactCard';
 
 // Interface Styling
@@ -53,7 +53,7 @@ export default BettermentLabsLandingPage = (props) => {
             <MainView>
                 <ScrollView>
                     <ViewSpacer/>
-                    <LocationTextDisplayContainer />
+                    <BHeader>{strings.title}</BHeader>
                     <ViewSpacer/>
                     <BRoundedButton
                         flex={2}
@@ -67,17 +67,6 @@ export default BettermentLabsLandingPage = (props) => {
                         onPress={props.saveContactFromPhonesPhoneBook}
                     />
                     <ViewSpacer/>
-                    <BRoundedButton
-                        flex={2}
-                        text={strings.getLocationButton}
-                        onPress={props.updateStoreWithCurrentLocation}
-                    />
-                    <ViewSpacer/>
-                    <BRoundedButton
-                        flex={2}
-                        text={strings.goToLocationPageButton}
-                        onPress={props.goToLocationView}
-                    />
                     <ViewSpacer/>
                     {contacts.map((contact, index) => getContactCard({contact: contact, index: index, removeContactFromPhonesPhoneBook: props.removeContactFromPhonesPhoneBook || null}))}
                 </ScrollView>
