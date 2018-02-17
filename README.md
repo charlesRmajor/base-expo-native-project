@@ -13,6 +13,7 @@ Learn how to use all essential elements of this project by following our tutoria
 5. Create a new router & connect it to MainRouter.js
 
 #### Before beginning the tutorial, go through "Project Setup Instructions" & "How to Use with Expo" below
+The "locations_tutorial" branch of this repo has the "after finishing tutorial" code
 ### Tutorial Link: https://github.com/charlesRmajor/base-expo-native-project/blob/master/TUTORIAL.md
 
 # Overview
