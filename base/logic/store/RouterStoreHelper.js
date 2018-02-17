@@ -11,8 +11,22 @@
 // Import React Modules
 import React from 'react';
 
+const storeNameSuffix = 'Store';
+const stateNameSuffix = 'State';
 const goActionSuffix = '_GO';
 const backActionSuffix = '_BACK';
+const forwardActionSuffix = '_FORWARD';
+
+export const getStoreSection = (routesObject) => {
+  const newObj = {};
+  newObj[routesObject.RoutesName+storeNameSuffix] = {
+    name: routesObject.RoutesName+stateNameSuffix,
+    reducer: getRouterReducer(routesObject)
+  }
+  console.log("newObj");
+  console.log(newObj);
+  return(newObj)
+}
 
 export const getRouterGoTo = (routesObject) => {
   const routesObjectName = routesObject.RoutesName;
@@ -29,7 +43,7 @@ export const getRouterGoBack = (routesObject) => {
 export const getRouterReducer = (routesObject) => {
   const routesObjectName = routesObject.RoutesName;
   const defaultRoute = {
-    location: routesObject.Home ? routesObject.Home : getFirstAvailableRoute(routesObject),
+    location: routesObject.Home ? routesObject.Home : getFirstAvailableObjectInObject(routesObject),
     history: []
   };
   const reducer = (state = defaultRoute, action) => {
@@ -46,10 +60,14 @@ export const getRouterReducer = (routesObject) => {
   return(reducer)
 }
 
-export const getFirstAvailableRoute = (routes) => {
-  for (const key in routes) {
-    if (routes[key]) {
-      return routes[key]
+export const getFirstAvailableObjectInObject = (object) => {
+  return(object[getFirstAvailableKey(object)])
+}
+
+export const getFirstAvailableKey = (object) => {
+  for (const key in object) {
+    if (object[key]) {
+      return key
     }
   }
 }

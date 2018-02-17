@@ -27,11 +27,13 @@ import BRouter from '../../../base/interface/routers/BRouter';
 import BRoute from '../../../base/interface/routers/BRoute';
 import {defaultInterfacePropsFrom, allStoreSections} from '../../../base/logic/store';
 import {addPropsRequestFromStore} from '../../../base/logic/store/helpers';
-import {getRouterGoTo,
+import {getStoreSection,
+    getRouterGoTo,
     getRouterGoBack,
     getRouterReducer,
     getFirstAvailableRoute,
     getCurrentView,
+    getFirstAvailableKey,
     LogRoute
 } from '../../../base/logic/store/RouterStoreHelper';
 
@@ -78,7 +80,6 @@ class MainRouter extends React.Component {
                 view: this.props.router.location.view,
                 routeProps: this.props});
         
-        // return (CurrentView);
         return(
             <View style={{height:'100%', width:'100%'}}>
                    <StatusBar barStyle="light-content" />
@@ -90,9 +91,10 @@ class MainRouter extends React.Component {
 }
 
 const mapStateToProps = function(store) {
+    MainRouterStoreSection
     const additionalSections = {
         loading: allStoreSections.loading,
-        router: allStoreSections.mainRouterStore
+        router: allStoreSections[getFirstAvailableKey(MainRouterStoreSection)]
     };
     return(addPropsRequestFromStore(
         defaultInterfacePropsFrom(store),
@@ -102,21 +104,14 @@ const mapStateToProps = function(store) {
   
 export default connect(mapStateToProps)(MainRouter);
 
-const MainRouterGoTo = getRouterGoTo(MainRoutes);
-// export const MainRouterGoBack = getRouterGoBack(MainRoutes);
-
 export const MainRouterGoBack = (dispatch) => {
     const goFunc = dispatch ? () => dispatch(getRouterGoBack(MainRoutes)) : null;
     return(goFunc)
 };
 
 export const getMainRouterGoToLocationView = (dispatch) => {
-    const goFunc = dispatch ? () => dispatch(MainRouterGoTo(MainRoutes.LocationView)) : null;
+    const goFunc = dispatch ? () => dispatch(getRouterGoTo(MainRoutes)(MainRoutes.LocationView)) : null;
     return(goFunc)
 };
 
-const mainRouterReducer = getRouterReducer(MainRoutes);
-
-const mainRouterStore = {name: 'mainRouterState', reducer: mainRouterReducer};
-
-export const MainRouterStoreSection = {mainRouterStore: mainRouterStore};
+export const MainRouterStoreSection = getStoreSection(MainRoutes);
