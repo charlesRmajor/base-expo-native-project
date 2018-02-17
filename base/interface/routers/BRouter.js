@@ -30,3 +30,36 @@ export default BRouter = (props) => {
         </NativeRouter>)
     )
 }
+
+const myRouter = (props) => {
+    const currentView = null;//
+    // props.location
+    return(currentView);
+}
+
+const getPageForRoute = (route) => {
+
+}
+
+const getRouter = (routes) => {
+    // const 
+    return(
+        <View style={{flex:1}}>
+
+        </View>
+    )
+}
+
+// export const getRouterWithStore = (mapPropsToStoreFunc) => {
+//     export connect()
+// }
+
+/*
+
+Router
+CurrentView
+Routes Object
+
+RoutesObject(location) => createReactComponent
+
+*/

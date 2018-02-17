@@ -10,5 +10,12 @@
 import setUserInfoSection from './userInfo';
 import setAppPhonebookSection from './appPhonebook';
 import userLocationSection from './userLocation';
+import {MainRouterStoreSection} from '../../../src/interface/routers/MainRouter';
 
-export default appStoreSections = Object.assign({}, setUserInfoSection, setAppPhonebookSection, userLocationSection);
+export default appStoreSections =
+  Object.assign({},
+    setUserInfoSection,
+    setAppPhonebookSection,
+    userLocationSection,
+    MainRouterStoreSection
+  );

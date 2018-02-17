@@ -10,6 +10,7 @@ Component BettermentLabsLandingContainer.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Import Core Project Modules
 import BRoute from '../../../base/interface/routers/BRoute';
@@ -20,6 +21,7 @@ import {requestNotifications} from '../../../base/logic/permissions';
 import saveContactFromPhonesPhoneBook from '../../logic/loading/saveContactFromPhonesPhoneBook';
 import {getRemoveContactFromAppPhonebookWithDispatch} from '../../logic/store/appPhonebook';
 import {getUpdateStoreWithCurrentLocationFunc} from '../../logic/location/locationServices';
+import {getMainRouterGoToLocationView} from '../routers/MainRouter';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
@@ -29,17 +31,19 @@ export default BettermentLabsLandingContainer = (props) => {
     const thisSaveContactFromPhonesPhoneBook = () => saveContactFromPhonesPhoneBook(dispatcher);
     const thisRemoveContactFromAppPhonebook = props.dispatch ? (contactIndex) => getRemoveContactFromAppPhonebookWithDispatch({contactIndex: contactIndex, dispatcher: props.dispatch}) : null;
     const thisUpdateStoreWithCurrentLocation = props.dispatch ? getUpdateStoreWithCurrentLocationFunc(props.dispatch) : null;
+    const thisGoToLocationView = props.dispatch ? getMainRouterGoToLocationView(props.dispatch) : null;
+    const ThisViewWithStore = connect(mapStateToProps)(BettermentLabsLandingPage);
     return(
-        <BRoute
-            exact
-            path="/"
-            view={BettermentLabsLandingPage}
-            mapStateToProps={(store) => ({contacts: store[appPhonebook.name]})}
+        <ThisViewWithStore
             requestNotifications={requestNotifications}
             saveContactFromPhonesPhoneBook={thisSaveContactFromPhonesPhoneBook}
             removeContactFromPhonesPhoneBook={thisRemoveContactFromAppPhonebook}
             updateStoreWithCurrentLocation={thisUpdateStoreWithCurrentLocation}
-            {...props}
-            />
+            goToLocationView={thisGoToLocationView}
+            {...props} />
     )
 }
+
+const mapStateToProps = function(store) {
+    return({contacts: store[appPhonebook.name]});
+  }

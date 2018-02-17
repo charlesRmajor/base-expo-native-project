@@ -19,13 +19,16 @@ import getPageStrings from '../../logic/strings/getPageStrings';
 export default BRoute = (props) => {
     const view = props.view;
     const allStrings = getPageStrings(view.name);
-    allStrings.setLanguage(props.strings.language);
+    allStrings && props.strings && props.strings.language && allStrings.setLanguage(props.strings.language);
     LogRoute(view.name);
     const propsWithStrings = objectMerge({strings: allStrings}, props);
     const viewToRender = (props.mapStateToProps) ? connect(props.mapStateToProps)(view) : view;
+    const path = props.path ? props.path : "/"+view.name;
     return(
-        <Route render={(routeProps) => {
-            return React.createElement(viewToRender, objectMerge(routeProps || null, propsWithStrings || null))
+        <Route
+            path={path}
+            render={(routeProps) => {
+                return React.createElement(viewToRender, objectMerge(routeProps || null, propsWithStrings || null))
           }}/>
     )
 }

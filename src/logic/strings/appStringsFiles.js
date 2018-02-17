@@ -6,6 +6,7 @@
 */
 
 export default stringsFiles = {
-    BettermentLabsLandingPage: require('./strings_BettermentLabsLandingPage'),
-    LocationTextDisplay: require('./strings_LocationTextDisplay')
+  BettermentLabsLandingPage: require('./strings_BettermentLabsLandingPage'),
+  BettermentLabsLandingContainer: require('./strings_BettermentLabsLandingPage'),
+  LocationTextDisplay: require('./strings_LocationTextDisplay')
 }

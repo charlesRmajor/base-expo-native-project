@@ -17,25 +17,44 @@ Component MainRouter.js
 // IMPORTS
 // Import React Modules
 import React from 'react';
-import { View } from 'react-native';
+import { View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 
 // Import Other Node Modules
 
 // Import Core Project Modules
-import BController from '../../../base/interface/routers/BRouter';
+import BRouter from '../../../base/interface/routers/BRouter';
 import BRoute from '../../../base/interface/routers/BRoute';
 import {defaultInterfacePropsFrom, allStoreSections} from '../../../base/logic/store';
 import {addPropsRequestFromStore} from '../../../base/logic/store/helpers';
+import {getRouterGoTo,
+    getRouterGoBack,
+    getRouterReducer,
+    getFirstAvailableRoute,
+    getCurrentView,
+    LogRoute
+} from '../../../base/logic/store/RouterStoreHelper';
 
 // Import App Logic
 import {isObject} from '../../../base/logic/jsExtend/objectMerge';
 import AppLaunch from '../../logic/AppLaunchLogic.js';
 import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
+import getPageStrings from '../../../base/logic/strings/getPageStrings';
 
 // Import Other App UI Elements
 // import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
 import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
+import LocationView from '../dumbViews/LocationView';
+
+export const MainRoutes = {
+    RoutesName: 'MainRoutes',
+    Home: {
+        view: BettermentLabsLandingContainer,
+    },
+    LocationView: {
+        view: LocationView
+    }
+}
 
 class MainRouter extends React.Component {
     componentWillMount() {
@@ -51,28 +70,53 @@ class MainRouter extends React.Component {
     }
     
     render() {
-        // console.log("MainRouter this.props");
-        // console.log(this.props);
-        const ViewRouter =
-        (<BController
-            {...this.props}
-            >
-            <BettermentLabsLandingContainer {...this.props} />
-        </BController>)
-
-            // readyToRender returns true if all store ... loading.essentialState items are true
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
         
-        return (!readyToRender ? <View/> : ViewRouter);
+        const CurrentView = !readyToRender ? <View/>  :
+            getCurrentView({
+                view: this.props.router.location.view,
+                routeProps: this.props});
+        
+        // return (CurrentView);
+        return(
+            <View style={{height:'100%', width:'100%'}}>
+                   <StatusBar barStyle="light-content" />
+                   <View style={{height:'3%', backgroundColor: '#000000'}} />
+                {CurrentView}
+            </View>
+        );
     }
 }
 
 const mapStateToProps = function(store) {
-    // get stores from defaults
-    const defaultPropsReturn = defaultInterfacePropsFrom(store);
-    const stateToPropsReturn = addPropsRequestFromStore(defaultPropsReturn, {loading: allStoreSections.loading}, store);
-    return(stateToPropsReturn);
+    const additionalSections = {
+        loading: allStoreSections.loading,
+        router: allStoreSections.mainRouterStore
+    };
+    return(addPropsRequestFromStore(
+        defaultInterfacePropsFrom(store),
+        additionalSections,
+        store));
   }
   
 export default connect(mapStateToProps)(MainRouter);
+
+const MainRouterGoTo = getRouterGoTo(MainRoutes);
+// export const MainRouterGoBack = getRouterGoBack(MainRoutes);
+
+export const MainRouterGoBack = (dispatch) => {
+    const goFunc = dispatch ? () => dispatch(getRouterGoBack(MainRoutes)) : null;
+    return(goFunc)
+};
+
+export const getMainRouterGoToLocationView = (dispatch) => {
+    const goFunc = dispatch ? () => dispatch(MainRouterGoTo(MainRoutes.LocationView)) : null;
+    return(goFunc)
+};
+
+const mainRouterReducer = getRouterReducer(MainRoutes);
+
+const mainRouterStore = {name: 'mainRouterState', reducer: mainRouterReducer};
+
+export const MainRouterStoreSection = {mainRouterStore: mainRouterStore};

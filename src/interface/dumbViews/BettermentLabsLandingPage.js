@@ -20,7 +20,7 @@ import styled, {ThemeProvider} from 'styled-components';
 // Import Other App UI Elements
 import ImageWithAspect from '../../../base/interface/components/ImageWithAspect';
 import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
-import BButton from '../../../base/interface/components/BButton';
+import BRoundedButton from '../../../base/interface/components/BRoundedButton';
 import LocationTextDisplayContainer from '../../../src/interface/containers/LocationTextDisplayContainer';
 import getContactCard from '../components/getContactCard';
 
@@ -55,22 +55,28 @@ export default BettermentLabsLandingPage = (props) => {
                     <ViewSpacer/>
                     <LocationTextDisplayContainer />
                     <ViewSpacer/>
-                    <BButton
+                    <BRoundedButton
                         flex={2}
                         text={strings.notificationsRequestButton}
                         onPress={props.requestNotifications}
                     />
                     <ViewSpacer/>
-                    <BButton
+                    <BRoundedButton
                         flex={2}
                         text={strings.getContactButton}
                         onPress={props.saveContactFromPhonesPhoneBook}
                     />
                     <ViewSpacer/>
-                    <BButton
+                    <BRoundedButton
                         flex={2}
                         text={strings.getLocationButton}
                         onPress={props.updateStoreWithCurrentLocation}
+                    />
+                    <ViewSpacer/>
+                    <BRoundedButton
+                        flex={2}
+                        text={strings.goToLocationPageButton}
+                        onPress={props.goToLocationView}
                     />
                     <ViewSpacer/>
                     {contacts.map((contact, index) => getContactCard({contact: contact, index: index, removeContactFromPhonesPhoneBook: props.removeContactFromPhonesPhoneBook || null}))}

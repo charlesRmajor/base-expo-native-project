@@ -26,27 +26,28 @@ import styled from 'styled-components';
 // Import Other App UI Elements
 import BText from './BText';
 
-const ButtonView = styled.View`flex:${({flex}) => flex || 1};
+export const ButtonView = styled.View`flex:${({flex}) => flex || 1};
     align-self: center;
     justify-content: center;
     width: ${({width}) => width || '80%'};
     borderColor: ${({theme}) => theme.color.highlight};
-    borderWidth: 2px;
-    borderRadius: 15px;
     backgroundColor: ${({theme}) => theme.color.title};`
 
-const ButtonText = BText.extend`
+export const ButtonText = BText.extend`
     text-align: center;`
 
 export default BButton = (props) => {
+    const TextForButtonText = props.text ? props.text : '';
+    const ThisButtonView = (props.ButtonView == null || props.ButtonView == undefined) ? ButtonView : props.ButtonView;
+    const ThisButtonText = (props.ButtonText == null || props.ButtonText == undefined) ? ButtonText : props.ButtonText;
     return(
         <TouchableWithoutFeedback
             onPress={props.onPress ? props.onPress : () => console.log('no onPress provided')}>
-            <ButtonView flex={props.flex || null} width={props.width || null}>
-                <ButtonText>
-                    {props.text}
-                </ButtonText>
-            </ButtonView>
+            <ThisButtonView flex={props.flex || null} width={props.width || null}>
+                <ThisButtonText>
+                    {TextForButtonText}
+                </ThisButtonText>
+            </ThisButtonView>
         </TouchableWithoutFeedback>
     )
 }
