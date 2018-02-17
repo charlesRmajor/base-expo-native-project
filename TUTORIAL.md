@@ -374,6 +374,103 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
     You should be able to see your new button [2.png] and clicking on it should update the location in the header! [3.png]
 
 # 5. Track Location On New Page
+What if we wanted to have a new page for location tracking?
+
+1. Let's make this new page: make a new dumb styling view called "LocationView.js" in src/interface/dumbViews. We will use baseMainView.js as the template for our new view.
+2. Using our baseMainView.js, cutting out the unnecessary bits, and then pulling in our LocationTextDisplayContainer.js that we made before will give us:
+```javascript
+    /*
+    LocationView.js
+        Betterment Labs
+        Created by BettermentLabs. 
+        Copyright © 2018 Betterment Labs, LLC. All rights reserved.
+
+    Component LocationView.js
+    Description:
+        Displays the device's current location
+    */
+
+    // IMPORTS
+    // Import React Modules
+    import React from 'react';
+
+    // Import Other Node Modules
+    import styled, {ThemeProvider} from 'styled-components';
+
+    // Import Core Project Modules
+
+    // Import App Logic
+
+    // Import Other App UI Elements
+    import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
+    import LocationTextDisplayContainer from '../containers/LocationTextDisplayContainer';
+
+    // Interface Styling
+    const MainView = styled.View`flex:1;
+        background: ${({theme}) => (theme.color.background)};
+        justify-content: flex-end`;
+
+    const ViewSpacer = styled.View`flex:1`;
+        
+    export default LocationView = (props) => {
+            const style = props.styles || defaultAppStyles;
+            const strings = props.strings || null;
+            const images = props.images || null;
+            const imageLogo = images ? images.logoTextWhite || false : false;
+            
+            const mainView = 
+                (<ThemeProvider theme={style}>
+                    <MainView>
+                        <ViewSpacer/>
+                        <LocationTextDisplayContainer/>
+                        <ViewSpacer/>
+                    </MainView>
+                </ThemeProvider>
+                )
+        return ( mainView)
+    }
+```
+3. Then we will add this view to our MainRouter.js. Add the following import in ```Import Other App UI Elements```:
+```javascript
+    import LocationView from '../dumbViews/LocationView';
+```
+and the update MainRoutes object so that it looks like this:
+```javascript
+    export const MainRoutes = {
+        RoutesName: 'MainRoutes',
+        Home: {
+            view: BettermentLabsLandingContainer,
+        },
+        LocationView: {
+            view: LocationView
+        }
+    }
+```
+4. Now we need to add a button to BettermentLabsLandingPage.js to ge to our new view. Most of this will be left up to you to figure out. You just need additional navigation info:
+    1. Add new string for this button to strings_BettermentLabsLandingPage.js
+    2. Using a new prop called "goToLocationView" to pass this navigation from the container to the dumb view,
+    ```javascript
+        const thisGoToLocationView = props.dispatch ? getMainRouterGoToLocationView(props.dispatch) : null;
+    ```
+    3. Your main page should now look something like [4.png]
+    4. And when you click on the "Go To Location Page" button, the location view will be basic [5.png]
+5. The first thing we might notice is the fact that we're now stuck on this view. We should add in our BNestedViewNavBar so that we can get back to the main view if we need to.
+    ```javascript
+        // Import App Logic
+        import {MainRouterGoBack} from '../../../src/interface/routers/MainRouter';
+
+        // Import Other App UI Elements
+        ...
+        import BNestedViewNavBar from '../../../base/interface/components/BNestedViewNavBar';
+        ...
+        const thisGoBack = props.dispatch ? MainRouterGoBack(props.dispatch) : null;
+        const mainView = 
+            (<ThemeProvider theme={style}>
+                <MainView>
+                    <BNestedViewNavBar BackFunc={thisGoBack}/>
+        ...
+    ```
+
 
 
 ### Questions:

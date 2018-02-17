@@ -9,7 +9,8 @@
 import stringsFiles from '../../../src/logic/strings/appStringsFiles';
 
 const baseStringsFiles = {
-    VersionInfo: require('./strings_VersionInfo')
+    VersionInfo: require('./strings_VersionInfo'),
+    BasicNavStrings: require('./strings_BasicNavStrings')
 }
 
 export default allAppStringsFiles = Object.assign({}, stringsFiles || {}, baseStringsFiles);

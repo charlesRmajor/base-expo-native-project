@@ -27,7 +27,6 @@ import store from './base/logic/store';
 // Import Other App UI Elements
 import MainRouter from './src/interface/routers/MainRouter';
 
-// export default class App extends React.Component {
 export default App = (props) => {
     return (
       <Provider store={store}>
