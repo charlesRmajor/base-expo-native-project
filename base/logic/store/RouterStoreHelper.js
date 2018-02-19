@@ -23,8 +23,6 @@ export const getStoreSection = (routesObject) => {
     name: routesObject.RoutesName+stateNameSuffix,
     reducer: getRouterReducer(routesObject)
   }
-  console.log("newObj");
-  console.log(newObj);
   return(newObj)
 }
 
@@ -38,6 +36,11 @@ export const getRouterGoTo = (routesObject) => {
 export const getRouterGoBack = (routesObject) => {
   const routesObjectName = routesObject.RoutesName;
     return({type: routesObjectName+backActionSuffix})
+}
+
+export const getRouterGoForward = (routesObject) => {
+  const routesObjectName = routesObject.RoutesName;
+    return({type: routesObjectName+forwardActionSuffix})
 }
 
 export const getRouterReducer = (routesObject) => {

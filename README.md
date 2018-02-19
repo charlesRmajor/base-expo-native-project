@@ -258,7 +258,6 @@ This was built with
 * React: 16.2.0
 * Redux: 3.7.2
 * React-Redux: 5.0.6
-* React-Router-Native: 4.2.0
 * Redux-DevTools: 3.4.1
 * react-native-onesignal: 3.0.9
 * Styled-Components: 3.1.6
@@ -352,6 +351,8 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * check issues with getting permissions for OneSignal (iOS)
 
 * fix app icons -- and add instructions for updating icons (XCode & Android Studio)
+
+* android back button hooked up to router
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
