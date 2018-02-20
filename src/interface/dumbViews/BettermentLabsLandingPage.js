@@ -67,6 +67,11 @@ export default BettermentLabsLandingPage = (props) => {
                         onPress={props.saveContactFromPhonesPhoneBook}
                     />
                     <ViewSpacer/>
+                    <BRoundedButton
+                        flex={2}
+                        text={strings.sendTestOneSignalTag}
+                        onPress={props.sendTestOneSignalTag}
+                    />
                     <ViewSpacer/>
                     {contacts.map((contact, index) => getContactCard({contact: contact, index: index, removeContactFromPhonesPhoneBook: props.removeContactFromPhonesPhoneBook || null}))}
                 </ScrollView>

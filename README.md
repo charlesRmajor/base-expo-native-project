@@ -269,7 +269,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 ### BETTER ORGANIZE THIS TO-DO LIST
 * base native projects:
     * react-native-onesignal
-        *  RN integration
+        *  RN integration - send tags
         * test
     * react-native-fbsdk
         * Android
@@ -357,6 +357,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
         ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```
+* do strings need to be managed by our redux store at all or is handling them through the router sufficient?
 
 ## Freeform Notes on Incorporating into Already Existing Projects:
 * should hopefully be able to largely drop your code into src/

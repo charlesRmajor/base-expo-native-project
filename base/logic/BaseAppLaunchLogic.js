@@ -35,6 +35,10 @@ import {appLaunchRan} from '../logic/store/loading';
 // Import App Logic
 import {setAppLanguage} from './strings/setAppLanguage';
 import {downloadAllAppImages} from './loading/loadImages';
+import {
+    OneSignalAppSubscriptions,
+    OneSignalAppUnSubscriptions
+    } from './notifications/OneSignalSupport';
 
 // import {setAppStringsTo} from './store';
 
@@ -44,11 +48,13 @@ export default BaseAppLaunch = (dispatch) => {
     logVersionInfo();
     loadAppStyles(dispatch || null);
     setAppLanguage(dispatch || null);
-    // loadAppStrings(dispatch || null);
     downloadAllAppImages(dispatch || null);
 }
 
-// const loadAppStrings = (dispatch) => {
-//     const setAppStringsToAction = setAppStringsTo();
-//     dispatch && dispatch(setAppStringsToAction);
-// }
+export const BaseAppSubscriptions = (dispatch) => {
+    OneSignalAppSubscriptions(dispatch || null);
+}
+
+export const BaseAppUnSubscriptions = (dispatch) => {
+    OneSignalAppUnSubscriptions(dispatch || null);
+}

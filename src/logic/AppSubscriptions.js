@@ -21,14 +21,15 @@ export Function AppUnSubscribe
     Outputs: see callbacks in the inputs above
 */
 
-import {completeAppSubscriptions, closeAppSubscriptions} from '../../base/logic/store/loading';
+import {
+    BaseAppSubscriptions,
+    BaseAppUnSubscriptions
+    } from '../../base/logic/BaseAppLaunchLogic';
 
 export const AppSubscribe = (dispatch) => {
-    dispatch && dispatch(completeAppSubscriptions);
-    // callback && callback({newState: {appIsFullySubscribed: true}, stateSetCallback: (result) => console.log('AppSubscribe state set callback response: '+result)})
+    BaseAppSubscriptions(dispatch || null);
 }
 
 export const AppUnSubscribe = (dispatch) => {
-    dispatch && dispatch(closeAppSubscriptions);
-    // callback && callback({newState: {appIsFullySubscribed: false}, stateSetCallback: (result) => console.log('AppUnSubscribe state set callback response: '+result)})
+    BaseAppUnSubscriptions(dispatch || null);
 }
