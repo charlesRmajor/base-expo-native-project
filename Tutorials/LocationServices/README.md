@@ -351,25 +351,11 @@ Note: React-Native GeoLocation Docs can be found here: https://facebook.github.i
         ...
         import {getUpdateStoreWithCurrentLocationFunc} from '../../logic/location/locationServices';
     ```
-    the following function-with-dispatch-included before the return()
+    and the following additional element to our ```ViewButtons``` array:
     ```javascript
-        const thisUpdateStoreWithCurrentLocation = props.dispatch ? getUpdateStoreWithCurrentLocationFunc(props.dispatch) : null;
-    ```
-    and the follow prop to the BRoute:
-    ```javascript
-        <BRoute ...
-            updateStoreWithCurrentLocation={thisUpdateStoreWithCurrentLocation}
-            {...props}
-            />
-    ```
-4. In BettermentLabsLandingPage.js, add the button:
-    ```javascript
-        <ViewSpacer/>
-        <BButton
-            flex={2}
-            text={strings.getLocationButton}
-            onPress={props.updateStoreWithCurrentLocation}
-        />
+        {title: strings.goToLocationPage,
+            onPress: getUpdateStoreWithCurrentLocationFunc
+        },
     ```
     You should be able to see your new button [2.png] and clicking on it should update the location in the header! [3.png]
 

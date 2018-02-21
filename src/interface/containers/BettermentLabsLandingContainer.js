@@ -16,30 +16,59 @@ import { connect } from 'react-redux';
 
 // Import App Logic
 import {appPhonebook} from '../../logic/store/appPhonebook';
-import {requestNotifications} from '../../../base/logic/permissions';
+import {
+  requestNotifications,
+  requestLocation,
+  checkNotificationsPermissions
+  } from '../../../base/logic/permissions';
 import saveContactFromPhonesPhoneBook from '../../logic/loading/saveContactFromPhonesPhoneBook';
 import {getRemoveContactFromAppPhonebookWithDispatch} from '../../logic/store/appPhonebook';
-import {SendOneSignalTag} from '../../../base/logic/notifications/OneSignalSupport';
+import {SendOneSignalTag,
+  GetOneSignalTags,
+  CheckOneSignalSubscriptionStatus
+  } from '../../../base/logic/notifications/OneSignalSupport';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
 
 export default BettermentLabsLandingContainer = (props) => {
+    const strings = props.strings || null;
+
     const dispatcher = props.dispatch ? {dispatch: props.dispatch} : null;
-    const thisSaveContactFromPhonesPhoneBook = () => saveContactFromPhonesPhoneBook(dispatcher);
     const thisRemoveContactFromAppPhonebook = props.dispatch ? (contactIndex) => getRemoveContactFromAppPhonebookWithDispatch({contactIndex: contactIndex, dispatcher: props.dispatch}) : null;
     const ThisViewWithStore = connect(mapStateToProps)(BettermentLabsLandingPage);
-    const ThisSendTestOneSignalTag = () => {
-      console.log("ThisSendTestOneSignalTag");
-      SendOneSignalTag({key0: "value0", key1: "value1", key2: "value2"});
-    };
+    const ViewButtons = [
+      {title: strings.checkPermissions,
+        onPress: checkNotificationsPermissions
+      },
+      {title: strings.notificationsRequestButton,
+        onPress: requestNotifications
+      },
+      {title: strings.locationPermissionsRequest,
+        onPress: requestLocation
+      },
+      {title: strings.getContactButton,
+        onPress: () => saveContactFromPhonesPhoneBook(dispatcher)
+      },
+      {
+        title: strings.sendTestOneSignalTag,
+        onPress: () => {
+          console.log("ThisSendTestOneSignalTag");
+          SendOneSignalTag({key0: "value0", key1: "value1", key2: "value2"});
+        }
+      },
+      {title: strings.checkOneSignalSubscription,
+        onPress: CheckOneSignalSubscriptionStatus
+      },
+      {title: strings.checkOneSignalTags,
+        onPress: GetOneSignalTags
+      }
+    ];
     return(
         <ThisViewWithStore
-            requestNotifications={requestNotifications}
-            saveContactFromPhonesPhoneBook={thisSaveContactFromPhonesPhoneBook}
-            removeContactFromPhonesPhoneBook={thisRemoveContactFromAppPhonebook}
-            sendTestOneSignalTag={ThisSendTestOneSignalTag}
-            {...props} />
+          buttons={ViewButtons}
+          removeContactFromPhonesPhoneBook={thisRemoveContactFromAppPhonebook}
+          {...props} />
     )
 }
 

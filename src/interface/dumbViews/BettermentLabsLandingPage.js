@@ -25,6 +25,8 @@ import BRoundedButton from '../../../base/interface/components/BRoundedButton';
 import getContactCard from '../components/getContactCard';
 
 // Interface Styling
+const ButtonEnclosingView = styled.View`flex:2`;
+
 const MainView = styled.View`flex:1;
     flex-direction: column;
     background: ${({theme}) => (theme.color.background)};
@@ -37,6 +39,25 @@ const ViewSpacer = styled.View`height: 20px`;
 const ImageView = styled.View`flex:5;
     justify-content: flex-end;
     marginBottom: -2%`
+
+const PageButtons = (PageButtonArray) => {
+    var JSXButtons = [];
+    PageButtonArray.map((buttonObject, index) => {
+        const JSXButton = (
+            <ButtonEnclosingView
+                key={index}
+            >
+                <ViewSpacer/>
+                <BRoundedButton
+                    text={buttonObject.title || ''}
+                    onPress={buttonObject.onPress || null}
+                />
+            </ButtonEnclosingView>
+        )
+        JSXButtons.push(JSXButton);
+    })
+    return(JSXButtons);
+}
     
 export default BettermentLabsLandingPage = (props) => {
     // console.log(props);
@@ -48,6 +69,7 @@ export default BettermentLabsLandingPage = (props) => {
 
     const logoImage =  (<ImageView>{imageLogo && (<ImageWithAspect source={imageLogo} />)}</ImageView>);
 
+    const Buttons = props.buttons ? PageButtons(props.buttons) : null;
     const mainView =
         (<ThemeProvider theme={style}>
             <MainView>
@@ -55,25 +77,10 @@ export default BettermentLabsLandingPage = (props) => {
                     <ViewSpacer/>
                     <BHeader>{strings.title}</BHeader>
                     <ViewSpacer/>
-                    <BRoundedButton
-                        flex={2}
-                        text={strings.notificationsRequestButton}
-                        onPress={props.requestNotifications}
-                    />
-                    <ViewSpacer/>
-                    <BRoundedButton
-                        flex={2}
-                        text={strings.getContactButton}
-                        onPress={props.saveContactFromPhonesPhoneBook}
-                    />
-                    <ViewSpacer/>
-                    <BRoundedButton
-                        flex={2}
-                        text={strings.sendTestOneSignalTag}
-                        onPress={props.sendTestOneSignalTag}
-                    />
+                    {Buttons}
                     <ViewSpacer/>
                     {contacts.map((contact, index) => getContactCard({contact: contact, index: index, removeContactFromPhonesPhoneBook: props.removeContactFromPhonesPhoneBook || null}))}
+                    <ViewSpacer/>
                 </ScrollView>
                 {logoImage}
             </MainView>
