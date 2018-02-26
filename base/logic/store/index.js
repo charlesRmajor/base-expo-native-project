@@ -18,6 +18,7 @@ import {getStoreSubscriptionObjectFrom, combineReducersObjectFrom, addPropsReque
 // Import Base Stores
 import loadingReducer from './loading';
 import setNotificationsSection from './notifications';
+import setMarketplaceSection from './marketplace';
 
 // Import App's Stores
 import appStoreSections from '../../../src/logic/store/appStoreSections';
@@ -86,7 +87,13 @@ const essentialStoreSections ={
   market: market
 }
 
-export const allStoreSections = Object.assign({}, essentialStoreSections, setNotificationsSection, (appStoreSections ? appStoreSections : {}));
+// Base Project Stores
+// appStoreSections is the store sections defined in the /src/logic/store/... folder
+export const allStoreSections = Object.assign({},
+  essentialStoreSections,
+  setNotificationsSection,
+  setMarketplaceSection,
+  (appStoreSections ? appStoreSections : {}));
 
 export const defaultInterfacePropsFrom = (store) => {
   const storeSubscriptionObject = getStoreSubscriptionObjectFrom({

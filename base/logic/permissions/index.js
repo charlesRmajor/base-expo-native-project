@@ -12,7 +12,8 @@ Component index.js
 // Import React Modules
 
 // Import Other Project Modules
-import OneSignal from 'react-native-onesignal'; // OneSignal has permission helpers we'll use
+// import OneSignal from 'react-native-onesignal'; // OneSignal has permission helpers we'll use
+import OneSignal from '../nativeBridge/notifications/OneSignalBridge';
 
 // Import Other App Logic
 import isFunction from '../../../base/logic/jsExtend/isFunction';
@@ -22,7 +23,10 @@ export const requestNotifications = (callback) => requestNotificationsPermission
 export const requestContacts = (callback) => {console.log('automatically requested when phone book is attempted to be accessed. Nothing done now.'); callback && callback(true)};
 
 // doesn't return anything - may want to replace with method that returns success/failure
-export const requestLocation = (callback) => {OneSignal.promptLocation()};
+export const requestLocation = (callback) => {
+  if (OneSignal == undefined || OneSignal.promptLocation == undefined) {return}
+  OneSignal.promptLocation()
+};
 
 // iOS Only
 // result is object of form: {
@@ -31,6 +35,7 @@ export const requestLocation = (callback) => {OneSignal.promptLocation()};
   //   "sound": 0 or 1,
   // }  
 export const checkNotificationsPermissions = (callback) => {
+  if (OneSignal == undefined || OneSignal.checkPermissions == undefined) {return}
   OneSignal.checkPermissions((result) => {
     console.log(result);
     if (isFunction(callback)) {
@@ -48,4 +53,7 @@ export const checkNotificationsPermissions = (callback) => {
 
 // iOS Only
 // can optionally call false on items you don't want to ask for permission for
-export const requestOneSignalNotificationsPermissions = ({alert = true, badge = true, sound = true}) => { OneSignal.requestPermissions({ alert: alert, badge: badge, sound: sound }) }
+export const requestOneSignalNotificationsPermissions = ({alert = true, badge = true, sound = true}) => {
+  if (OneSignal == undefined || OneSignal.requestPermissions == undefined) {return}
+  OneSignal.requestPermissions({ alert: alert, badge: badge, sound: sound })
+}

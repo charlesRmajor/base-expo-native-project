@@ -269,8 +269,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 ### BETTER ORGANIZE THIS TO-DO LIST
 * base native projects:
     * react-native-onesignal
-        *  RN integration - send tags
-        * test
+        * test android
     * react-native-fbsdk
         * Android
         * RN integration
@@ -332,7 +331,8 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * more elegant way to handle expo/native builds (different app.json files)
 
 * In App Purchases:
-    * RN: get IAP purchase options dynamically
+    * RN: get IAP purchase options dynamically:
+        * iOS: must load product IDs from server to query App Store
 
 * process of testing after setup to make sure everything is working correctly:
     * in app purchases:
@@ -354,6 +354,11 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 
 * android back button hooked up to router
 
+* use Google Firebase (or other) to store basic retrievable app info such as:
+    * current available in-app-purchases
+    * what version(s) of app are "dead"
+    * others?
+
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
         ```xml <data android:scheme="exp0eb95a6a4750409ebfe07d5095542b14"/>```
@@ -364,3 +369,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * and use src/interface/controllers/MainController.js as the main app insertion point
 * kind of what App.js or index.js might have been before … but already has the controller bit and a really basic template for a router
 * so page navigation stuff may need to be updated. You probably can just drop it in as is. But we’ll need to use my BRoute for analytics, strings, and themes
+
+## Troubleshooting
+#### iOS In-App-Purchases:
+https://stackoverflow.com/questions/7947805/ios-in-app-purchase-no-products-received/11707704#11707704

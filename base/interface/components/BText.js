@@ -21,8 +21,8 @@ import styled from 'styled-components';
 export default BText = styled.Text`
     fontFamily: ${({theme}) => theme.fontStyles.bold};
     color: ${({theme}) => theme.color.highlight};
-    fontSize: ${({theme}) => theme.fontSizes.base}`
+    font-size: ${({theme}) => theme.fontSizes.base}`
 
 export const BHeader = BText.extend`
     text-align: center;
-    fontSize: ${({theme}) => theme.fontSizes.large}`
+    font-size: ${({theme}) => theme.fontSizes.large}`

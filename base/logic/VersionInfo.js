@@ -11,6 +11,11 @@ import getPageStrings from './strings/getPageStrings';
 
 const thisAppJSON = require('../../app.json');
 
+export const isCurrentlyRunningInExpoClient = () => {
+    const isDetached = (thisAppJSON.expo.isDetached ? thisAppJSON.expo.isDetached : false);
+    return !isDetached
+}
+
 export const getAlertWithVersionInfoContent = () => {
     const versionStrings = getPageStrings('VersionInfo');
     if (versionStrings == null) {return('','')}

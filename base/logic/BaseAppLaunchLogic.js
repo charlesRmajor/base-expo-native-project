@@ -35,10 +35,12 @@ import {appLaunchRan} from '../logic/store/loading';
 // Import App Logic
 import {setAppLanguage} from './strings/setAppLanguage';
 import {downloadAllAppImages} from './loading/loadImages';
-import {
-    OneSignalAppSubscriptions,
-    OneSignalAppUnSubscriptions
-    } from './notifications/OneSignalSupport';
+// import {
+//     OneSignalAppSubscriptions,
+//     OneSignalAppUnSubscriptions
+//     } from './notifications/OneSignalSupport';
+import loadMarketplace from './loading/loadMarketplace';
+// import {isCurrentlyRunningInExpoClient} from '../../base/logic/VersionInfo';
 
 // import {setAppStringsTo} from './store';
 
@@ -49,12 +51,22 @@ export default BaseAppLaunch = (dispatch) => {
     loadAppStyles(dispatch || null);
     setAppLanguage(dispatch || null);
     downloadAllAppImages(dispatch || null);
+    loadMarketplace(dispatch || null);
 }
 
 export const BaseAppSubscriptions = (dispatch) => {
-    OneSignalAppSubscriptions(dispatch || null);
+    // if (!isCurrentlyRunningInExpoClient()) {
+    //     console.log('OneSignalAppSubscriptions');
+        // const OneSignalAppSubscriptions = require('./notifications/OneSignalSupport');
+        // OneSignalAppSubscriptions(dispatch || null);
+    // }
+    // !isCurrentlyRunningInExpoClient() && OneSignalAppSubscriptions(dispatch || null);
 }
 
 export const BaseAppUnSubscriptions = (dispatch) => {
-    OneSignalAppUnSubscriptions(dispatch || null);
+    // if (!isCurrentlyRunningInExpoClient()) {
+        // const OneSignalAppUnSubscriptions = require('./notifications/OneSignalSupport');
+        // OneSignalAppUnSubscriptions(dispatch || null);
+    // }
+    // !isCurrentlyRunningInExpoClient() && OneSignalAppUnSubscriptions(dispatch || null);
 }

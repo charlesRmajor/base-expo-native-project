@@ -83,6 +83,7 @@ RCT_EXPORT_MODULE()
     }
 }
 
+// MARK:- purchaseProduct
 RCT_EXPORT_METHOD(purchaseProduct:(NSString *)productIdentifier
                   callback:(RCTResponseSenderBlock)callback)
 {
@@ -136,6 +137,7 @@ restoreCompletedTransactionsFailedWithError:(NSError *)error
     }
 }
 
+// MARK:- restorePurchases
 RCT_EXPORT_METHOD(restorePurchases:(RCTResponseSenderBlock)callback)
 {
     NSString *restoreRequest = @"restoreRequest";
@@ -143,6 +145,7 @@ RCT_EXPORT_METHOD(restorePurchases:(RCTResponseSenderBlock)callback)
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }
 
+// MARK:- loadProducts
 RCT_EXPORT_METHOD(loadProducts:(NSArray *)productIdentifiers
                   callback:(RCTResponseSenderBlock)callback)
 {
@@ -157,6 +160,7 @@ RCT_EXPORT_METHOD(loadProducts:(NSArray *)productIdentifiers
     }
 }
 
+// MARK:- receiptData
 RCT_EXPORT_METHOD(receiptData:(RCTResponseSenderBlock)callback)
 {
     NSURL *receiptUrl = [[NSBundle mainBundle] appStoreReceiptURL];

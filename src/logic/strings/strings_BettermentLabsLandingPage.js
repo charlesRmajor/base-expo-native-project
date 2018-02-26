@@ -9,7 +9,8 @@ import BLocalization from '../../../base/logic/strings/BLocalization';
 
 export default Strings = new BLocalization( {
   en: {
-    title: "Welcome to Betterment Labs's Base Expo/React-Native Project",
+    title: "Base Expo Project",
+    loadAppMarketPlace: "Load App MarketPlace",
     checkPermissions: "Check Permissions",
     notificationsRequestButton: "Get Notifications Permission",
     locationPermissionsRequest: "Get Locations Permission",
@@ -19,7 +20,8 @@ export default Strings = new BLocalization( {
     goToLocationPageButton: "Go To Location Page",
     sendTestOneSignalTag: "Send OneSignal Test Tag",
     checkOneSignalSubscription: "Check OneSignal Subscription Status",
-    checkOneSignalTags: "Get Current OneSignal Tags"
+    checkOneSignalTags: "Get Current OneSignal Tags",
+    storeHeaderTitle: "Loaded App Marketplace"
   },
   es: {
     title: "SPANISH: Welcome to Betterment Labs's Base Expo/React-Native Project"

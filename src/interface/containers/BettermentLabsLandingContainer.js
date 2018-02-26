@@ -16,6 +16,7 @@ import { connect } from 'react-redux';
 
 // Import App Logic
 import {appPhonebook} from '../../logic/store/appPhonebook';
+import {marketplace} from '../../../base/logic/store/marketplace';
 import {
   requestNotifications,
   requestLocation,
@@ -23,10 +24,12 @@ import {
   } from '../../../base/logic/permissions';
 import saveContactFromPhonesPhoneBook from '../../logic/loading/saveContactFromPhonesPhoneBook';
 import {getRemoveContactFromAppPhonebookWithDispatch} from '../../logic/store/appPhonebook';
-import {SendOneSignalTag,
+import {
+  SendOneSignalTag,
   GetOneSignalTags,
   CheckOneSignalSubscriptionStatus
   } from '../../../base/logic/notifications/OneSignalSupport';
+import {updateMarket} from '../../../base/logic/nativeBridge/nativeInAppPurchases';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
@@ -47,11 +50,7 @@ export default BettermentLabsLandingContainer = (props) => {
       {title: strings.locationPermissionsRequest,
         onPress: requestLocation
       },
-      {title: strings.getContactButton,
-        onPress: () => saveContactFromPhonesPhoneBook(dispatcher)
-      },
-      {
-        title: strings.sendTestOneSignalTag,
+      { title: strings.sendTestOneSignalTag,
         onPress: () => {
           console.log("ThisSendTestOneSignalTag");
           SendOneSignalTag({key0: "value0", key1: "value1", key2: "value2"});
@@ -62,6 +61,9 @@ export default BettermentLabsLandingContainer = (props) => {
       },
       {title: strings.checkOneSignalTags,
         onPress: GetOneSignalTags
+      },
+      {title: strings.getContactButton,
+        onPress: () => saveContactFromPhonesPhoneBook(dispatcher)
       }
     ];
     return(
@@ -73,5 +75,5 @@ export default BettermentLabsLandingContainer = (props) => {
 }
 
 const mapStateToProps = function(store) {
-    return({contacts: store[appPhonebook.name]});
+    return({contacts: store[appPhonebook.name], marketplace: store[marketplace.name]});
   }
