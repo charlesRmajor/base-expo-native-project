@@ -39,6 +39,7 @@ export const ButtonView = styled.View`flex:${({flex}) => flex || 1};
     background: ${({isPressed, theme}) => isPressed ? theme.color.background : theme.color.title };`
 
 export const ButtonText = BText.extend`
+    color: ${({theme}) => theme.color.highlight};
     text-align: center;`
 
 // export default BButton = (props) => {

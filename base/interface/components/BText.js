@@ -20,7 +20,7 @@ import styled from 'styled-components';
 
 export default BText = styled.Text`
     fontFamily: ${({theme}) => theme.fontStyles.bold};
-    color: ${({theme}) => theme.color.highlight};
+    color: ${({theme}) => theme.color.bodyText};
     font-size: ${({theme}) => theme.fontSizes.base}`
 
 export const BHeader = BText.extend`

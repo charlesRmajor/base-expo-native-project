@@ -11,7 +11,7 @@
 export const images = {
   logoNoTextWhite: require('../assets/images/BettermentLabsLogos/whiteMountains.png'),
   logoTextWhite: require('../assets/images/BettermentLabsLogos/whiteMountainsWithText.png'),
-  logoTextWhiteBlueMountains: require('../assets/images/BettermentLabsLogos/whiteMountainsWithBlueBackgroundAndText.png'),
+  logoTextWhiteBlueMountains: require('../assets/images/BettermentLabsLogos/bettermentLabsLogoWhiteSnow.png'),
   logoNoTextBlack: require('../assets/images/BettermentLabsLogos/blackMountains.png'),
   logoTextBlack: require('../assets/images/BettermentLabsLogos/blackMountainsWithText.png'),
   logoNoTextPurple: require('../assets/images/BettermentLabsLogos/purpleMountains.png'),

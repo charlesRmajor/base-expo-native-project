@@ -6,16 +6,28 @@
 
   Use :
 */
-
 import ColorPalette from './ColorPalette';
 
-export default ThemeColors = {
-    background: ColorPalette.DarkBlue,
-    bodyText: ColorPalette.White,
-    title: ColorPalette.MidBlue,
-    secondary: ColorPalette.Red,
-    tertiary: ColorPalette.LightGray,
-    highlight: ColorPalette.Yellow,
-    detailText: ColorPalette.DarkGray,
-    quaternary: ColorPalette.Cream,
+const BettermentLabsTheme = {
+  background: ColorPalette.White,
+  bodyText: ColorPalette.Purple,
+  title: ColorPalette.Purple,
+  secondary: ColorPalette.LightBlue,
+  tertiary: ColorPalette.BettermentDarkBlue,
+  highlight: ColorPalette.BettermentYellow,
+  detailText: ColorPalette.DarkGray,
+  quaternary: ColorPalette.SnowWhite,
 }
+
+const SOSTheme = {
+  background: ColorPalette.SOSDarkBlue,
+  bodyText: ColorPalette.White,
+  title: ColorPalette.MidBlue,
+  secondary: ColorPalette.Red,
+  tertiary: ColorPalette.LightGray,
+  highlight: ColorPalette.SOSYellow,
+  detailText: ColorPalette.DarkGray,
+  quaternary: ColorPalette.Cream,
+}
+
+export default BettermentLabsTheme;
