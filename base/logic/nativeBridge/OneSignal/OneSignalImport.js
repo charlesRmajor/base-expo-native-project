@@ -9,6 +9,6 @@
 */
 // IMPORTS
 // Import Other Project Modules
-// import OneSignal from 'react-native-onesignal'; // Import package from node modules
+import OneSignal from 'react-native-onesignal'; // Import package from node modules
 
 export default OneSignal;

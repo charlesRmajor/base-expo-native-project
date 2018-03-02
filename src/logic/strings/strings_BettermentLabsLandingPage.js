@@ -11,6 +11,7 @@ export default Strings = new BLocalization( {
   en: {
     title: "Base Expo Project",
     loadAppMarketPlace: "Load App MarketPlace",
+    goToSwipeableExample: "Go To Swipeable Router Example",
     checkPermissions: "Check Permissions",
     notificationsRequestButton: "Get Notifications Permission",
     locationPermissionsRequest: "Get Locations Permission",

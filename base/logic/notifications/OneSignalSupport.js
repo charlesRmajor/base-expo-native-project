@@ -11,7 +11,7 @@
 */
 // IMPORTS
 // Import Other App Logic
-import OneSignal from '../nativeBridge/notifications/OneSignalBridge';
+import OneSignal from '../nativeBridge/OneSignal/OneSignalBridge';
 import isFunction from '../../../base/logic/jsExtend/isFunction';
 import {
   getOnReceived,

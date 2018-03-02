@@ -33,6 +33,8 @@ import {updateMarket} from '../../../base/logic/nativeBridge/nativeInAppPurchase
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
+// UI Logic
+import {getMainRouterGoToSwipeableExample} from '../routers/MainRouter';
 
 export default BettermentLabsLandingContainer = (props) => {
     const strings = props.strings || null;
@@ -41,6 +43,9 @@ export default BettermentLabsLandingContainer = (props) => {
     const thisRemoveContactFromAppPhonebook = props.dispatch ? (contactIndex) => getRemoveContactFromAppPhonebookWithDispatch({contactIndex: contactIndex, dispatcher: props.dispatch}) : null;
     const ThisViewWithStore = connect(mapStateToProps)(BettermentLabsLandingPage);
     const ViewButtons = [
+      {title: strings.goToSwipeableExample,
+        onPress: getMainRouterGoToSwipeableExample(dispatcher)
+      },
       {title: strings.checkPermissions,
         onPress: checkNotificationsPermissions
       },

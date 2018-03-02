@@ -11,6 +11,10 @@
 // Import React Modules
 import React from 'react';
 
+// Import Project Logic
+import isFunction from '../../../base/logic/jsExtend/isFunction';
+import {isObject} from '../../../base/logic/jsExtend/objectMerge';
+
 const storeNameSuffix = 'Store';
 const stateNameSuffix = 'State';
 const goActionSuffix = '_GO';
@@ -18,10 +22,14 @@ const backActionSuffix = '_BACK';
 const forwardActionSuffix = '_FORWARD';
 
 export const getStoreSection = (routesObject) => {
+  const thisRoutesObject = (routesObject.routesArray != undefined && routesObject.routesArray != null) ? 
+    getRoutesObjectFromArray({routesArray: routesObject.routesArray}) :
+    routesObject
+
   const newObj = {};
-  newObj[routesObject.RoutesName+storeNameSuffix] = {
-    name: routesObject.RoutesName+stateNameSuffix,
-    reducer: getRouterReducer(routesObject)
+  newObj[routesObject.routerName+storeNameSuffix] = {
+    name: routesObject.routerName+stateNameSuffix,
+    reducer: getRouterReducer(thisRoutesObject)
   }
   return(newObj)
 }
@@ -76,13 +84,30 @@ export const getFirstAvailableKey = (object) => {
 }
 
 export const getCurrentView = ({view, routeProps, mapStateToProps}) => {
-  const allStrings = Object.assign({}, getPageStrings(view.name),(routeProps ? routeProps.strings ? routeProps.strings : {} : {}));
-  LogRoute(view.name);
-  const viewToRender = (mapStateToProps) ? connect(mapStateToProps)(view) : view;
-  const allRouteProps = Object.assign({},routeProps ? routeProps : {}, {strings: allStrings});
-  return React.createElement(viewToRender, allRouteProps)
+  if (isFunction(view)) {
+    const allStrings = Object.assign({}, getPageStrings(view.name),(routeProps ? routeProps.strings ? routeProps.strings : {} : {}));
+    LogRoute(view.name);
+    const viewToRender = (mapStateToProps) ? connect(mapStateToProps)(view) : view;
+    const allRouteProps = Object.assign({},routeProps ? routeProps : {}, {strings: allStrings});
+    return React.createElement(viewToRender, allRouteProps)  
+  } else {
+    if (!isObject(view)) {return null};
+    return getCurrentView({
+      view: view.routesArray,
+      routeProps: routeProps,
+      mapStateToProps: mapStateToProps})
+  }
 }
 
 export const LogRoute = (routeName) => {
   console.log("LogRoute: "+routeName);
+}
+
+const getRoutesObjectFromArray = ({routerName = 'unnamedRouter', routesArray}) => {
+  const routesObject = {};
+  routesObject.routerName = routerName;
+  routesArray.map((route, index) => {
+      routesObject[routerName+index] = route;
+  })
+  return routesObject
 }

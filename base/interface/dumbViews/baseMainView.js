@@ -40,6 +40,7 @@ export default baseMainView = (props) => {
             (<ThemeProvider theme={style}>
                 <MainView>
                     <ViewSpacer/>
+                    {props.children}
                     <ViewSpacer/>
                 </MainView>
             </ThemeProvider>

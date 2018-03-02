@@ -9,11 +9,12 @@
 // Import Store Files
 import setUserInfoSection from './userInfo';
 import setAppPhonebookSection from './appPhonebook';
-import {MainRouterStoreSection} from '../../../src/interface/routers/MainRouter';
+import {MainRouterStoreSection, SwipeableRouterExampleStoreSection} from '../../../src/interface/routers/MainRouter';
 
 export default appStoreSections =
   Object.assign({},
     setUserInfoSection,
     setAppPhonebookSection,
-    MainRouterStoreSection
+    MainRouterStoreSection,
+    SwipeableRouterExampleStoreSection
   );

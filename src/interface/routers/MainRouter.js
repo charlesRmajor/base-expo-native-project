@@ -28,7 +28,6 @@ import {addPropsRequestFromStore} from '../../../base/logic/store/helpers';
 import {getStoreSection,
     getRouterGoTo,
     getRouterGoBack,
-    getRouterReducer,
     getFirstAvailableRoute,
     getCurrentView,
     getFirstAvailableKey,
@@ -42,13 +41,30 @@ import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 import getPageStrings from '../../../base/logic/strings/getPageStrings';
 
 // Import Other App UI Elements
-// import BettermentLabsLandingPage from '../mainViews/BettermentLabsLandingPage';
+import SwipeableRouter from '../../../base/interface/routers/SwipeableRouter';
+import getSimplePageView from '../../../base/interface/dumbViews/getSimplePageView';
 import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
 
+const SwipeableRouterExampleRoutes = () => {
+    var Routes = [];
+    for (i = 0; i < 10; i++) { 
+        Routes.push({view: getSimplePageView(i)})
+    }
+    return Routes;
+}
+
+const SwipeableRouterExample = {
+    routerName: 'SwipeableRouterExample',
+    routesArray: SwipeableRouterExampleRoutes()
+}
+
 export const MainRoutes = {
-    RoutesName: 'MainRoutes',
+    routerName: 'MainRoutes',
     Home: {
         view: BettermentLabsLandingContainer,
+    },
+    SwipeableRouterExample: {
+        view: SwipeableRouterExample
     }
 }
 
@@ -66,6 +82,7 @@ class MainRouter extends React.Component {
     }
     
     render() {
+        console.log(this.props);
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
         
@@ -85,7 +102,6 @@ class MainRouter extends React.Component {
 }
 
 const mapStateToProps = function(store) {
-    MainRouterStoreSection
     const additionalSections = {
         loading: allStoreSections.loading,
         router: allStoreSections[getFirstAvailableKey(MainRouterStoreSection)]
@@ -98,14 +114,20 @@ const mapStateToProps = function(store) {
   
 export default connect(mapStateToProps)(MainRouter);
 
-export const MainRouterGoBack = (dispatch) => {
+export const MainRouterGoBack = ({dispatch}) => {
     const goFunc = dispatch ? () => dispatch(getRouterGoBack(MainRoutes)) : null;
     return(goFunc)
 };
 
-export const getMainRouterGoToLocationView = (dispatch) => {
+export const getMainRouterGoToLocationView = ({dispatch}) => {
     const goFunc = dispatch ? () => dispatch(getRouterGoTo(MainRoutes)(MainRoutes.LocationView)) : null;
     return(goFunc)
 };
 
+export const getMainRouterGoToSwipeableExample = ({dispatch}) => {
+    const goFunc = dispatch ? () => dispatch(getRouterGoTo(MainRoutes)(MainRoutes.SwipeableRouterExample)) : null;
+    return(goFunc)
+};
+
 export const MainRouterStoreSection = getStoreSection(MainRoutes);
+export const SwipeableRouterExampleStoreSection = getStoreSection(SwipeableRouterExample);

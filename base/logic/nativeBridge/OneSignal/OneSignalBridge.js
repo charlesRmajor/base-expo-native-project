@@ -20,7 +20,7 @@ const getOneSignalPackage = () => {
         return null
     } else {
         console.log("getOneSignalPackage isNOTCurrentlyRunningInExpoClient - returning NativeOneSignal")
-        const OneSignal = require('./OneSignalImport');
+        const NativeOneSignal = require('./OneSignalImport');
         return NativeOneSignal;
     }
 }

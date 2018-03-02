@@ -13,7 +13,7 @@ Component index.js
 
 // Import Other Project Modules
 // import OneSignal from 'react-native-onesignal'; // OneSignal has permission helpers we'll use
-import OneSignal from '../nativeBridge/notifications/OneSignalBridge';
+import OneSignal from '../nativeBridge/OneSignal/OneSignalBridge';
 
 // Import Other App Logic
 import isFunction from '../../../base/logic/jsExtend/isFunction';

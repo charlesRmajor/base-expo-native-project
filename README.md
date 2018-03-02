@@ -224,6 +224,11 @@ Native Modules's potential lack of existence must be guarded against. When calli
         [... what to do if MyModule is not found ...]
     }
 ```
+
+For using packages that require native code integration, consult /base/logic/nativeBridge/OneSignal/*
+and where this package is used: /base/logic/notifications/OneSignalSupport.js
+
+
 ## iOS Permissions:
     * When using iOS permissions, you'll need to update Info.plist with the reason your app needs the requested permission
 
@@ -279,18 +284,33 @@ Note: When updating these essential packages for Betterment Labs projects (espec
         * Android native module still needed
     * in app purchases? (can we use the packages this was based on before?)
         * iOS: 
-            * InAppUtils not kept up ... use our own version -- need to test
-            * Added to binary
-            * Need to test after uploading binary to app store
+            * Working
         * Android:
             * 
 * publish to expo with screen that says it needs to be updated to whatever the person wants!!!
+* Setup Router types:
+    * swipeable tutorial/wizard style
+    * nested hierarchies
+    * standardize passing navigation links (redux state)
+* change theme in app:
+    * add other themes
+    * fix app icon
+    * language override
+* add permissions tracking to redux/OneSignal/FB Analytics
+* fix app icons -- and add instructions for updating icons (XCode & Android Studio)
+* android back button hooked up to router
+* should essential logic of MainRouter be abstracted away from app insertion point?
+* support additional default store sections from app
 
 ### Other Packages To Add?
 * redux-thunk
 * react-native-firebase
 
-* should essential logic of MainController be abstracted away from app insertion point?
+* use Google Firebase (or other) to store basic retrievable app info such as:
+    * current available in-app-purchases
+    * what version(s) of app are "dead"
+    * others?
+
 * get working with Expo & native at same time
 * react-router-redux??? https://github.com/reactjs/react-router-redux
 * app store signing:
@@ -310,26 +330,12 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * add general update build instructions to this readme
 * other instructions/troubleshooting notes from my build docs?
 * separate out iOS/Android studio instructions above
-* add table of contents to this readme
-* Setup ViewController types:
-    * swipeable tutorial/wizard style
-    * nested hierarchies
-    * standardize passing navigation links (redux state)
+* add table of contents to this readme -- improve Readme & Tutorial formatting
 * add instructions for cloning this repo, getting cocoapods, more detail using yarn, etc.
     * using your own in app purchases
     * stripping out un-needed code
 * add default fallbacks for styled components
-
-* change theme in app:
-    * add other themes
-    * fix app icon
                 
-* Expo-Project:
-    * add expo-based notifications (maybe?)
-    * live theme update from in-app 
-    * language override
-    * more elegant way to handle expo/native builds (different app.json files)
-
 * In App Purchases:
     * RN: get IAP purchase options dynamically:
         * iOS: must load product IDs from server to query App Store
@@ -340,24 +346,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
         * subscription
         * restore
 
-* add permissions tracking to redux/OneSignal/FB Analytics
-
-* add visual response to clicking on BButton
-
 * animated transitions: https://github.com/Traviskn/react-router-native-stack
-
-* add OneSignal subscriptions to AppSubscriptions.js
-
-* check issues with getting permissions for OneSignal (iOS)
-
-* fix app icons -- and add instructions for updating icons (XCode & Android Studio)
-
-* android back button hooked up to router
-
-* use Google Firebase (or other) to store basic retrievable app info such as:
-    * current available in-app-purchases
-    * what version(s) of app are "dead"
-    * others?
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
