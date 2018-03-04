@@ -14,13 +14,6 @@ import {Platform, NativeModules} from 'react-native';
 // Import Other App Logic
 import isFunction from '../../../base/logic/jsExtend/isFunction';
 
-// ArrayOfProductObjects returned by .loadProducts(...) is an array of objects of form:
-//  "description": String,
-// "downloadable": String ("false" or "true"),
-// "identifier": String,
-// "priceString": String ("$0.99",)
-// "title": String,
-// },
 export const getMarketplaceFromAppStore = ({callback, productArray}) => {
     console.log("updating Market with product array:");
     console.log(productArray);
@@ -57,10 +50,10 @@ export const getMarketplaceFromAppStore = ({callback, productArray}) => {
     }
 }
 
-export const buyMarketplaceProductFromStore = ({productID, productsArrayIndex, callback, dispatch}) => {
-	console.log("attempting to buy from apple store: ");
+export const buyMarketplaceProductFromStore = ({productID, callback}) => {
+    console.log("buyMarketplaceProductFromStore productID");
     console.log(productID);
-	if (NativeModules.InAppPurchasesModule != undefined) {
+    if (NativeModules.InAppPurchasesModule != undefined) {
 		let InAppPurchasesModule = NativeModules.InAppPurchasesModule;
 		if (InAppPurchasesModule.purchaseProduct != undefined) {
 			InAppPurchasesModule.purchaseProduct(productID, (error, response) => {
@@ -71,7 +64,6 @@ export const buyMarketplaceProductFromStore = ({productID, productsArrayIndex, c
                             errorMessage: error
                           })      
                     } else {
-
                         callback({
                             error: false,
                             errorMessage: '',
@@ -85,37 +77,11 @@ export const buyMarketplaceProductFromStore = ({productID, productsArrayIndex, c
                     console.log("response");
                     console.log(response);
                 }
-
-				// if(response && response.productIdentifier) {
-				// 	// logPurchaseEvent(productID, store);
-				// 	resetUpgrade();
-				// 	AsyncStorage.setItem(sosProducts[response.productIdentifier], 'true');
-				// 	// console.log(isFunctionA(promiseFunction)); // next line throws error if you don't do this first
-				// 	// (isFunctionA(promiseFunction) && promiseFunction(promiseParams));
-				// } else {
-				// 	console.log('received error & no response. Attempting to restore app purchase');
-				// 	// restoreApplePurchase(strings, store, promiseFunction, promiseParams);
-				// }
 			});			
 		} else {
             console.log('NativeModules.InAppPurchasesModule.loadProducts is not found');
-			// betaNotSupportedAlert();
 			}
 		} else {
             console.log('NativeModules.InAppPurchasesModule is not found');
-            // betaNotSupportedAlert();
 		}
 }
-
-
-// const getArrayOfProducts = (rawProductObject) => {
-// 	var arrayOfProducts = [];
-// 	for(var key in rawProductObject) {
-// 	    if(rawProductObject.hasOwnProperty(key)) {
-// 	        // arrayOfProducts.push(rawProductObject[key]);
-// 	        arrayOfProducts.push(key);
-// 	    }
-// 	}
-// 	return(arrayOfProducts)
-// }
-

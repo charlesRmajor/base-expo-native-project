@@ -22,7 +22,11 @@ export default Strings = new BLocalization( {
     sendTestOneSignalTag: "Send OneSignal Test Tag",
     checkOneSignalSubscription: "Check OneSignal Subscription Status",
     checkOneSignalTags: "Get Current OneSignal Tags",
-    storeHeaderTitle: "Loaded App Marketplace"
+    storeHeaderTitle: "Loaded App Marketplace",
+    purchasedProductsTitle: "Purchased Products",
+    failedPurchasesTitle: "Failed Purchases",
+    attemptedPurchasesTitle: "Attempted Purchases",
+    consumedProductsTitle: "Consumed Products"
   },
   es: {
     title: "SPANISH: Welcome to Betterment Labs's Base Expo/React-Native Project"

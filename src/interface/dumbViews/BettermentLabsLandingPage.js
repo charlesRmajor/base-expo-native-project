@@ -25,6 +25,7 @@ import BRoundedButton from '../../../base/interface/components/BRoundedButton';
 import BButton, {ButtonView} from '../../../base/interface/components/BButton';
 import getContactCard from '../components/getContactCard';
 import getMarketplaceItemCard from '../components/getMarketplaceItemCard';
+import getProductCard from '../components/getProductCard';
 
 // Interface Styling
 const ButtonEnclosingView = styled.View`flex:2`;
@@ -40,7 +41,7 @@ const ScrollView = styled.ScrollView`
 const ViewSpacer = styled.View`height: 20px`;
 
 const MarketplaceHeader = BHeader.extend`
-    font-size: ${({theme}) => theme.fontSizes.base};`;
+    font-size: ${({theme}) => theme.fontSizes.medium};`;
 
 const StoreItemButtonView = ButtonView.extend`
     width: 100%
@@ -73,34 +74,11 @@ const PageButtons = (PageButtonArray) => {
     })
     return(JSXButtons);
 }
-
-const StoreList = (productsArray) => {
-// text: item.title+" "+strings.for+" "+item.priceString+strings.perYear, 
-console.log("StoreList productsArray");
-console.log(productsArray);
-    var JSXButtons = [];
-    productsArray.map((buttonObject, index) => {
-        console.log("buttonObject");
-        console.log(buttonObject);
-        const JSXButton = (
-            <ButtonEnclosingView
-                key={index}
-            >
-                <ViewSpacer/>
-                <BButton
-                    ButtonView={StoreItemButtonView}
-                    title={buttonObject.title || ''}
-                    onPress={buttonObject.onPress || null}
-                />
-            </ButtonEnclosingView>
-        )
-        JSXButtons.push(JSXButton);
-    })
-    return(JSXButtons);
-}
     
 export default BettermentLabsLandingPage = (props) => {
     // console.log(props);
+    // console.log("props.marketplace");
+    // console.log(props.marketplace);
     const style = props.styles || defaultAppStyles;
     const strings = props.strings || null;
     const images = props.images || null;
@@ -112,12 +90,63 @@ export default BettermentLabsLandingPage = (props) => {
     const logoImage =  (<ImageView>{imageLogo && (<ImageWithAspect source={imageLogo} />)}</ImageView>);
 
     const Buttons = props.buttons ? PageButtons(props.buttons) : null;
-    const ProductsButtons = (props.marketplace && props.marketplace.products) ?
-        props.marketplace.products.map((marketplaceItem, index) => getMarketplaceItemCard({marketplaceItem: marketplaceItem, index: index}))
-        : null;
-    // (props.marketplace && props.marketplace.products) ? StoreList(props.marketplace.products) : null;
+    const ProductsButtons = (props.marketplace && props.marketplace.MarketPlaceProducts) ?
+        props.marketplace.MarketPlaceProducts.map(
+            (marketplaceItem, index) =>
+                getMarketplaceItemCard({
+                    marketplaceItem: marketplaceItem,
+                    index: index,
+                    purchaseFunction: props.purchaseFunction}))
+            : null;
 
-    const mainView =
+    const PurchasedProducts = (props.marketplace && props.marketplace.PurchasedProducts) ?
+        props.marketplace.PurchasedProducts.map(
+            (product, index) =>
+                {
+                const ProductButton =
+                    (props.consumeFunction
+                        && product
+                        && product.productID == 'consumableProdID') ?
+                        (<BRoundedButton
+                            title={'CONSUME'}
+                            onPress={() => props.consumeFunction({productID: product.identifier})}/>)
+                        : null;
+
+                return (getProductCard({
+                    productState: 'purchased',
+                    product: product,
+                    index: index,
+                    productButton: ProductButton}))})
+        : null;
+
+    const FailedTransactions = (props.marketplace && props.marketplace.FailedTransactions) ?
+        props.marketplace.FailedTransactions.map(
+            (product, index) =>
+                getProductCard({
+                    productState: 'failed',
+                    product: product,
+                    index: index}))
+        : null;
+    
+    const AttemptedTransactions = (props.marketplace && props.marketplace.AttemptedTransactions) ?
+        props.marketplace.AttemptedTransactions.map(
+            (product, index) =>
+                getProductCard({
+                    productState: 'attempted',
+                    product: product,
+                    index: index}))
+        : null;
+
+    const ConsumedProducts = (props.marketplace && props.marketplace.ConsumedProducts) ?
+        props.marketplace.ConsumedProducts.map(
+            (product, index) =>
+                getProductCard({
+                    productState: 'consumed',
+                    product: product,
+                    index: index}))
+        : null;
+    
+        const mainView =
         (<ThemeProvider theme={style}>
             <MainView>
                 <ScrollView>
@@ -129,6 +158,14 @@ export default BettermentLabsLandingPage = (props) => {
                     <ViewSpacer/>
                     <MarketplaceHeader>{strings.storeHeaderTitle}</MarketplaceHeader>
                     {ProductsButtons}
+                    <MarketplaceHeader>{strings.purchasedProductsTitle}</MarketplaceHeader>
+                    {PurchasedProducts}
+                    <MarketplaceHeader>{strings.failedPurchasesTitle}</MarketplaceHeader>
+                    {FailedTransactions}
+                    <MarketplaceHeader>{strings.attemptedPurchasesTitle}</MarketplaceHeader>
+                    {AttemptedTransactions}
+                    <MarketplaceHeader>{strings.consumedProductsTitle}</MarketplaceHeader>
+                    {ConsumedProducts}
                     <ScrollViewBottomSpacer/>
                 </ScrollView>
                 {logoImage}

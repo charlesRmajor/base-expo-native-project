@@ -18,7 +18,9 @@ import {
     } from '../nativeBridge/nativeInAppPurchases';
 import {
     isAttemptingToPurchase,
-    isPurchased
+    purchaseProduct,
+    transactionFailed,
+    consumeProduct
     } from '../../../base/logic/store/marketplace';
 
 export const getMarketplace = ({callback, productIDs}) => {
@@ -35,9 +37,62 @@ export const getMarketplace = ({callback, productIDs}) => {
         productArray: productIDs})
 }
 
-export const buyProduct = ({productID, productsArrayIndex, callback, dispatch}) => {
-    const isAttemptingToPurchaseAction = isAttemptingToPurchase(productsArrayIndex);
-    const isPurchased = isPurchased(productsArrayIndex);
-    dispatch && dispatch(isAttemptingToPurchase);
-
+export default purchaseProductWithDispatch = ({callback, dispatch}) => {
+    return(
+        ({productID}) => {
+            const isAttemptingToPurchaseAction = isAttemptingToPurchase(productID);
+            dispatch && dispatch(isAttemptingToPurchaseAction);
+            buyMarketplaceProductFromStore({
+                productID: productID,
+                callback: (result) => {
+                    console.log("buyMarketplaceProductFromStore result:");
+                    console.log(result);
+                    if (result.error) {
+                        const transactionFailedAction = transactionFailed(productID);
+                        dispatch && dispatch(transactionFailedAction);
+                    } else {
+                        const purchaseProductAction = 
+                            purchaseProduct({
+                                productID: result.content.productIdentifier,
+                                transactionID: result.content.transactionIdentifier
+                            });
+                        dispatch && dispatch(purchaseProductAction);
+                    }
+                    if (isFunction(callback)) {
+                        callback(result);
+                    } else {
+                        console.log("No callback function to purchaseProductWithDispatch provided. Result is: ");
+                        console.log(result);
+                    }
+                    console.log('buyMarketplaceProductFromStore callback')}       
+            })
+        }
+    )
 }
+
+export const consumeProductWithDispatch = ({callback, dispatch}) => {
+    return(
+        ({productID}) => {
+            const consumeProductAction = consumeProduct(productID);
+            dispatch && dispatch(consumeProductAction);
+            if (isFunction(callback)) {
+                callback(true);
+            } else {
+                console.log("No callback function to consumeProductWithDispatch provided.");
+            }
+        }
+    )
+}
+
+/*
+result:
+
+Object {
+  "productIdentifier": "consumableProdID",
+  "transactionIdentifier": "1000000380462355",
+}
+
+  "error": true,
+  "errorMessage": "transaction_failed",
+
+*/

@@ -47,7 +47,7 @@ RCT_EXPORT_MODULE()
                     }
                     [_callbacks removeObjectForKey:key];
                 } else {
-                    RCTLogWarn(@"No callback registered for transaction with state failed.");
+                    RCTLog(@"No callback registered for transaction with state failed.");
                 }
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
@@ -63,7 +63,7 @@ RCT_EXPORT_MODULE()
                     callback(@[[NSNull null], purchase]);
                     [_callbacks removeObjectForKey:key];
                 } else {
-                    RCTLogWarn(@"No callback registered for transaction with state purcahsed.");
+                    RCTLog(@"No callback registered for transaction with state purchased.");
                 }
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
@@ -72,10 +72,10 @@ RCT_EXPORT_MODULE()
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKPaymentTransactionStatePurchasing:
-                NSLog(@"purchasing");
+                RCTLog(@"purchasing");
                 break;
             case SKPaymentTransactionStateDeferred:
-                NSLog(@"deferred");
+                RCTLog(@"deferred");
                 break;
             default:
                 break;
@@ -114,7 +114,7 @@ restoreCompletedTransactionsFailedWithError:(NSError *)error
         callback(@[@"restore_failed"]);
         [_callbacks removeObjectForKey:key];
     } else {
-        RCTLogWarn(@"No callback registered for restore product request.");
+        RCTLog(@"No callback registered for restore product request.");
     }
 }
 
@@ -133,7 +133,7 @@ restoreCompletedTransactionsFailedWithError:(NSError *)error
         callback(@[[NSNull null], productsArrayForJS]);
         [_callbacks removeObjectForKey:key];
     } else {
-        RCTLogWarn(@"No callback registered for restore product request.");
+        RCTLog(@"No callback registered for restore product request.");
     }
 }
 
@@ -178,30 +178,10 @@ RCT_EXPORT_METHOD(receiptData:(RCTResponseSenderBlock)callback)
 {
     NSString *key = RCTKeyForInstance(request);
     RCTResponseSenderBlock callback = _callbacks[key];
-    RCTLog(@"response");
-    RCTLog(@"%@", response);
-    RCTLog(@"request");
-    RCTLog(@"%@", request);
-    RCTLog(@"response.products");
-    RCTLog(@"%@", response.products);
     if (callback) {
         products = [NSMutableArray arrayWithArray:response.products];
-        RCTLog(@"products");
-        RCTLog(@"%@", products);
         NSMutableArray *productsArrayForJS = [NSMutableArray array];
         for(SKProduct *item in response.products) {
-            RCTLog(@"item");
-            RCTLog(@"%@", item);
-            RCTLog(@"productIdentifier");
-            RCTLog(@"%@", item.productIdentifier);
-            RCTLog(@"priceString");
-            RCTLog(@"%@", item.priceString);
-            RCTLog(@"downloadable");
-            RCTLog(@"%@", item.downloadable);
-            RCTLog(@"localizedDescription");
-            RCTLog(@"%@", item.localizedDescription);
-            RCTLog(@"localizedTitle");
-            RCTLog(@"%@", item.localizedTitle);
             NSDictionary *product = @{
                                       @"identifier": (item.productIdentifier != NULL) ? item.productIdentifier : (NSString*)@"",
                                       @"priceString": (item.priceString != NULL) ? item.priceString : (NSString*)@"",
@@ -209,16 +189,12 @@ RCT_EXPORT_METHOD(receiptData:(RCTResponseSenderBlock)callback)
                                       @"description": (item.localizedDescription != NULL) ? item.localizedDescription : (NSString*)@"",
                                       @"title": (item.localizedTitle != NULL) ? item.localizedTitle : (NSString*)@"",
                                       };
-            RCTLog(@"product");
-            RCTLog(@"%@", product);
             [productsArrayForJS addObject:product];
         }
-        RCTLog(@"productsArrayForJS");
-        RCTLog(@"%@", productsArrayForJS);
         callback(@[[NSNull null], productsArrayForJS]);
         [_callbacks removeObjectForKey:key];
     } else {
-        RCTLogWarn(@"No callback registered for load product request.");
+        RCTLog(@"No callback registered for load product request.");
     }
 }
 

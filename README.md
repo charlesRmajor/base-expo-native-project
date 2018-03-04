@@ -301,6 +301,15 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * android back button hooked up to router
 * should essential logic of MainRouter be abstracted away from app insertion point?
 * support additional default store sections from app
+* have localization post alert when string isn't found
+* save in-app-purchase info
+* time-based notifications from within app (?)
+* date-time support functions
+* in app purchases:
+    * support In-app-purchase based downloads
+    * loading indicator
+    * time out time
+    * cancel button
 
 ### Other Packages To Add?
 * redux-thunk

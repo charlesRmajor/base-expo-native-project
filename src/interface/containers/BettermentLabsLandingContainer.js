@@ -29,7 +29,7 @@ import {
   GetOneSignalTags,
   CheckOneSignalSubscriptionStatus
   } from '../../../base/logic/notifications/OneSignalSupport';
-import {updateMarket} from '../../../base/logic/nativeBridge/nativeInAppPurchases';
+import purchaseProductWithDispatch, {consumeProductWithDispatch} from '../../../base/logic/purchases';
 
 // Import Other App UI Elements
 import BettermentLabsLandingPage from '../dumbViews/BettermentLabsLandingPage';
@@ -41,7 +41,6 @@ export default BettermentLabsLandingContainer = (props) => {
 
     const dispatcher = props.dispatch ? {dispatch: props.dispatch} : null;
     const thisRemoveContactFromAppPhonebook = props.dispatch ? (contactIndex) => getRemoveContactFromAppPhonebookWithDispatch({contactIndex: contactIndex, dispatcher: props.dispatch}) : null;
-    const ThisViewWithStore = connect(mapStateToProps)(BettermentLabsLandingPage);
     const ViewButtons = [
       {title: strings.goToSwipeableExample,
         onPress: getMainRouterGoToSwipeableExample(dispatcher)
@@ -57,7 +56,6 @@ export default BettermentLabsLandingContainer = (props) => {
       },
       { title: strings.sendTestOneSignalTag,
         onPress: () => {
-          console.log("ThisSendTestOneSignalTag");
           SendOneSignalTag({key0: "value0", key1: "value1", key2: "value2"});
         }
       },
@@ -71,9 +69,12 @@ export default BettermentLabsLandingContainer = (props) => {
         onPress: () => saveContactFromPhonesPhoneBook(dispatcher)
       }
     ];
+    const ThisViewWithStore = connect(mapStateToProps)(BettermentLabsLandingPage);
     return(
         <ThisViewWithStore
           buttons={ViewButtons}
+          purchaseFunction={purchaseProductWithDispatch(dispatcher)}
+          consumeFunction={consumeProductWithDispatch(dispatcher)}
           removeContactFromPhonesPhoneBook={thisRemoveContactFromAppPhonebook}
           {...props} />
     )

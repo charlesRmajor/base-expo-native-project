@@ -1,10 +1,10 @@
 /*
-  getMarketplaceItemCard.js
+  getProductCard.js
     Betterment Labs
     Created by BettermentLabs. 
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-Component getMarketplaceItemCard.js
+Component getProductCard.js
   Description:  
   Inputs: 
   Outputs: 
@@ -16,12 +16,10 @@ import React from 'react';
 // Import Other Node Modules
 import styled from 'styled-components';
 
-// Import Other App UI Elements
-import BRoundedButton from '../../../base/interface/components/BRoundedButton';
-
 const MainView = styled.View``;
 
-const CardView = styled.View`height: 175px;
+const CardView = styled.View`
+    height: ${({height}) => (height || '120px')};
     background: ${({theme}) => (theme.color.title)};
 `
 const ViewSpacer = styled.View`height: 5px`;
@@ -38,19 +36,20 @@ const GeneralText = styled.Text`height: 20px;
     color: ${({theme}) => theme.color.highlight};
     fontSize: ${({theme}) => theme.fontSizes.small}`
 
-export default getMarketplaceItemCard = ({marketplaceItem, index, purchaseFunction}) => {
+export default getProductCard = ({productState, product, index, productButton}) => {
     return(
             <MainView key={index}>
-                <CardView>
-                    <Header>title: {marketplaceItem.title}</Header>
-                    <GeneralText>identifier: {marketplaceItem.identifier}</GeneralText>
-                    <GeneralText>description: {marketplaceItem.description}</GeneralText>
-                    <GeneralText>priceString: {marketplaceItem.priceString}</GeneralText>
-                    <GeneralText>downloadable: {marketplaceItem.downloadable}</GeneralText>
+                <CardView
+                    height={productButton ? '170px' : null}
+                >
+                    <Header>productID: {product.productID}</Header>
+                    {product.transactionID && <GeneralText>transactionID: {product.transactionID}</GeneralText>}
+                    {product.dateTime && product.dateTime.attempted && <GeneralText>dateTime.attempted: {product.dateTime.attempted}</GeneralText>}
+                    {product.dateTime && product.dateTime.failed && <GeneralText>dateTime.failed: {product.dateTime.failed}</GeneralText>}
+                    {product.dateTime && product.dateTime.purchased && <GeneralText>dateTime.purchased: {product.dateTime.purchased}</GeneralText>}
+                    {product.dateTime && product.dateTime.consumed && <GeneralText>dateTime.consumed: {product.dateTime.consumed}</GeneralText>}
                     <ViewSpacer/>
-                    <BRoundedButton
-                        title={'PURCHASE'}
-                        onPress={() => purchaseFunction({productID: marketplaceItem.identifier})}/>
+                    {productButton && productButton}
                     <ViewSpacer/>
                 </CardView>
                 <ViewSpacer/>

@@ -82,7 +82,7 @@ class MainRouter extends React.Component {
     }
     
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
         
@@ -90,6 +90,8 @@ class MainRouter extends React.Component {
             getCurrentView({
                 view: this.props.router.location.view,
                 routeProps: this.props});
+
+        // const FullScreenLoadingOverlay = 
         
         return(
             <View style={{height:'100%', width:'100%'}}>
