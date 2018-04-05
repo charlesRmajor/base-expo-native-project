@@ -267,6 +267,8 @@ This was built with
 * react-native-onesignal: 3.0.9
 * Styled-Components: 3.1.6
 * Axios: 0.17.1
+* redux-devtools-extension: 2.13.2
+    * NOTE: uses redux-devtools-extension/developmentOnly, so not included in final builds
 
 Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
@@ -321,6 +323,16 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * later: add permissions tracking to OneSignal/FB Analytics from redux store
 * (A) have BLocalization post alert when string isn't found
 * (A) save in-app-purchase info (ASyncStorage)
+
+* (A) Dynamically load all store sections in folder. Does code like this allow us to do such a thing?
+    ```javascript
+        if (module.hot) {
+        module.hot.accept('./reducers/', () => {
+            const nextRootReducer = require('./reducers/index').default;
+            store.replaceReducer(nextRootReducer);
+        });
+        }
+    ```
 
 * publish to expo with screen that says it needs to be updated to whatever the person wants!!!
 * Setup Router types:

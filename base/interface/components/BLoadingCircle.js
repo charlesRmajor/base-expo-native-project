@@ -32,13 +32,20 @@ class BLoadingCircle extends React.Component {
         circleAngle: 0,
         circMargin: 5,
         circBoxViewBox: "-60 -60 120 120",
+        isMounted: true
     }
 
-    componentDidMount() {this.startProgressCircle()}
+    componentDidMount() {
+        this.setState({isMounted: true}, this.startProgressCircle())
+    }
 
-    componentWillUnmount() {this.resetProgressCircle()}
+    componentWillUnmount() {
+        // this.resetProgressCircle()
+        this.setState({isMounted: false})
+    }
 
     setLayoutState = (event) => {
+        if (!this.state.isMounted) {return}
 		const width = event.nativeEvent.layout.width;
 		const height = event.nativeEvent.layout.height;
 
@@ -93,6 +100,7 @@ class BLoadingCircle extends React.Component {
       }
   
       advanceProgressCircle = () => {
+          if (!this.state.isMounted) {return}
           var newState = this.state;
           if (newState.circleAngle > (360-anglePerFrame)) {
               newState.circleAngle = 0;
@@ -109,7 +117,8 @@ class BLoadingCircle extends React.Component {
     }
   
       resetProgressCircle = () => {
-          var newState = this.state;
+        if (!this.state.isMounted) {return}
+        var newState = this.state;
           newState.circleAngle = 0;
           newState.progressCircleInProgress = false;
           this.setState({
@@ -118,7 +127,8 @@ class BLoadingCircle extends React.Component {
       }
   
       startProgressCircle = () => {
-          this.setState({
+        if (!this.state.isMounted) {return}
+        this.setState({
               progressCircleInProgress: true
               }, () => {
                   requestAnimationFrame(this.advanceProgressCircle);
