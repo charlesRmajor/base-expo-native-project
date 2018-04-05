@@ -92,7 +92,7 @@ class MainRouter extends React.Component {
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState.areLoaded) { if (!this.props.loading.essentialState.areLoaded[key]) {ready=false; return}} return ready })())
         
-        // const FullScreenLoadingOverlay = <FullScreenLoading {...this.props} />;
+        const FullScreenLoadingOverlay = null;//<FullScreenLoading {...this.props} />;
 
         const CurrentView = !readyToRender ? <FullScreenLoading {...this.props} /> :
             getCurrentView({
@@ -105,7 +105,7 @@ class MainRouter extends React.Component {
                     <StatusBar barStyle="light-content" />
                     <View style={{height:'3%', backgroundColor: '#000000'}} />
                     {CurrentView}
-                    <FullScreenLoading {...this.props} />
+                    {FullScreenLoadingOverlay}
                 </View>
             </ThemeProvider>
         );
