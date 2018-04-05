@@ -13,10 +13,15 @@ import { combineReducers } from 'redux';
 
 // Action Definitions
 // Loading
+export const fontsStartLoading = {type: 'FONTS_START_LOADING'};
 export const fontsDoneLoading = {type: 'FONTS_DONE_LOADING'};
+export const appLaunchStart = {type: 'APP_LAUNCH_START'};
+export const appLaunchDone = {type: 'APP_LAUNCH_DONE'};
+
+export const imagesStartLoading = {type: 'IMAGES_START_LOADING'};
 export const imagesDoneLoading = {type: 'IMAGES_DONE_LOADING'};
+export const marketStartLoading = {type: 'MARKET_START_LOADING'};
 export const marketDoneLoading = {type: 'MARKET_DONE_LOADING'};
-export const appLaunchRan = {type: 'APP_LAUNCH_RAN'};
 
 // Subscriptions
 export const oneSignalIsSubscribing = {type: 'ONE_SIGNAL_IS_SUBSCRIBING'};
@@ -48,31 +53,67 @@ const subscriptionsReducer = (state, action) => {
 const essentialLoadingReducer = (state, action) => {
     if (state === undefined) {
         state = {
-            appLaunchRan: false,
-            fontsLoaded: false
+            areLoading: {appLaunch: false},
+            areLoaded: {appLaunch: false}
         }
     }
     switch(action.type) {
+        case appLaunchStart.type:
+            return Object.assign({}, state, {areLoading: Object.assign({}, state.areLoading, {appLaunch: true})})
+        case appLaunchDone.type:
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {appLaunch: false}),
+                areLoaded: Object.assign({}, state.areLoaded, {appLaunch: true})
+            })
+        case fontsStartLoading.type:
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {fonts: true}),
+                areLoaded: Object.assign({}, state.areLoaded, {fonts: false})
+            })
         case fontsDoneLoading.type:
-            return Object.assign({}, state, {fontsLoaded: true})
-        case appLaunchRan.type:
-            return Object.assign({}, state, {appLaunchRan: true})
-    }
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {fonts: false}),
+                areLoaded: Object.assign({}, state.areLoaded, {fonts: true})
+            })
+        }
     return state
 }
 
 const nonEssentialLoadingReducer = (state, action) => {
     if (state === undefined) {
         state = {
-            imagesLoaded: false
+            areLoading: {
+                images: false,
+                market: false,
+            },
+            areLoaded:  {
+                images: false,
+                market: false,
+            }
         }
     }
     switch(action.type) {
+        case imagesStartLoading.type:
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {images: true}),
+                areLoaded: Object.assign({}, state.areLoaded, {images: false})
+            })
         case imagesDoneLoading.type:
-            return Object.assign({}, state, {imagesLoaded: true})
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {images: false}),
+                areLoaded: Object.assign({}, state.areLoaded, {images: true})
+            })
+        case marketStartLoading.type:
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {market: true}),
+                areLoaded: Object.assign({}, state.areLoaded, {market: false})
+            })
         case marketDoneLoading.type:
-            return Object.assign({}, state, {marketLoaded: true})
-    }
+            return Object.assign({}, state,
+                {areLoading: Object.assign({}, state.areLoading, {market: false}),
+                areLoaded: Object.assign({}, state.areLoaded, {market: true})
+            })
+        }
     return state
 }
   

@@ -26,7 +26,7 @@ const BRoundedButtonView = ButtonView.extend`
     borderRadius: 15px;
     `
 
-export default BRoundedButton = (props) => {
+export default BFormButton = (props) => {
     return(
         <BButton ButtonView={BRoundedButtonView} {...props} />
     )

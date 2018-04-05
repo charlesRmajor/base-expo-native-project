@@ -23,7 +23,7 @@ import getArrayOfSources from './getArrayOfSources';
 import AppStyles, {defaultFontSet} from '../../interface/theming/AppStyles';
 import getThemeFontSet from '../../interface/theming/getThemeFontSet';
 import {rawImages, images} from '../../../src/AppAssets';
-import {fontsDoneLoading} from '../store/loading';
+import {fontsStartLoading, fontsDoneLoading} from '../store/loading';
 import {setAppStylesTo} from '../store';
 
 // Import Current Font Set From App Properties
@@ -37,6 +37,7 @@ export default loadAppStyles = (dispatch) => {
 }
 
 const downloadAllFonts = (dispatch) => {
+  dispatch(fontsStartLoading);
   const ThemeFontSetIs = ThemeFontSet ? ThemeFontSet : defaultFontSet;
   const FontsToLoad = getThemeFontSet(ThemeFontSetIs);
   const needsLoading = FontsToLoad.needsLoading;

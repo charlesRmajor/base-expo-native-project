@@ -30,7 +30,7 @@ import loadAppStyles from './loading/loadAppStyles';
 
 // Import General Logic
 import {logVersionInfo} from '../logic/VersionInfo';
-import {appLaunchRan} from '../logic/store/loading';
+import {appLaunchStart, appLaunchDone} from '../logic/store/loading';
 
 // Import App Logic
 import {setAppLanguage} from './strings/setAppLanguage';
@@ -46,12 +46,13 @@ import loadMarketplace from './loading/loadMarketplace';
 
 // here be our functions!
 export default BaseAppLaunch = (dispatch) => {
-    dispatch && dispatch(appLaunchRan);
+    dispatch && dispatch(appLaunchStart);
     logVersionInfo();
     loadAppStyles(dispatch || null);
     setAppLanguage(dispatch || null);
     downloadAllAppImages(dispatch || null);
     loadMarketplace(dispatch || null);
+    dispatch && dispatch(appLaunchDone);
 }
 
 export const BaseAppSubscriptions = (dispatch) => {

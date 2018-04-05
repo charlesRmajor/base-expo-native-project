@@ -20,7 +20,7 @@ import styled, {ThemeProvider} from 'styled-components';
 // Import Other App UI Elements
 import {BHeader} from '../../../base/interface/components/BText';
 import ImageWithAspect from '../../../base/interface/components/ImageWithAspect';
-import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
+// import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
 import BRoundedButton from '../../../base/interface/components/BRoundedButton';
 import BButton, {ButtonView} from '../../../base/interface/components/BButton';
 import getContactCard from '../components/getContactCard';
@@ -79,7 +79,7 @@ export default BettermentLabsLandingPage = (props) => {
     // console.log(props);
     // console.log("props.marketplace");
     // console.log(props.marketplace);
-    const style = props.styles || defaultAppStyles;
+    // const style = props.styles || defaultAppStyles;
     const strings = props.strings || null;
     const images = props.images || null;
     const imageLogo = images ? images.logoTextWhiteBlueMountains || false : false;
@@ -147,7 +147,7 @@ export default BettermentLabsLandingPage = (props) => {
         : null;
     
         const mainView =
-        (<ThemeProvider theme={style}>
+        (
             <MainView>
                 <ScrollView>
                     <BHeader>{strings.title}</BHeader>
@@ -170,6 +170,6 @@ export default BettermentLabsLandingPage = (props) => {
                 </ScrollView>
                 {logoImage}
             </MainView>
-        </ThemeProvider>)
+        )
     return ( mainView)
   }

@@ -21,6 +21,7 @@ import { View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 
 // Import Other Node Modules
+import {ThemeProvider} from 'styled-components';
 
 // Import Core Project Modules
 import {defaultInterfacePropsFrom, allStoreSections} from '../../../base/logic/store';
@@ -41,8 +42,10 @@ import {AppSubscribe, AppUnSubscribe} from '../../logic/AppSubscriptions.js';
 import getPageStrings from '../../../base/logic/strings/getPageStrings';
 
 // Import Other App UI Elements
+import {defaultAppStyles} from '../../../base/interface/theming/AppStyles';
 import SwipeableRouter from '../../../base/interface/routers/SwipeableRouter';
 import getSimplePageView from '../../../base/interface/dumbViews/getSimplePageView';
+import FullScreenLoading from '../../../base/interface/dumbViews/FullScreenLoading';
 import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingContainer';
 
 const SwipeableRouterExampleRoutes = () => {
@@ -82,23 +85,29 @@ class MainRouter extends React.Component {
     }
     
     render() {
-        // console.log(this.props);
+        console.log(this.props);
+        const styles = this.props.styles || defaultAppStyles;
+
+        // next line checks if we're ready to render & should probably be exported to a separate file
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
-            (() => { var ready = true; for (const key in this.props.loading.essentialState) { if (!this.props.loading.essentialState[key]) {ready=false; return}} return ready })())
+            (() => { var ready = true; for (const key in this.props.loading.essentialState.areLoaded) { if (!this.props.loading.essentialState.areLoaded[key]) {ready=false; return}} return ready })())
         
         const CurrentView = !readyToRender ? <View/>  :
             getCurrentView({
                 view: this.props.router.location.view,
                 routeProps: this.props});
 
-        // const FullScreenLoadingOverlay = 
+        const FullScreenLoadingOverlay = null;//<FullScreenLoading {...this.props} />;
         
         return(
-            <View style={{height:'100%', width:'100%'}}>
-                   <StatusBar barStyle="light-content" />
-                   <View style={{height:'3%', backgroundColor: '#000000'}} />
-                {CurrentView}
-            </View>
+            <ThemeProvider theme={styles}>
+                <View style={{height:'100%', width:'100%'}}>
+                    <StatusBar barStyle="light-content" />
+                    <View style={{height:'3%', backgroundColor: '#000000'}} />
+                    {CurrentView}
+                    {FullScreenLoadingOverlay}
+                </View>
+            </ThemeProvider>
         );
     }
 }

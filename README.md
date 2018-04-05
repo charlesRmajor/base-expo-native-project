@@ -271,7 +271,7 @@ This was built with
 Note: When updating these essential packages for Betterment Labs projects (especially Expo, React, & React-Native), this base project should be updated & then the project code should be copied into the new base project. This should just be files in src/ and the app.json.* files (unless you have modified other files, in which case you are on your own).
 
 # 10. To-Do's
-### BETTER ORGANIZE THIS TO-DO LIST
+### A. Native Code Integration To-Do
 * base native projects:
     * react-native-onesignal
         * test android
@@ -287,41 +287,15 @@ Note: When updating these essential packages for Betterment Labs projects (espec
             * Working
         * Android:
             * 
-* publish to expo with screen that says it needs to be updated to whatever the person wants!!!
-* Setup Router types:
-    * swipeable tutorial/wizard style
-    * nested hierarchies
-    * standardize passing navigation links (redux state)
-* change theme in app:
-    * add other themes
-    * fix app icon
-    * language override
-* add permissions tracking to redux/OneSignal/FB Analytics
-* fix app icons -- and add instructions for updating icons (XCode & Android Studio)
-* android back button hooked up to router
-* should essential logic of MainRouter be abstracted away from app insertion point?
-* support additional default store sections from app
-* have localization post alert when string isn't found
-* save in-app-purchase info
-* time-based notifications from within app (?)
-* date-time support functions
 * in app purchases:
     * support In-app-purchase based downloads
     * loading indicator
     * time out time
     * cancel button
+    * RN: get IAP purchase options dynamically:
+    * iOS: must load product IDs from server to query App Store
+* support notification (OneSignal) deep-links
 
-### Other Packages To Add?
-* redux-thunk
-* react-native-firebase
-
-* use Google Firebase (or other) to store basic retrievable app info such as:
-    * current available in-app-purchases
-    * what version(s) of app are "dead"
-    * others?
-
-* get working with Expo & native at same time
-* react-router-redux??? https://github.com/reactjs/react-router-redux
 * app store signing:
     * Android: https://developer.android.com/studio/build/build-variants.html
         * https://medium.com/react-native-training/fastlane-for-react-native-ios-android-app-devops-8ca85bee614e
@@ -336,6 +310,43 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 * XCode:
     * can we get CanonicalAppID, OrganizationID, appVersionName from app.json into iOS build settings?
 * can app.json have a CanonicalAppID & OrganizationID and then automatically update bundle & package identifiers to match?
+
+### B. React-Native/Expo Only To-Do
+* (A) change theme in app:
+    * add other themes
+    * fix app icon
+    * language override
+    * set theme in redux store
+* (A) add permissions tracking to redux
+    * later: add permissions tracking to OneSignal/FB Analytics from redux store
+* (A) have BLocalization post alert when string isn't found
+* (A) save in-app-purchase info (ASyncStorage)
+
+* publish to expo with screen that says it needs to be updated to whatever the person wants!!!
+* Setup Router types:
+    * should essential logic of MainRouter be abstracted away from app insertion point?
+    * swipeable tutorial/wizard style
+    * nested hierarchies
+    * standardize passing navigation links (redux state)
+    * android back button hooked up to router
+* fix app icons -- and add instructions for updating icons (XCode & Android Studio)
+* time-based notifications from within app (?)
+* date-time support functions
+
+* support additional default store sections from app
+* animated transitions: https://github.com/Traviskn/react-router-native-stack
+
+### Other Packages To Add?
+* redux-thunk
+* react-native-firebase
+
+* use Google Firebase (or other) to store basic retrievable app info such as:
+    * current available in-app-purchases
+    * what version(s) of app are "dead"
+    * others?
+
+* get working with Expo & native at same time
+* react-router-redux??? https://github.com/reactjs/react-router-redux
 * add general update build instructions to this readme
 * other instructions/troubleshooting notes from my build docs?
 * separate out iOS/Android studio instructions above
@@ -344,18 +355,12 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * using your own in app purchases
     * stripping out un-needed code
 * add default fallbacks for styled components
-                
-* In App Purchases:
-    * RN: get IAP purchase options dynamically:
-        * iOS: must load product IDs from server to query App Store
 
 * process of testing after setup to make sure everything is working correctly:
     * in app purchases:
         * purchase
         * subscription
         * restore
-
-* animated transitions: https://github.com/Traviskn/react-router-native-stack
 
 # Questions:
 * does this part of AndroidManifest.xml need to be updated for a new project?
