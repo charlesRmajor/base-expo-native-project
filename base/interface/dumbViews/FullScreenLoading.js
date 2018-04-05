@@ -41,12 +41,8 @@ const PageLoadingCircleView = styled.View`
 `
 
 export default FullScreenLoading = (props) => {
-    console.log("props");
-    console.log(props);
     const circColor= props.loadingCircColor ? props.loadingCircColor :
         (props.styles ? props.styles.color ? props.styles.color.highlight ? props.styles.color.highlight : null : null : null);
-    console.log("circColor");
-    console.log(circColor);
     return(
         <MainView>
             <PageLoadingCircleView>

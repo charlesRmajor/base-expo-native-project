@@ -85,7 +85,7 @@ class MainRouter extends React.Component {
     }
     
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         const styles = this.props.styles || defaultAppStyles;
 
         // next line checks if we're ready to render & should probably be exported to a separate file

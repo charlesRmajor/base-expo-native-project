@@ -23,6 +23,8 @@ export default Strings = new BLocalization( {
     checkOneSignalSubscription: "Check OneSignal Subscription Status",
     checkOneSignalTags: "Get Current OneSignal Tags",
     storeHeaderTitle: "Loaded App Marketplace",
+    marketplaceLoading: "Marketplace Loading",
+    marketplaceFailedToLoad: "Marketplace Failed To Load",
     purchasedProductsTitle: "Purchased Products",
     failedPurchasesTitle: "Failed Purchases",
     attemptedPurchasesTitle: "Attempted Purchases",

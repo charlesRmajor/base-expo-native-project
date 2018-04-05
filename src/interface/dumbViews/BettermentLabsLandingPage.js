@@ -26,6 +26,7 @@ import BButton, {ButtonView} from '../../../base/interface/components/BButton';
 import getContactCard from '../components/getContactCard';
 import getMarketplaceItemCard from '../components/getMarketplaceItemCard';
 import getProductCard from '../components/getProductCard';
+import BLoadingCircle from '../../../base/interface/components/BLoadingCircle';
 
 // Interface Styling
 const ButtonEnclosingView = styled.View`flex:2`;
@@ -47,6 +48,10 @@ const StoreItemButtonView = ButtonView.extend`
     width: 100%
 `
 const ScrollViewBottomSpacer = styled.View`height: 200px`;
+
+const MarketPlaceSectionView = styled.View``;
+
+const MarketplaceLoadingCircleView = styled.View`height: 200px`;
 
 const ImageView = styled.View`height:25%;
     position: absolute;
@@ -145,10 +150,38 @@ export default BettermentLabsLandingPage = (props) => {
                     product: product,
                     index: index}))
         : null;
-    
-        const mainView =
+
+    const MarketPlaceSection = props.marketplace.MarketPlaceIsLoading ?
+        (<MarketPlaceSectionView>
+            <MarketplaceHeader>{strings.marketplaceLoading}</MarketplaceHeader>
+            <MarketplaceLoadingCircleView>
+                <BLoadingCircle circColor={props.styles.color.highlight} isAnimating/>
+            </MarketplaceLoadingCircleView>
+        </MarketPlaceSectionView>)
+        :
+        (props.marketplace.MarketPlaceFailedLoading ? 
         (
-            <MainView>
+        <MarketPlaceSectionView>
+            <MarketplaceHeader>{strings.marketplaceFailedToLoad}</MarketplaceHeader>
+        </MarketPlaceSectionView>
+        ) :
+        (
+        <MarketPlaceSectionView>
+            <MarketplaceHeader>{strings.storeHeaderTitle}</MarketplaceHeader>
+            {ProductsButtons}
+            <MarketplaceHeader>{strings.purchasedProductsTitle}</MarketplaceHeader>
+            {PurchasedProducts}
+            <MarketplaceHeader>{strings.failedPurchasesTitle}</MarketplaceHeader>
+            {FailedTransactions}
+            <MarketplaceHeader>{strings.attemptedPurchasesTitle}</MarketplaceHeader>
+            {AttemptedTransactions}
+            <MarketplaceHeader>{strings.consumedProductsTitle}</MarketplaceHeader>
+            {ConsumedProducts}
+        </MarketPlaceSectionView>
+        ))
+    
+    const mainView =
+        (<MainView>
                 <ScrollView>
                     <BHeader>{strings.title}</BHeader>
                     <ViewSpacer/>
@@ -156,16 +189,7 @@ export default BettermentLabsLandingPage = (props) => {
                     <ViewSpacer/>
                     {contacts}
                     <ViewSpacer/>
-                    <MarketplaceHeader>{strings.storeHeaderTitle}</MarketplaceHeader>
-                    {ProductsButtons}
-                    <MarketplaceHeader>{strings.purchasedProductsTitle}</MarketplaceHeader>
-                    {PurchasedProducts}
-                    <MarketplaceHeader>{strings.failedPurchasesTitle}</MarketplaceHeader>
-                    {FailedTransactions}
-                    <MarketplaceHeader>{strings.attemptedPurchasesTitle}</MarketplaceHeader>
-                    {AttemptedTransactions}
-                    <MarketplaceHeader>{strings.consumedProductsTitle}</MarketplaceHeader>
-                    {ConsumedProducts}
+                    {MarketPlaceSection}
                     <ScrollViewBottomSpacer/>
                 </ScrollView>
                 {logoImage}
