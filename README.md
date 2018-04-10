@@ -321,6 +321,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * set theme in redux store
 * (A) add permissions tracking to redux
     * later: add permissions tracking to OneSignal/FB Analytics from redux store
+* (A) remove nonEssentialLoading store ... move  those loading pieces to their relevant stores
 * (A) have BLocalization post alert when string isn't found
 * (A) save in-app-purchase info (ASyncStorage)
 

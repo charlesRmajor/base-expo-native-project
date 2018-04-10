@@ -79,6 +79,7 @@ const essentialLoadingReducer = (state, action) => {
     return state
 }
 
+// THIS SHOULD BE ELIMINATED & PIECES MOVED TO THEIR RELEVANT STORES
 const nonEssentialLoadingReducer = (state, action) => {
     if (state === undefined) {
         state = {
