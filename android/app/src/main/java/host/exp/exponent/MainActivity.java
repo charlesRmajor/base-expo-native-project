@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import android.content.Intent;
+
 import host.exp.exponent.generated.DetachBuildConstants;
 import host.exp.exponent.experience.DetachActivity;
 
@@ -44,4 +46,11 @@ public class MainActivity extends DetachActivity {
     // Add extra initialProps here
     return expBundle;
   }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        MainApplication.getCallbackManager().onActivityResult(requestCode, resultCode, data);
+    }
+
 }

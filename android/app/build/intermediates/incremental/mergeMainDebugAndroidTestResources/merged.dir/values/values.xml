@@ -212,6 +212,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
             
@@ -269,6 +271,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="CreditCardForm"><attr format="boolean" name="include_exp"/><attr format="boolean" name="include_security"/><attr format="boolean" name="include_zip"/><attr format="boolean" name="include_helper"/><attr format="color" name="helper_text_color"/><attr format="color" name="text_color"/><attr format="color" name="hint_text_color"/><attr format="color" name="cursor_color"/><attr format="string" name="card_number_hint"/><attr format="reference" name="input_background"/><attr format="boolean" name="default_text_colors"/><attr format="boolean" name="animate_on_error"/><attr format="dimension" name="text_size"/></declare-styleable>
     <declare-styleable name="CropImageView"><attr name="cropGuidelines">
@@ -308,7 +312,7 @@
     <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
-        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/></declare-styleable>
+        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/><attr name="android:fontStyle"/><attr name="android:font"/><attr name="android:fontWeight"/></declare-styleable>
     <declare-styleable name="GenericDraweeHierarchy"><attr format="integer" name="fadeDuration"/><attr format="float" name="viewAspectRatio"/><attr format="reference" name="placeholderImage"/><attr name="placeholderImageScaleType">
       <enum name="none" value="-1"/>
       <enum name="fitXY" value="0"/>
@@ -505,6 +509,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="WalletFragmentOptions"><attr name="appTheme">
@@ -780,6 +786,7 @@
     <item name="progress_horizontal" type="id"/>
     <item name="react_test_id" type="id"/>
     <item name="split_action_bar" type="id"/>
+    <item name="tag_transition_group" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
     <item name="text_helper" type="id">2000</item>
@@ -792,15 +799,13 @@
     <integer name="card_flip_time_full">700</integer>
     <integer name="card_flip_time_half">350</integer>
     <integer name="config_tooltipAnimTime">150</integer>
-    <integer name="google_play_services_version">9877000</integer>
+    <integer name="google_play_services_version">12211000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="CreditCardNumberHelp"/>
     <string name="ExpirationDateHelp">Expiration date (MM/YY)</string>
     <string name="SecurityCodeHelp">Security code (CVV)</string>
     <string name="ZipHelp">Zip code of billing address</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
-    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
     <string name="abc_action_mode_done">Done</string>
@@ -827,9 +832,8 @@
     <string name="abc_searchview_description_submit">Submit query</string>
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
-    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="accept">Accept</string>
     <string name="android_pay_unavaliable">Android Pay unavailable on your device.</string>
     <string name="app_name">Exponent</string>
     <string name="cardNumber">Card Number</string>
@@ -886,6 +890,7 @@
     <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
     <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
     <string name="common_google_play_services_notification_ticker">Google Play services error</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
@@ -897,8 +902,6 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
-    <string name="create_calendar_title">Create calendar event</string>
     <string name="crop_image_activity_title"/>
     <string name="crop_image_menu_crop">Crop</string>
     <string name="crop_image_menu_flip">Flip</string>
@@ -907,11 +910,6 @@
     <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
     <string name="crop_image_menu_rotate_right">Rotate</string>
     <string name="cvc">CVC</string>
-    <string name="debug_menu_ad_information">Ad Information</string>
-    <string name="debug_menu_creative_preview">Creative Preview</string>
-    <string name="debug_menu_title">Select a Debug Mode</string>
-    <string name="debug_menu_troubleshooting">Troubleshooting</string>
-    <string name="decline">Decline</string>
     <string name="default_media_controller_time">00:00</string>
     <string name="dev_activity_name">Exponent Dev</string>
     <string name="enter_fullscreen_mode">Enter fullscreen mode</string>
@@ -925,14 +923,19 @@
     <string name="exo_controls_previous_description">Previous track</string>
     <string name="exo_controls_rewind_description">Rewind</string>
     <string name="exo_controls_stop_description">Stop</string>
+    <string name="gcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="pick_image_intent_chooser_title">Select source</string>
     <string name="preference_file_key">host.exp.exponent.SharedPreferences</string>
+    <string name="s1">Save image</string>
+    <string name="s2">"Allow Ad to store image in Picture gallery?"</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
     <string name="save">Save</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
-    <string name="store_picture_title">Save image</string>
     <string name="user_cancel_dialog">User cancel dialog. No card added!</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -2371,22 +2374,6 @@
     <style name="TextAppearance.AppCompat.Medium" parent="Base.TextAppearance.AppCompat.Medium"/>
     <style name="TextAppearance.AppCompat.Medium.Inverse" parent="Base.TextAppearance.AppCompat.Medium.Inverse"/>
     <style name="TextAppearance.AppCompat.Menu" parent="Base.TextAppearance.AppCompat.Menu"/>
-    <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent"/>
-    <style name="TextAppearance.AppCompat.Notification.Info">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Info.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Line2" parent="TextAppearance.AppCompat.Notification.Info"/>
-    <style name="TextAppearance.AppCompat.Notification.Line2.Media" parent="TextAppearance.AppCompat.Notification.Info.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Time">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Time.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
-    <style name="TextAppearance.AppCompat.Notification.Title.Media"/>
     <style name="TextAppearance.AppCompat.SearchResult.Subtitle" parent="Base.TextAppearance.AppCompat.SearchResult.Subtitle">
     </style>
     <style name="TextAppearance.AppCompat.SearchResult.Title" parent="Base.TextAppearance.AppCompat.SearchResult.Title">

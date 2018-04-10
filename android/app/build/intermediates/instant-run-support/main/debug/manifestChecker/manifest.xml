@@ -86,7 +86,10 @@
         android:required="false" />
     <uses-feature
         android:name="android.hardware.bluetooth"
-        android:required="false" /> <!-- for android -->
+        android:required="false" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> <!-- for android -->
     <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
@@ -99,8 +102,6 @@
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- for apex -->
     <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
     <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
     <!--
  Use to restore notifications the user hasn't interacted with.
          They could be missed notifications if the user reboots their device if this isn't in place.
@@ -257,7 +258,8 @@
 
         <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"
-            android:enabled="true" >
+            android:enabled="true"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
             </intent-filter>
@@ -374,14 +376,27 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name="com.facebook.CustomTabMainActivity" />
         <activity
             android:name="com.facebook.ads.AudienceNetworkActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.0.1" />
+        <service
+            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+            android:exported="false" />
+        <service
+            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+            android:exported="false" />
+        <service
+            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+            android:exported="false" />
+
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
@@ -403,81 +418,9 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <service
-            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-            android:exported="false" />
-        <service
-            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-            android:exported="false" />
-        <service
-            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-            android:exported="false" />
-
         <meta-data
-            android:name="onesignal_app_id"
-            android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
-        <meta-data
-            android:name="onesignal_google_project_number"
-            android:value="str:" />
-
-        <receiver
-            android:name="com.onesignal.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-
-            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
-            <intent-filter android:priority="999" >
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-                <category android:name="com.OrganizationID.CanonicalAppID" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
-
-        <service android:name="com.onesignal.GcmIntentService" /> <!-- For Android O -->
-        <service
-            android:name="com.onesignal.GcmIntentJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service
-            android:name="com.onesignal.SyncJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service
-            android:name="com.onesignal.RestoreJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service
-            android:name="com.onesignal.RestoreKickoffJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- END - For Android O -->
-        <service android:name="com.onesignal.SyncService" />
-
-        <activity
-            android:name="com.onesignal.PermissionsActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <service android:name="com.onesignal.NotificationRestoreService" />
-
-        <receiver android:name="com.onesignal.BootUpReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.onesignal.UpgradeReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
-        <activity
-            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
-            android:theme="@style/Theme.IAPTheme" />
+            android:name="android.support.VERSION"
+            android:value="26.0.1" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -487,6 +430,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -497,6 +441,11 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -504,7 +453,6 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="com.OrganizationID.CanonicalAppID" />
             </intent-filter>
@@ -532,7 +480,16 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.OrganizationID.CanonicalAppID.firebaseinitprovider"
             android:exported="false"
-            android:initOrder="100" />
+            android:initOrder="100" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--
          The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
          with the application context. This config is merged in with the host app's manifest,
@@ -546,6 +503,63 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.facebook.internal.FacebookInitProvider"
             android:authorities="com.OrganizationID.CanonicalAppID.FacebookInitProvider"
             android:exported="false" />
+
+        <meta-data
+            android:name="onesignal_app_id"
+            android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
+        <meta-data
+            android:name="onesignal_google_project_number"
+            android:value="str:" />
+
+        <receiver
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
+            <intent-filter android:priority="999" >
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.OrganizationID.CanonicalAppID" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
+
+        <service android:name="com.onesignal.GcmIntentService" />
+        <service
+            android:name="com.onesignal.GcmIntentJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.onesignal.RestoreJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.onesignal.RestoreKickoffJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.onesignal.SyncService"
+            android:stopWithTask="true" />
+        <service
+            android:name="com.onesignal.SyncJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.onesignal.PermissionsActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.onesignal.NotificationRestoreService" />
+
+        <receiver android:name="com.onesignal.BootUpReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.UpgradeReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.OrganizationID.CanonicalAppID.com.android.tools.ir.server.InstantRunContentProvider"

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.crashlytics.sdk.android:answers-shim-0.0.6">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-shim-0.0.6.aar/243a231976ad26c670e953258111b858/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-shim-0.0.6.aar/243a231976ad26c670e953258111b858/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-shim-0.0.6.aar/780f6c1d0495f27eac3f9d4a52074273/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-shim-0.0.6.aar/780f6c1d0495f27eac3f9d4a52074273/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -11,9 +11,20 @@ import java.util.List;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 
+import com.facebook.FacebookSdk;
+import com.facebook.CallbackManager;
+import com.facebook.appevents.AppEventsLogger;
+
+
 public class MainApplication extends ExpoApplication {
 
-  @Override
+    private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
+
+    protected static CallbackManager getCallbackManager() {
+        return mCallbackManager;
+    }
+
+    @Override
   public boolean isDebug() {
     return BuildConfig.DEBUG;
   }
@@ -26,7 +37,8 @@ public class MainApplication extends ExpoApplication {
 
         // Needed for `react-native link`
         // new MainReactPackage(),
-            new FBSDKPackage(),
+//            new FBSDKPackage(),
+            new FBSDKPackage(mCallbackManager),
             new ReactNativeOneSignalPackage()
     );
   }

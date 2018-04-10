@@ -295,7 +295,7 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * time out time
     * cancel button
     * RN: get IAP purchase options dynamically:
-    * iOS: must load product IDs from server to query App Store
+        * iOS: must load product IDs from server to query App Store
 * support notification (OneSignal) deep-links
 
 * app store signing:
@@ -323,16 +323,6 @@ Note: When updating these essential packages for Betterment Labs projects (espec
     * later: add permissions tracking to OneSignal/FB Analytics from redux store
 * (A) have BLocalization post alert when string isn't found
 * (A) save in-app-purchase info (ASyncStorage)
-
-* (A) Dynamically load all store sections in folder. Does code like this allow us to do such a thing?
-    ```javascript
-        if (module.hot) {
-        module.hot.accept('./reducers/', () => {
-            const nextRootReducer = require('./reducers/index').default;
-            store.replaceReducer(nextRootReducer);
-        });
-        }
-    ```
 
 * publish to expo with screen that says it needs to be updated to whatever the person wants!!!
 * Setup Router types:

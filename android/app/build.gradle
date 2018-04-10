@@ -15,30 +15,28 @@ repositories {
 }
 
 android {
-  compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
   flavorDimensions "dev"
 
-
-
     defaultConfig {
-    applicationId 'com.'+rootProject.ext.OrganizationID+'.'+rootProject.ext.CanonicalAppID
-        targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode rootProject.ext.appVersionCode
-    versionName rootProject.ext.appVersionName
-    ndk {
-      abiFilters 'armeabi-v7a', 'x86'
-    }
-    multiDexEnabled true
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+      applicationId 'com.'+rootProject.ext.OrganizationID+'.'+rootProject.ext.CanonicalAppID
+      targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
+        versionCode rootProject.ext.appVersionCode
+      versionName rootProject.ext.appVersionName
+      ndk {
+        abiFilters 'armeabi-v7a', 'x86'
+      }
+      testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     // Deprecated. Used by net.openid:appauth
     manifestPlaceholders = [
-            'appAuthRedirectScheme': 'com.'+rootProject.ext.OrganizationID+'.'+rootProject.ext.CanonicalAppID,
-            onesignal_app_id: rootProject.ext.OneSignal_AppID,
-            onesignal_google_project_number: rootProject.ext.Google_Project_Number
+      'appAuthRedirectScheme': 'com.'+rootProject.ext.OrganizationID+'.'+rootProject.ext.CanonicalAppID,
+      onesignal_app_id: rootProject.ext.OneSignal_AppID,
+      onesignal_google_project_number: rootProject.ext.Google_Project_Number
     ]
-        buildConfigField("String", "OrganizationID", '"'+rootProject.ext.OrganizationID+'"')
-        buildConfigField("String", "CanonicalAppID", '"'+rootProject.ext.CanonicalAppID+'"')
+      buildConfigField("String", "OrganizationID", '"'+rootProject.ext.OrganizationID+'"')
+      buildConfigField("String", "CanonicalAppID", '"'+rootProject.ext.CanonicalAppID+'"')
     }
   dexOptions {
     javaMaxHeapSize System.getenv("DISABLE_DEX_MAX_HEAP") ? null : "8g"
@@ -93,60 +91,59 @@ preBuild.dependsOn exponentPrebuildStep
 
 
 dependencies {
-    compile project(':react-native-fbsdk')
-    compile project(':react-native-onesignal')
-  compile project(':react-native-onesignal')
-  compile fileTree(include: ['*.jar'], dir: 'libs')
-  compile 'com.android.support:multidex:1.0.1'
+    implementation project(':react-native-fbsdk')
+  implementation project(':react-native-onesignal')
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+  implementation 'com.android.support:multidex:1.0.3'
   // Our dependencies
-  compile 'com.android.support:appcompat-v7:26.0.1'
+  implementation 'com.android.support:appcompat-v7:26.0.1'
   // Our dependencies from ExpoView
   // DON'T ADD ANYTHING HERE THAT ISN'T IN EXPOVIEW. ONLY COPY THINGS FROM EXPOVIEW TO HERE.
-  compile 'com.android.support:appcompat-v7:26.0.1'
-  compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+  implementation 'com.android.support:appcompat-v7:26.0.1'
+  implementation 'com.facebook.android:facebook-android-sdk:4.7.0'
   compile('com.facebook.android:audience-network-sdk:4.22.1') {
     exclude module: 'play-services-ads'
   }
   provided 'org.glassfish:javax.annotation:3.1.1'
-  //  compile 'com.jakewharton:butterknife:7.0.1'
-  compile 'de.greenrobot:eventbus:2.4.0'
-  compile 'com.amplitude:android-sdk:2.9.2'
+  //  implementation 'com.jakewharton:butterknife:7.0.1'
+  implementation 'de.greenrobot:eventbus:2.4.0'
+  implementation 'com.amplitude:android-sdk:2.9.2'
   // Be careful when upgrading! Upgrading might break experience scoping. Check with Jesse. See Analytics.resetAmplitudeDatabaseHelper
-  compile 'com.squareup.picasso:picasso:2.5.2'
-  compile "com.google.android.gms:play-services-gcm:$rootProject.ext.playServicesVersion"
-  compile "com.google.android.gms:play-services-analytics:$rootProject.ext.playServicesVersion"
-  compile "com.google.android.gms:play-services-maps:$rootProject.ext.playServicesVersion"
-  compile "com.google.android.gms:play-services-auth:$rootProject.ext.playServicesVersion"
-  compile "com.google.android.gms:play-services-location:$rootProject.ext.playServicesVersion"
-  compile "com.google.android.gms:play-services-ads:$rootProject.ext.playServicesVersion"
+  implementation 'com.squareup.picasso:picasso:2.5.2'
+//  implementation "com.google.android.gms:play-services-gcm:$rootProject.ext.playServicesVersion"
+  implementation "com.google.android.gms:play-services-analytics:$rootProject.ext.playServicesVersion"
+  implementation "com.google.android.gms:play-services-maps:$rootProject.ext.playServicesVersion"
+  implementation "com.google.android.gms:play-services-auth:$rootProject.ext.playServicesVersion"
+  implementation "com.google.android.gms:play-services-location:$rootProject.ext.playServicesVersion"
+  implementation "com.google.android.gms:play-services-ads:$rootProject.ext.playServicesVersion"
   annotationProcessor 'com.raizlabs.android:DBFlow-Compiler:2.2.1'
-  compile 'com.raizlabs.android:DBFlow-Core:2.2.1'
-  compile 'com.raizlabs.android:DBFlow:2.2.1'
-  compile 'com.madgag.spongycastle:core:1.53.0.0'
-  compile 'com.madgag.spongycastle:prov:1.53.0.0'
+  implementation 'com.raizlabs.android:DBFlow-Core:2.2.1'
+  implementation 'com.raizlabs.android:DBFlow:2.2.1'
+  implementation 'com.madgag.spongycastle:core:1.53.0.0'
+  implementation 'com.madgag.spongycastle:prov:1.53.0.0'
   debugCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1'
   // debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta1'
   releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1'
-  compile 'com.facebook.device.yearclass:yearclass:1.0.1'
-  compile 'commons-io:commons-io:1.3.2'
-  compile 'me.leolin:ShortcutBadger:1.1.4@aar'
-  compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-  compile 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
-  compile 'com.yqritc:android-scalablevideoview:1.0.1'
-  compile 'commons-codec:commons-codec:1.10'
-  compile 'com.segment.analytics.android:analytics:4.3.0'
-  compile 'com.google.zxing:core:3.2.1'
-  compile 'net.openid:appauth:0.4.1'
-  compile 'com.airbnb.android:lottie:2.2.0'
-  compile 'io.branch.sdk.android:library:2.6.1'
+  implementation 'com.facebook.device.yearclass:yearclass:1.0.1'
+  implementation 'commons-io:commons-io:1.3.2'
+  implementation 'me.leolin:ShortcutBadger:1.1.4@aar'
+  implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+  implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
+  implementation 'com.yqritc:android-scalablevideoview:1.0.1'
+  implementation 'commons-codec:commons-codec:1.10'
+  implementation 'com.segment.analytics.android:analytics:4.3.0'
+  implementation 'com.google.zxing:core:3.3.0'
+  implementation 'net.openid:appauth:0.4.1'
+  implementation 'com.airbnb.android:lottie:2.2.0'
+  implementation 'io.branch.sdk.android:library:2.6.1'
   compile('io.nlopez.smartlocation:library:3.2.11') {
     transitive = false
   }
-  compile 'com.android.support:exifinterface:26.0.1'
-  compile 'com.squareup.okhttp3:okhttp:3.4.1'
-  compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
-  compile 'com.squareup.okhttp3:okhttp-ws:3.4.1'
-  compile 'com.squareup.okio:okio:1.9.0'
+  implementation 'com.android.support:exifinterface:26.0.1'
+  implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+  implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+  implementation 'com.squareup.okhttp3:okhttp-ws:3.4.1'
+  implementation 'com.squareup.okio:okio:1.9.0'
   // Testing
   androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
   // We use a modified build of com.android.support.test:runner:1.0.1. Explanation in maven-test/README

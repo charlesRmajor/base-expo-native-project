@@ -27,8 +27,8 @@ public final class R {
         public static final int text_size = 0x7f040175;
     }
     public static final class color {
-        public static final int null_color = 0x7f06006c;
-        public static final int text_helper_color = 0x7f060083;
+        public static final int null_color = 0x7f06006d;
+        public static final int text_helper_color = 0x7f060084;
     }
     public static final class drawable {
         public static final int background_white = 0x7f080053;
@@ -50,7 +50,7 @@ public final class R {
         public static final int cc_form_layout = 0x7f09003f;
         public static final int cc_four_digits = 0x7f090040;
         public static final int cc_zip = 0x7f090041;
-        public static final int text_helper = 0x7f090126;
+        public static final int text_helper = 0x7f090127;
     }
     public static final class string {
         public static final int CreditCardNumberHelp = 0x7f0f0000;
