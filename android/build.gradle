@@ -16,9 +16,10 @@ ext {
 buildscript {
   repositories {
     jcenter()
+      google()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:3.1.1'
     classpath 'com.google.gms:google-services:3.0.0'
   }
 }
@@ -48,7 +49,23 @@ allprojects {
 
     // Want this last so that we never end up with a stale cache
     mavenLocal()
+      google()
   }
+}
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy {
+            eachDependency { details ->
+                // Force dependencies to use the same version.
+                def versionSelector = details.requested
+                if (versionSelector.group == 'com.google.firebase'
+                        || versionSelector.group == 'com.google.android.gms') {
+                    details.useVersion playServicesVersion
+                }
+            }
+        }
+    }
 }
 
 task clean(type: Delete) {

@@ -1,1 +1,1 @@
-[{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"resources-mainDebug.ap_","properties":{"packageId":"com.OrganizationID.CanonicalAppID","split":"","minSdkVersion":"19"}}]
+[{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"0.1.0","enabled":true,"outputFile":"app-main-debug.apk","fullName":"mainDebug","baseName":"main-debug"},"path":"resources-mainDebug.ap_","properties":{"packageId":"com.OrganizationID.CanonicalAppID","split":"","minSdkVersion":"19"}}]

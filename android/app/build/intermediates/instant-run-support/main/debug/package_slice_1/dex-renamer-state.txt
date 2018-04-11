@@ -1,4 +1,0 @@
-#Mon Apr 09 15:41:01 MDT 2018
-base.0=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/main/debug/1
-renamed.0=classes.dex
-file.0=/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/transforms/dexMerger/main/debug/1/classes.dex

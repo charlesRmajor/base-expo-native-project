@@ -4,17 +4,7 @@
             "outputFile": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/incremental/mergeMainDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/27ef7bffea9c7654e77b6ae77743e794/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/29ed0aa2cf4d57a8e66c86cd879b09ff/res/values-v16/values-v16.xml",
+                    "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/771dc8efbdab972bedc1c715a742653f/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
