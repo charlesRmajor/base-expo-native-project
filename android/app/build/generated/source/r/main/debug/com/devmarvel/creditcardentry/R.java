@@ -55,8 +55,8 @@ public final class R {
     public static final class string {
         public static final int CreditCardNumberHelp = 0x7f0f0000;
         public static final int ExpirationDateHelp = 0x7f0f0001;
-        public static final int SecurityCodeHelp = 0x7f0f0002;
-        public static final int ZipHelp = 0x7f0f0003;
+        public static final int SecurityCodeHelp = 0x7f0f0003;
+        public static final int ZipHelp = 0x7f0f0004;
     }
     public static final class style {
         public static final int AppBaseTheme = 0x7f100006;

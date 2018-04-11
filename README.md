@@ -275,8 +275,6 @@ Note: When updating these essential packages for Betterment Labs projects (espec
 # 10. To-Do's
 ### A. Native Code Integration To-Do
 * base native projects:
-    * react-native-onesignal
-        * test android
     * react-native-fbsdk
         * Android
         * RN integration
@@ -289,6 +287,8 @@ Note: When updating these essential packages for Betterment Labs projects (espec
             * Working
         * Android:
             * 
+    * permissions:
+        * ios largely working? -- notifications ...
 * in app purchases:
     * support In-app-purchase based downloads
     * loading indicator

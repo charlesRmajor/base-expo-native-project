@@ -25,23 +25,23 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_com_facebook_login_fragment.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/layout/com_facebook_login_fragment.xml"
-    },
-    {
-        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/layout/com_facebook_login_fragment.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_common_google_signin_btn_icon_light_normal.xml.flat",
         "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-base-11.2.0.aar/b351f12e8b9faccdd54b405a8217e084/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/exoplayer-r2.0.3.aar/c324a3456f0da678801b9013defedece/res/drawable-hdpi-v4/exo_controls_pause.png"
     },
     {
-        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_abc_vector_test.xml.flat",
         "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_ic_fullscreen_exit_32dp.png.flat",
@@ -92,12 +92,12 @@
         "source": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/res/drawable-mdpi/ic_share_white_36dp.png"
     },
     {
-        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/anim_abc_popup_exit.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/anim/abc_popup_exit.xml"
-    },
-    {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color-v23_abc_tint_spinner.xml.flat",
         "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/anim_abc_popup_exit.xml.flat",
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -141,7 +141,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-hdpi-v4/messenger_bubble_large_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-hdpi-v4/messenger_bubble_large_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xxhdpi-v4/messenger_bubble_large_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xxhdpi-v4/messenger_bubble_large_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
@@ -221,7 +221,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color_com_facebook_send_button_text_color.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/color/com_facebook_send_button_text_color.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/color/com_facebook_send_button_text_color.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi_ic_home_white_36dp.png.flat",
@@ -229,7 +229,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -277,7 +277,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_btn_default_disabled_holo_dark.9.png.flat",
@@ -297,7 +297,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-mdpi-v4/messenger_bubble_small_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-mdpi-v4/messenger_bubble_small_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -333,7 +333,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-mdpi-v4/messenger_bubble_small_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-mdpi-v4/messenger_bubble_small_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_exo_controls_play.png.flat",
@@ -345,7 +345,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-mdpi-v4/com_facebook_close.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-mdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_exo_controls_fastforward.png.flat",
@@ -401,7 +401,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_com_facebook_device_auth_dialog_fragment.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/layout/com_facebook_device_auth_dialog_fragment.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/layout/com_facebook_device_auth_dialog_fragment.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi_ic_logo_white_32dp.png.flat",
@@ -517,7 +517,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_login_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable/com_facebook_button_login_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable/com_facebook_button_login_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -565,7 +565,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color_abc_primary_text_material_dark.xml.flat",
@@ -573,11 +573,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xhdpi-v4/messenger_bubble_large_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xhdpi-v4/messenger_bubble_large_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_square.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -605,7 +605,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_messenger_button_white_bg_round.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable/messenger_button_white_bg_round.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable/messenger_button_white_bg_round.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_abc_textfield_search_material.xml.flat",
@@ -613,11 +613,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi_ic_logo_white_32dp.png.flat",
@@ -633,7 +633,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-xhdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-xhdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_ic_fullscreen_32dp.png.flat",
@@ -665,7 +665,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_messenger_button_white_bg_selector.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable/messenger_button_white_bg_selector.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable/messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_spinner_default_holo_dark.9.png.flat",
@@ -673,7 +673,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
@@ -765,7 +765,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_blue_large.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_blue_large.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_blue_large.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi_ic_logo_white_32dp.png.flat",
@@ -785,11 +785,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_white_large.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_white_large.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_white_large.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -805,15 +805,15 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-hdpi-v4/com_facebook_close.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-hdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_com_facebook_tooltip_bubble.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/layout/com_facebook_tooltip_bubble.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/layout/com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_notification_bg.xml.flat",
@@ -825,7 +825,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color_abc_secondary_text_material_dark.xml.flat",
@@ -873,11 +873,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-mdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-mdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/mipmap-hdpi-v4_ic_launcher.png.flat",
@@ -885,7 +885,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xhdpi-v4/com_facebook_button_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xhdpi-v4/com_facebook_button_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_abc_screen_content_include.xml.flat",
@@ -905,7 +905,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-mdpi-v4/messenger_bubble_large_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-mdpi-v4/messenger_bubble_large_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -917,11 +917,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xxhdpi-v4/com_facebook_button_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xxhdpi-v4/com_facebook_button_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_send_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable/com_facebook_button_send_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable/com_facebook_button_send_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_stp_card_form_back.png.flat",
@@ -965,7 +965,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_ic_card_discover.png.flat",
@@ -973,7 +973,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_login_silver_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable/com_facebook_button_login_silver_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable/com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -993,7 +993,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xhdpi-v4/com_facebook_button_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xhdpi-v4/com_facebook_button_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
@@ -1013,7 +1013,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_auth_dialog_header_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_auth_dialog_header_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/menu_crop_image_menu.xml.flat",
@@ -1037,7 +1037,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_crop_image_menu_rotate_right.png.flat",
@@ -1085,7 +1085,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1101,7 +1101,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_blue_small.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_blue_small.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_blue_small.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -1137,7 +1137,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -1353,7 +1353,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -1369,7 +1369,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_blue_round.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_blue_round.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_blue_round.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1377,7 +1377,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_com_facebook_activity_layout.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/layout/com_facebook_activity_layout.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/layout/com_facebook_activity_layout.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color-v23_abc_color_highlight_material.xml.flat",
@@ -1385,7 +1385,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
@@ -1457,11 +1457,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi_ic_home_white_36dp.png.flat",
@@ -1485,7 +1485,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1553,7 +1553,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_icon.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_button_icon.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_button_icon.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_abc_btn_borderless_material.xml.flat",
@@ -1565,7 +1565,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-mdpi-v4/com_facebook_button_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-mdpi-v4/com_facebook_button_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_abc_activity_chooser_view_list_item.xml.flat",
@@ -1573,7 +1573,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_expo_media_controller.xml.flat",
@@ -1597,7 +1597,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-mdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-mdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_crop_image_menu_rotate_left.png.flat",
@@ -1613,7 +1613,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-hdpi-v4/com_facebook_button_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-hdpi-v4/com_facebook_button_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1637,7 +1637,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xhdpi-v4/messenger_bubble_small_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xhdpi-v4/messenger_bubble_small_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1657,7 +1657,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_white_small.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_white_small.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_white_small.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -1697,11 +1697,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xxhdpi-v4/com_facebook_button_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xxhdpi-v4/com_facebook_button_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1769,7 +1769,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_messenger_button_send_white_round.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/layout/messenger_button_send_white_round.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/layout/messenger_button_send_white_round.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1789,7 +1789,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_button_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_button_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_ic_card_visa.png.flat",
@@ -1873,7 +1873,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-mdpi-v4/messenger_bubble_large_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-mdpi-v4/messenger_bubble_large_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1973,7 +1973,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi_big_logo_filled.png.flat",
@@ -1997,7 +1997,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-hdpi-v4/messenger_bubble_large_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-hdpi-v4/messenger_bubble_large_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2017,7 +2017,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_abc_ic_clear_material.xml.flat",
@@ -2033,7 +2033,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_auth_dialog_cancel_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -2045,7 +2045,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_login_logo.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable/com_facebook_button_login_logo.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable/com_facebook_button_login_logo.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -2057,11 +2057,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xhdpi-v4/com_facebook_close.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xhdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xhdpi-v4/messenger_button_send_round_shadow.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xhdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_abc_action_bar_up_container.xml.flat",
@@ -2097,7 +2097,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_favicon_blue.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_favicon_blue.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_favicon_blue.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -2105,7 +2105,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -2117,23 +2117,23 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_messenger_button_blue_bg_selector.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable/messenger_button_blue_bg_selector.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable/messenger_button_blue_bg_selector.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xxhdpi-v4/messenger_bubble_small_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xxhdpi-v4/messenger_bubble_small_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-hdpi-v4/com_facebook_button_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-hdpi-v4/com_facebook_button_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable-xxhdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable-xxhdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -2153,7 +2153,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xxhdpi-v4/messenger_button_send_round_shadow.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xxhdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/xml_stub_material.xml.flat",
@@ -2181,7 +2181,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout-v21_notification_template_icon_group.xml.flat",
@@ -2201,11 +2201,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_auth_dialog_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_auth_dialog_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xxhdpi-v4/messenger_bubble_small_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xxhdpi-v4/messenger_bubble_small_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_redbox_view.xml.flat",
@@ -2233,7 +2233,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color-v23_abc_tint_switch_track.xml.flat",
@@ -2281,7 +2281,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -2301,7 +2301,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout_com_facebook_smart_device_dialog_fragment.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/layout/com_facebook_smart_device_dialog_fragment.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/layout/com_facebook_smart_device_dialog_fragment.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -2309,7 +2309,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_send_button_icon.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/res/drawable/com_facebook_send_button_icon.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_common_google_signin_btn_text_light_normal.xml.flat",
@@ -2317,7 +2317,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -2493,7 +2493,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_com_facebook_button_like_background.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable/com_facebook_button_like_background.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -2509,7 +2509,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-mdpi-v4/com_facebook_button_icon_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-mdpi-v4/com_facebook_button_icon_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -2521,7 +2521,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xxhdpi-v4/messenger_bubble_large_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xxhdpi-v4/messenger_bubble_large_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -2529,11 +2529,11 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable_messenger_button_blue_bg_round.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable/messenger_button_blue_bg_round.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xhdpi-v4/messenger_bubble_small_blue.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xhdpi-v4/messenger_bubble_small_blue.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -2557,7 +2557,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-xhdpi-v4/messenger_bubble_large_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-xhdpi-v4/messenger_bubble_large_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/anim_tooltip_exit.xml.flat",
@@ -2565,7 +2565,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/layout-v21_notification_template_custom_big.xml.flat",
@@ -2577,7 +2577,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-ldpi-v4_exo_controls_previous.png.flat",
@@ -2605,7 +2605,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/color_com_facebook_button_text_color.xml.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/color/com_facebook_button_text_color.xml"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/color/com_facebook_button_text_color.xml"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -2665,7 +2665,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi_ic_logo_white_32dp.png.flat",
@@ -2697,7 +2697,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_ic_card_mastercard.png.flat",
@@ -2709,7 +2709,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-mdpi-v4/messenger_button_send_round_shadow.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-mdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -2793,7 +2793,7 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-hdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/res/drawable-hdpi-v4/messenger_bubble_small_white.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/res/drawable-hdpi-v4/messenger_bubble_small_white.png"
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi_ic_arrow_back_white_36dp.png.flat",
@@ -2857,6 +2857,6 @@
     },
     {
         "merged": "/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/res/merged/main/debug/drawable-mdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     }
 ]

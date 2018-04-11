@@ -49,10 +49,10 @@ MERGED from [com.theartofdev.edmodo:android-image-cropper:2.4.7] /Users/charlesm
 MERGED from [com.airbnb.android:lottie:2.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/lottie-2.2.0.aar/0aad40e9533690fb01f27ff83045b7a3/AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:25.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/react-native-25.0.0.aar/5d1adb852351592273c5d4ba8b875a73/AndroidManifest.xml:2:1-15:12
 MERGED from [com.google.android:cameraview:1.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/cameraview-1.0.0.aar/a9d018ae61d01814360601414d39d5ce/AndroidManifest.xml:14:1-34:12
-MERGED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-login:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-share:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:21:1-36:12
+MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-share:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:21:1-36:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-analytics:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-analytics-11.2.0.aar/037263103b67747146ac3b5c9bfbcb59/AndroidManifest.xml:16:1-27:12
 MERGED from [com.google.android.gms:play-services-wallet:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-wallet-11.2.0.aar/de98f9979777bb3d32eff066c5ebcc8e/AndroidManifest.xml:16:1-20:12
@@ -70,10 +70,10 @@ MERGED from [com.android.support:exifinterface:26.0.1] /Users/charlesmajor/.grad
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/50ac496cd23a600f6fcfc3e7f1515dee/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/ab26781e37f9bf9be0bb4047a3f3a271/AndroidManifest.xml:17:1-28:12
 MERGED from [com.stripe:stripe-android:2.1.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/stripe-android-2.1.0.aar/0bd0ee6cb6cf5a145af240546a58fcea/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.android:facebook-places:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.31.0.aar/9dff0651f60d6699754932b94d79cfdd/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-applinks:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.31.0.aar/3cedf7f0764d9ef20d31156907b061ab/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-messenger:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:21:1-45:12
+MERGED from [com.facebook.android:facebook-places:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.32.0.aar/e6ebd11452fc82294835cd44c23bc543/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-applinks:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.32.0.aar/01c1a03f45a22043e5906248f6516102/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-messenger:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:21:1-45:12
 MERGED from [com.github.thefuntasty:CreditCardEntry:1.4.8.4] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/CreditCardEntry-1.4.8.4.aar/46bc409a0f926e5fd35ea4e62535dd6c/AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-gcm:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-gcm-11.2.0.aar/0470fc919a56524893dcd3a6defc147d/AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-vision:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-vision-11.2.0.aar/9fe14b0e72d083e948f9fd19670ca5bf/AndroidManifest.xml:2:1-5:12
@@ -427,14 +427,14 @@ MERGED from [com.facebook.react:react-native:25.0.0] /Users/charlesmajor/.gradle
 MERGED from [com.facebook.react:react-native:25.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/react-native-25.0.0.aar/5d1adb852351592273c5d4ba8b875a73/AndroidManifest.xml:13:5-20
 MERGED from [com.google.android:cameraview:1.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/cameraview-1.0.0.aar/a9d018ae61d01814360601414d39d5ce/AndroidManifest.xml:32:5-20
 MERGED from [com.google.android:cameraview:1.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/cameraview-1.0.0.aar/a9d018ae61d01814360601414d39d5ce/AndroidManifest.xml:32:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:28:5-34:19
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:28:5-34:19
 MERGED from [com.google.android.gms:play-services-analytics:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-analytics-11.2.0.aar/037263103b67747146ac3b5c9bfbcb59/AndroidManifest.xml:26:5-19
 MERGED from [com.google.android.gms:play-services-analytics:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-analytics-11.2.0.aar/037263103b67747146ac3b5c9bfbcb59/AndroidManifest.xml:26:5-19
 MERGED from [com.google.android.gms:play-services-maps:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-maps-11.2.0.aar/a0653888d11590f04491a6e17036e7f1/AndroidManifest.xml:24:5-19
@@ -453,14 +453,14 @@ MERGED from [com.android.support:exifinterface:26.0.1] /Users/charlesmajor/.grad
 MERGED from [com.android.support:exifinterface:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/exifinterface-26.0.1.aar/9d37e34039bf84def6540c13d7cfd8d3/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/ab26781e37f9bf9be0bb4047a3f3a271/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/ab26781e37f9bf9be0bb4047a3f3a271/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.android:facebook-places:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.31.0.aar/9dff0651f60d6699754932b94d79cfdd/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-places:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.31.0.aar/9dff0651f60d6699754932b94d79cfdd/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.31.0.aar/3cedf7f0764d9ef20d31156907b061ab/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.31.0.aar/3cedf7f0764d9ef20d31156907b061ab/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:28:5-43:19
-MERGED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:28:5-43:19
+MERGED from [com.facebook.android:facebook-places:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.32.0.aar/e6ebd11452fc82294835cd44c23bc543/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-places:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.32.0.aar/e6ebd11452fc82294835cd44c23bc543/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.32.0.aar/01c1a03f45a22043e5906248f6516102/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.32.0.aar/01c1a03f45a22043e5906248f6516102/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:28:5-43:19
+MERGED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:28:5-43:19
 MERGED from [com.google.android.gms:play-services-gcm:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-gcm-11.2.0.aar/0470fc919a56524893dcd3a6defc147d/AndroidManifest.xml:23:5-19
 MERGED from [com.google.android.gms:play-services-gcm:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-gcm-11.2.0.aar/0470fc919a56524893dcd3a6defc147d/AndroidManifest.xml:23:5-19
 MERGED from [com.google.android.gms:play-services-vision:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-vision-11.2.0.aar/9fe14b0e72d083e948f9fd19670ca5bf/AndroidManifest.xml:4:5-19
@@ -526,7 +526,7 @@ MERGED from [io.fabric.sdk.android:fabric:1.3.10] /Users/charlesmajor/.gradle/ca
 MERGED from [com.crashlytics.sdk.android:beta:1.1.4] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/beta-1.1.4.aar/b889e3b3f0716de3fffd6903282372ea/AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:beta:1.1.4] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/beta-1.1.4.aar/b889e3b3f0716de3fffd6903282372ea/AndroidManifest.xml:11:5-20
 	android:supportsRtl
-		ADDED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:28:18-44
+		ADDED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:28:18-44
 	android:label
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:48:5-37
 	android:largeHeap
@@ -749,8 +749,8 @@ activity#com.facebook.FacebookActivity
 ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:160:5-165:39
 MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:160:5-165:39
 MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:160:5-165:39
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:29:9-32:66
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:29:9-32:66
 	android:label
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:163:7-39
 	android:configChanges
@@ -758,7 +758,7 @@ MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.g
 	android:theme
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:164:7-66
 		REJECTED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:164:7-66
-		REJECTED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:32:13-63
+		REJECTED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:32:13-63
 	tools:replace
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:165:7-36
 	android:name
@@ -908,11 +908,11 @@ MERGED from [com.google.android.gms:play-services-basement:11.2.0] /Users/charle
 	android:name
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:276:9-54
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:32
-MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:32
-MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:32
+ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:52
+MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:52
+MERGED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:7-287:52
 	android:value
-		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:287:11-30
+		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:287:11-50
 	android:name
 		ADDED from /Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/src/main/AndroidManifest.xml:286:18-63
 uses-sdk
@@ -943,14 +943,14 @@ MERGED from [com.facebook.react:react-native:25.0.0] /Users/charlesmajor/.gradle
 MERGED from [com.facebook.react:react-native:25.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/react-native-25.0.0.aar/5d1adb852351592273c5d4ba8b875a73/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android:cameraview:1.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/cameraview-1.0.0.aar/a9d018ae61d01814360601414d39d5ce/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android:cameraview:1.0.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/cameraview-1.0.0.aar/a9d018ae61d01814360601414d39d5ce/AndroidManifest.xml:19:5-21:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.31.0.aar/f484b43525c1d46ac84cfef437e73615/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.31.0.aar/1a3910138be7e31ff7588f01478cd299/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.31.0.aar/3188d9ae4316e8d7661cd8f7eb4c863c/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/765877af61301c6c6ff7149946ce347b/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/6a3f64ba7306de54ed9057669db185eb/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-share-4.32.0.aar/87157cca12ba39726af2842b45065508/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c60df1e713d030e9221287f074c4bcd6/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-analytics:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-analytics-11.2.0.aar/037263103b67747146ac3b5c9bfbcb59/AndroidManifest.xml:17:5-43
@@ -985,14 +985,14 @@ MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gr
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/ab26781e37f9bf9be0bb4047a3f3a271/AndroidManifest.xml:20:5-44
 MERGED from [com.stripe:stripe-android:2.1.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/stripe-android-2.1.0.aar/0bd0ee6cb6cf5a145af240546a58fcea/AndroidManifest.xml:7:5-9:41
 MERGED from [com.stripe:stripe-android:2.1.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/stripe-android-2.1.0.aar/0bd0ee6cb6cf5a145af240546a58fcea/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.android:facebook-places:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.31.0.aar/9dff0651f60d6699754932b94d79cfdd/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-places:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.31.0.aar/9dff0651f60d6699754932b94d79cfdd/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.31.0.aar/3cedf7f0764d9ef20d31156907b061ab/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.31.0.aar/3cedf7f0764d9ef20d31156907b061ab/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.31.0.aar/90e334f57672e5fe8331055c56ff7765/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.32.0.aar/e6ebd11452fc82294835cd44c23bc543/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-places-4.32.0.aar/e6ebd11452fc82294835cd44c23bc543/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.32.0.aar/01c1a03f45a22043e5906248f6516102/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.32.0.aar/01c1a03f45a22043e5906248f6516102/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/8fc96efc3ee0979c4b618d1515b12783/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:24:5-26:41
 MERGED from [com.github.thefuntasty:CreditCardEntry:1.4.8.4] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/CreditCardEntry-1.4.8.4.aar/46bc409a0f926e5fd35ea4e62535dd6c/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.thefuntasty:CreditCardEntry:1.4.8.4] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/CreditCardEntry-1.4.8.4.aar/46bc409a0f926e5fd35ea4e62535dd6c/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.gms:play-services-gcm:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-gcm-11.2.0.aar/0470fc919a56524893dcd3a6defc147d/AndroidManifest.xml:17:5-43
@@ -1254,9 +1254,9 @@ ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/charlesmajor/.gradle/
 	android:name
 		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/6fff670e1ada7d343fee0bf971adc763/AndroidManifest.xml:26:13-120
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.31.0.aar/7a498e13198e594f506f0ea280843836/AndroidManifest.xml:33:19-68
+		ADDED from [com.facebook.android:facebook-common:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-common-4.32.0.aar/af09fda3373ec922922b453c2a5bbca4/AndroidManifest.xml:33:19-68
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.2.0.aar/44a4351ebbc349dc450f99ddbdabbf9f/AndroidManifest.xml:20:9-189
 	android:excludeFromRecents
@@ -1336,13 +1336,13 @@ MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/charlesmajor/.gr
 	android:name
 		ADDED from [com.android.support:exifinterface:26.0.1] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/exifinterface-26.0.1.aar/9d37e34039bf84def6540c13d7cfd8d3/AndroidManifest.xml:24:13-51
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.31.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.31.0.aar/2e237160648a82cf233d1d70598fff98/AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:4.32.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/facebook-core-4.32.0.aar/56836a38e364b0d077fba1a86e151c9c/AndroidManifest.xml:40:13-70
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
 ADDED from [com.google.firebase:firebase-analytics:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.2.0.aar/9800c65915453d506ceefba4d56badbb/AndroidManifest.xml:25:7-26:18
 MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] /Users/charlesmajor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.2.0.aar/61231d6cb595f8622854805bef406667/AndroidManifest.xml:25:7-26:18
