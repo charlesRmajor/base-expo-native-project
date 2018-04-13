@@ -50,7 +50,7 @@ export default BettermentLabsLandingContainer = (props) => {
         onPress: checkNotificationsPermissions
       },
       {title: strings.notificationsRequestButton,
-        onPress: requestNotifications(linkPermissionsTrackingToStore(dispatcher))
+        onPress: () => requestNotifications(linkPermissionsTrackingToStore(dispatcher))
       },
       {title: strings.locationPermissionsRequest,
         onPress: requestLocation
