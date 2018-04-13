@@ -59,12 +59,12 @@ PODS:
     - ExpoKit/Core
   - Fabric (1.7.6)
   - FBAudienceNetwork (4.28.1)
-  - FBSDKCoreKit (4.31.1):
+  - FBSDKCoreKit (4.32.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.31.1):
+  - FBSDKLoginKit (4.32.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.31.1):
-    - FBSDKCoreKit (~> 4.31.1)
+  - FBSDKShareKit (4.32.0):
+    - FBSDKCoreKit (~> 4.32.0)
   - Folly (2016.09.26.00):
     - boost
     - DoubleConversion
@@ -223,9 +223,9 @@ SPEC CHECKSUMS:
   ExpoKit: b322775eb089a18e60ddc2b785d00a0aa08ad316
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   FBAudienceNetwork: c0cda151bb2f7b55d1e045e59ebc81f3153989b2
-  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
-  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
-  FBSDKShareKit: e640c41c9fcd61929eeb3d0c21ad335103e7cb62
+  FBSDKCoreKit: 55d7f2ac45d9c4b9b6119f4e43900fe84b9b7b1b
+  FBSDKLoginKit: 32ac05c2a59952c363c2e85aafa8f73ba93bcbad
+  FBSDKShareKit: 658780d0d108b8ad590a54afb5ac1427bdc8de28
   Folly: b7255b29f1d693c375d642d0f04f0592181156d9
   GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
   Google-Mobile-Ads-SDK: 1bdf1a4244d0553b1840239874c209c01aef055f
