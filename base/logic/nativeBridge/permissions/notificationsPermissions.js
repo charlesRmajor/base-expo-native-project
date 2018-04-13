@@ -1,11 +1,11 @@
 /*
   notificationsPermissions.js - nativeBridge
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component notificationsPermissions.js
-  Description:  
+  Description:
 */
 
 // IMPORTS

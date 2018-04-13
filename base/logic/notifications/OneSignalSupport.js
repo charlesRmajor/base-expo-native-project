@@ -1,7 +1,7 @@
 /*
   OneSignalSupport.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
     These functions are the Betterment Labs implementation of this package:
@@ -30,7 +30,7 @@ import {
 
 // Subscribe To OneSignal
 // default is subscribed=true, only needs to be called if has been set to false before
-export const SubscribeDeviceToOneSignalNotifications = (dispatch) => { 
+export const SubscribeDeviceToOneSignalNotifications = (dispatch) => {
   if (OneSignal == undefined || OneSignal.setSubscription == undefined) {return}
       OneSignal.setSubscription(true)
 }
@@ -49,8 +49,8 @@ export const UnSubscribeDeviceToOneSignalNotifications = (dispatch) => {
 //   "userSubscriptionEnabled": bool,
 // }
 export const CheckOneSignalSubscriptionStatus = (callback) => {
-  if (OneSignal == undefined || OneSignal.getPermissionSubscriptionState == undefined) {return}
-  OneSignal.getPermissionSubscriptionState((result) => {
+  if (OneSignal == undefined || OneSignal.default.getPermissionSubscriptionState == undefined) {return}
+  OneSignal.default.getPermissionSubscriptionState((result) => {
     if (isFunction(callback)) {
       callback({
         error: false,
@@ -61,7 +61,7 @@ export const CheckOneSignalSubscriptionStatus = (callback) => {
       console.log("No callback function to CheckOneSignalSubscriptionStatus provided. Result is: ");
       console.log(result);
     }
-  });  
+  });
 }
 
 // inputObject has form: {key: "value", key2: "value"}
@@ -88,10 +88,10 @@ export const GetOneSignalTags = (callback) =>{
         content: receivedTags
       })
     } else {
-      console.log("No callback function to GetOneSignalTags provided. Result is: ");      
+      console.log("No callback function to GetOneSignalTags provided. Result is: ");
       console.log(receivedTags);
     }
-  });  
+  });
 }
 
 // Delete a tag
@@ -190,7 +190,6 @@ export const OneSignalAppUnSubscriptions = (dispatch) => {
   OneSignal.removeEventListener('ids', getOnIds(dispatch));
   dispatch && dispatch(oneSignalDoneUnSubscribing);
 }
-
 
 // TODO: add "send missing OneSignal tags" function of form:
 /*
