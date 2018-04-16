@@ -9,14 +9,18 @@
 */
 // IMPORTS
 import OneSignal from '../nativeBridge/OneSignal/OneSignalBridge';
-import { setOneSignalIOSPermissionsTo } from '../store/permissions';
-import { setOneSignalSubscriptionsTo } from '../store/subscriptions';
+import {
+  setOneSignalSubscriptionsTo,
+  setOneSignalIOSPermissionsTo
+} from '../store/permissions';
 
-export const linkPermissionsTrackingToStore = ({dispatch}) => {
-  return (() => {OneSignal.default.getPermissionSubscriptionState(result => {
-    dispatch(setOneSignalSubscriptionsTo(result));
-  });
-  OneSignal.default.checkPermissions(result => {
-    dispatch(setOneSignalIOSPermissionsTo(result));
-  })})
+export const linkPermissionsTrackingToStore = ({ dispatch }) => {
+  return () => {
+    OneSignal.default.getPermissionSubscriptionState(result => {
+      dispatch(setOneSignalSubscriptionsTo(result));
+    });
+    OneSignal.default.checkPermissions(result => {
+      dispatch(setOneSignalIOSPermissionsTo(result));
+    });
+  };
 };

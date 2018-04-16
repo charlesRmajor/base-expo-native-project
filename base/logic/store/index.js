@@ -19,9 +19,7 @@ import {getStoreSubscriptionObjectFrom, combineReducersObjectFrom, addPropsReque
 // Import Base Stores
 import loadingReducer from './loading';
 import setMarketplaceSection from './marketplace';
-import setNotificationsSection from './notifications';
 import setPermissionsSection from './permissions';
-import setSubscriptionsSection from './subscriptions';
 
 // Import App's Stores
 import appStoreSections from '../../../src/logic/store/appStoreSections';
@@ -95,9 +93,7 @@ const essentialStoreSections ={
 export const allStoreSections = Object.assign({},
   essentialStoreSections,
   setMarketplaceSection,
-  setNotificationsSection,
   setPermissionsSection,
-  setSubscriptionsSection,
   (appStoreSections ? appStoreSections : {}));
 
 export const defaultInterfacePropsFrom = (store) => {
