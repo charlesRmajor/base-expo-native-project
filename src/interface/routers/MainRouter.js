@@ -1,7 +1,7 @@
 /*
   MainRouter.js
     CanonicalAppName
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component MainRouter.js
@@ -50,7 +50,7 @@ import BettermentLabsLandingContainer from '../containers/BettermentLabsLandingC
 
 const SwipeableRouterExampleRoutes = () => {
     var Routes = [];
-    for (i = 0; i < 10; i++) { 
+    for (i = 0; i < 10; i++) {
         Routes.push({view: getSimplePageView(i)})
     }
     return Routes;
@@ -75,15 +75,15 @@ class MainRouter extends React.Component {
     componentWillMount() {
         if (this.props.dispatch) {AppLaunch(this.props.dispatch)};
     }
-  
+
     componentDidMount() {
         if (this.props.dispatch) {AppSubscribe(this.props.dispatch)};
     }
-  
+
     componentWillUnmount() {
         if (this.props.dispatch) {AppUnSubscribe(this.props.dispatch)};
     }
-    
+
     render() {
         // console.log(this.props);
         const styles = this.props.styles || defaultAppStyles;
@@ -91,14 +91,14 @@ class MainRouter extends React.Component {
         // next line checks if we're ready to render & should probably be exported to a separate file
         const readyToRender = (this.props.loading == null || this.props.loading == undefined) ? false : (!isObject(this.props.loading.essentialState) ? this.props.loading.essentialState :
             (() => { var ready = true; for (const key in this.props.loading.essentialState.areLoaded) { if (!this.props.loading.essentialState.areLoaded[key]) {ready=false; return}} return ready })())
-        
+
         const FullScreenLoadingOverlay = null;//<FullScreenLoading {...this.props} />;
 
         const CurrentView = !readyToRender ? <FullScreenLoading {...this.props} /> :
             getCurrentView({
                 view: this.props.router.location.view,
                 routeProps: this.props});
-        
+
         return(
             <ThemeProvider theme={styles}>
                 <View style={{height:'100%', width:'100%'}}>
@@ -122,7 +122,7 @@ const mapStateToProps = function(store) {
         additionalSections,
         store));
   }
-  
+
 export default connect(mapStateToProps)(MainRouter);
 
 export const MainRouterGoBack = ({dispatch}) => {

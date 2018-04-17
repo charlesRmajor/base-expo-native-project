@@ -1,7 +1,7 @@
 /*
   BettermentLabsLandingContainer.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component BettermentLabsLandingContainer.js
@@ -22,6 +22,7 @@ import {
   requestLocation,
   checkNotificationsPermissions
   } from '../../../base/logic/permissions';
+import {linkPermissionsTrackingToStore} from '../../../base/logic/notifications/OneSignalReduxSupport'
 import saveContactFromPhonesPhoneBook from '../../logic/loading/saveContactFromPhonesPhoneBook';
 import {getRemoveContactFromAppPhonebookWithDispatch} from '../../logic/store/appPhonebook';
 import {
@@ -49,7 +50,7 @@ export default BettermentLabsLandingContainer = (props) => {
         onPress: checkNotificationsPermissions
       },
       {title: strings.notificationsRequestButton,
-        onPress: requestNotifications
+        onPress: () => requestNotifications(linkPermissionsTrackingToStore(dispatcher))
       },
       {title: strings.locationPermissionsRequest,
         onPress: requestLocation

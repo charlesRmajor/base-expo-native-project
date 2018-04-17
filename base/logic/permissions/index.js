@@ -1,7 +1,7 @@
 /*
   index.js - Permissions
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component index.js
@@ -33,11 +33,10 @@ export const requestLocation = (callback) => {
   //   "alert": 0 or 1,
   //   "badge": 0 or 1,
   //   "sound": 0 or 1,
-  // }  
+  // }
 export const checkNotificationsPermissions = (callback) => {
-  if (OneSignal == undefined || OneSignal.checkPermissions == undefined) {return}
-  OneSignal.checkPermissions((result) => {
-    console.log(result);
+  if (OneSignal == undefined || OneSignal.default.checkPermissions == undefined) {return}
+  OneSignal.default.checkPermissions((result) => {
     if (isFunction(callback)) {
       callback({
         error: false,
@@ -48,7 +47,7 @@ export const checkNotificationsPermissions = (callback) => {
       console.log("No callback function to CheckOneSignalSubscriptionStatus provided. Result is: ");
       console.log(result);
     }
-  });  
+  });
 }
 
 // iOS Only

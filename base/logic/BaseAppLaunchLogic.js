@@ -1,7 +1,7 @@
 /*
   BaseAppLaunch.js
     BettermentLabs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 export Function AppLaunch

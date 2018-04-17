@@ -1,7 +1,7 @@
 /*
   notificationsSupport.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
     Description: Functions for managing OneSignal integrations
@@ -9,11 +9,6 @@
 
     All of these functions are essential to using OneSignal. Don't remove entire functions.
 */
-
-import {
-    setOneSignalPushTokenTo,
-    setOneSignaluserIdTo
-} from '../../../base/logic/store/notifications';
 
 // A OneSignal-sent notification is received
 export const getOnReceived = (dispatch) => {
@@ -51,4 +46,3 @@ export const getOnIds = (dispatch) => {
     return((device) => {
         console.log('Device info: ', device);
   })}
-  

@@ -2,7 +2,7 @@
   index.js
     top-level store organizing file
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
     Description:
@@ -18,8 +18,8 @@ import {getStoreSubscriptionObjectFrom, combineReducersObjectFrom, addPropsReque
 
 // Import Base Stores
 import loadingReducer from './loading';
-import setNotificationsSection from './notifications';
 import setMarketplaceSection from './marketplace';
+import setPermissionsSection from './permissions';
 
 // Import App's Stores
 import appStoreSections from '../../../src/logic/store/appStoreSections';
@@ -92,8 +92,8 @@ const essentialStoreSections ={
 // appStoreSections is the store sections defined in the /src/logic/store/... folder
 export const allStoreSections = Object.assign({},
   essentialStoreSections,
-  setNotificationsSection,
   setMarketplaceSection,
+  setPermissionsSection,
   (appStoreSections ? appStoreSections : {}));
 
 export const defaultInterfacePropsFrom = (store) => {
