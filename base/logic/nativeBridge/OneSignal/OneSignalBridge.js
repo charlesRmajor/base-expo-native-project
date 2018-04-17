@@ -1,7 +1,7 @@
 /*
   OneSignalBridge.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
     Description: Bridges OneSignal package to project
@@ -25,4 +25,4 @@ const getOneSignalPackage = () => {
     }
 }
 
-export default OneSignal = getOneSignalPackage();
+export default OneSignal = getOneSignalPackage().default;
