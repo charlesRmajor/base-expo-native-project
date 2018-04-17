@@ -168,8 +168,6 @@
     <color name="wallet_bright_foreground_holo_light">#ff000000</color>
     <color name="wallet_dim_foreground_disabled_holo_dark">#80bebebe</color>
     <color name="wallet_dim_foreground_holo_dark">#bebebe</color>
-    <color name="wallet_dim_foreground_inverse_disabled_holo_dark">#80323232</color>
-    <color name="wallet_dim_foreground_inverse_holo_dark">#323232</color>
     <color name="wallet_highlighted_text_holo_dark">#6633b5e5</color>
     <color name="wallet_highlighted_text_holo_light">#6633b5e5</color>
     <color name="wallet_hint_foreground_holo_dark">#808080</color>
@@ -799,10 +797,11 @@
     <integer name="card_flip_time_full">700</integer>
     <integer name="card_flip_time_half">350</integer>
     <integer name="config_tooltipAnimTime">150</integer>
-    <integer name="google_play_services_version">12211000</integer>
+    <integer name="google_play_services_version">11200000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="CreditCardNumberHelp"/>
     <string name="ExpirationDateHelp">Expiration date (MM/YY)</string>
+    <string name="FACEBOOK_APP_ID" translatable="false">1862668823822620</string>
     <string name="SecurityCodeHelp">Security code (CVV)</string>
     <string name="ZipHelp">Zip code of billing address</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -861,7 +860,7 @@
     <string name="catalyst_report_button" project="catalyst" translatable="false">Report</string>
     <string name="catalyst_settings" project="catalyst" translatable="false">Dev Settings</string>
     <string name="catalyst_settings_title" project="catalyst" translatable="false">Catalyst Dev Settings</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">eca053d2-60dd-4909-baa9-6bef62f6ced0</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">4b2777ea-5393-4460-b050-56a2866dc86c</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -891,7 +890,6 @@
     <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
     <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
-    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
     <string name="common_google_play_services_notification_ticker">Google Play services error</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
@@ -924,6 +922,7 @@
     <string name="exo_controls_previous_description">Previous track</string>
     <string name="exo_controls_rewind_description">Rewind</string>
     <string name="exo_controls_stop_description">Stop</string>
+    <string name="facebook_app_id">1862668823822620</string>
     <string name="ga_trackingId" translatable="false">UA-76673608-1</string>
     <string name="gcm_defaultSenderId" translatable="false">367315174693</string>
     <string name="gcm_fallback_notification_channel_label">Miscellaneous</string>

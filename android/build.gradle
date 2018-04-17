@@ -5,20 +5,23 @@ ext {
     buildToolsVersion = '26.0.2'
     targetSdkVersion = 26
     minSdkVersion = 19
-    OneSignal_AppID = ''
-    Google_Project_Number = ''
+    OneSignal_AppID = '70028655-b534-42b0-9ad8-04d6fb014371'
+    Google_Project_Number = '5288352928'
     CanonicalAppID = 'CanonicalAppID'
     OrganizationID = 'OrganizationID'
     appVersionCode = 1
     appVersionName = '0.1.0'
+    FacebookAppID = '1862668823822620'
+    FacebookDisplayName = 'base-expo-native-project'
 }
 
 buildscript {
   repositories {
     jcenter()
+      google()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:3.1.1'
     classpath 'com.google.gms:google-services:3.0.0'
   }
 }
@@ -48,7 +51,23 @@ allprojects {
 
     // Want this last so that we never end up with a stale cache
     mavenLocal()
+      google()
   }
+}
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy {
+            eachDependency { details ->
+                // Force dependencies to use the same version.
+                def versionSelector = details.requested
+                if (versionSelector.group == 'com.google.firebase'
+                        || versionSelector.group == 'com.google.android.gms') {
+                    details.useVersion playServicesVersion
+                }
+            }
+        }
+    }
 }
 
 task clean(type: Delete) {

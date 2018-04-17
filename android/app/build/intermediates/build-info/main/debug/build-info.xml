@@ -5,8 +5,8 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    plugin-version="3.0.0"
-    timestamp="1523310314730"
+    plugin-version="3.1.1"
+    timestamp="1523484042393"
     token="-1607969793720219556"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -24,16 +24,28 @@
         duration="0" />
 
     <artifact
-        location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/outputs/apk/main/debug/app-main-debug.apk"
+        location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/instant-run-apk/main/debug/app-main-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1523309534756"
+        timestamp="1523483915740"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/outputs/apk/main/debug/app-main-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_2.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_5.apk"
             type="SPLIT" />
@@ -44,72 +56,24 @@
             location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/dep/dependencies.apk"
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_6.apk"
-            type="SPLIT" />
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/instant-run-apk/main/debug/app-main-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1523310036491"
+        timestamp="1523484042393"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/split-apk/main/debug/slices/slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1523310314730"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/outputs/apk/main/debug/app-main-debug.apk"
+            location="/Users/charlesmajor/CSquaredEnterprises/BettermentLabsLLC/base-expo-native-project/android/app/build/intermediates/instant-run-apk/main/debug/app-main-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 

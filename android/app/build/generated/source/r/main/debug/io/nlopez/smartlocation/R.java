@@ -57,12 +57,12 @@ public final class R {
         public static final int google_play_services_version = 0x7f0a0006;
     }
     public static final class string {
-        public static final int common_google_play_services_enable_button = 0x7f0f0054;
-        public static final int common_google_play_services_enable_text = 0x7f0f0055;
-        public static final int common_google_play_services_enable_title = 0x7f0f0056;
-        public static final int common_google_play_services_install_button = 0x7f0f0057;
-        public static final int common_google_play_services_install_text = 0x7f0f0058;
-        public static final int common_google_play_services_install_title = 0x7f0f0059;
+        public static final int common_google_play_services_enable_button = 0x7f0f0055;
+        public static final int common_google_play_services_enable_text = 0x7f0f0056;
+        public static final int common_google_play_services_enable_title = 0x7f0f0057;
+        public static final int common_google_play_services_install_button = 0x7f0f0058;
+        public static final int common_google_play_services_install_text = 0x7f0f0059;
+        public static final int common_google_play_services_install_title = 0x7f0f005a;
         public static final int common_google_play_services_notification_ticker = 0x7f0f005b;
         public static final int common_google_play_services_unknown_issue = 0x7f0f005c;
         public static final int common_google_play_services_unsupported_text = 0x7f0f005d;

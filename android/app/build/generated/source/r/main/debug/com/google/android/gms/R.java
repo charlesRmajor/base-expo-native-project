@@ -75,14 +75,14 @@ public final class R {
         public static final int wallet_bright_foreground_holo_light = 0x7f060089;
         public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f06008a;
         public static final int wallet_dim_foreground_holo_dark = 0x7f06008b;
-        public static final int wallet_highlighted_text_holo_dark = 0x7f06008e;
-        public static final int wallet_highlighted_text_holo_light = 0x7f06008f;
-        public static final int wallet_hint_foreground_holo_dark = 0x7f060090;
-        public static final int wallet_hint_foreground_holo_light = 0x7f060091;
-        public static final int wallet_holo_blue_light = 0x7f060092;
-        public static final int wallet_link_text_light = 0x7f060093;
-        public static final int wallet_primary_text_holo_light = 0x7f060094;
-        public static final int wallet_secondary_text_holo_dark = 0x7f060095;
+        public static final int wallet_highlighted_text_holo_dark = 0x7f06008c;
+        public static final int wallet_highlighted_text_holo_light = 0x7f06008d;
+        public static final int wallet_hint_foreground_holo_dark = 0x7f06008e;
+        public static final int wallet_hint_foreground_holo_light = 0x7f06008f;
+        public static final int wallet_holo_blue_light = 0x7f060090;
+        public static final int wallet_link_text_light = 0x7f060091;
+        public static final int wallet_primary_text_holo_light = 0x7f060092;
+        public static final int wallet_secondary_text_holo_dark = 0x7f060093;
     }
     public static final class drawable {
         public static final int common_full_open_on_phone = 0x7f08007c;
@@ -162,13 +162,12 @@ public final class R {
         public static final int google_play_services_version = 0x7f0a0006;
     }
     public static final class string {
-        public static final int common_google_play_services_enable_button = 0x7f0f0054;
-        public static final int common_google_play_services_enable_text = 0x7f0f0055;
-        public static final int common_google_play_services_enable_title = 0x7f0f0056;
-        public static final int common_google_play_services_install_button = 0x7f0f0057;
-        public static final int common_google_play_services_install_text = 0x7f0f0058;
-        public static final int common_google_play_services_install_title = 0x7f0f0059;
-        public static final int common_google_play_services_notification_channel_name = 0x7f0f005a;
+        public static final int common_google_play_services_enable_button = 0x7f0f0055;
+        public static final int common_google_play_services_enable_text = 0x7f0f0056;
+        public static final int common_google_play_services_enable_title = 0x7f0f0057;
+        public static final int common_google_play_services_install_button = 0x7f0f0058;
+        public static final int common_google_play_services_install_text = 0x7f0f0059;
+        public static final int common_google_play_services_install_title = 0x7f0f005a;
         public static final int common_google_play_services_notification_ticker = 0x7f0f005b;
         public static final int common_google_play_services_unknown_issue = 0x7f0f005c;
         public static final int common_google_play_services_unsupported_text = 0x7f0f005d;
@@ -180,14 +179,14 @@ public final class R {
         public static final int common_open_on_phone = 0x7f0f0063;
         public static final int common_signin_button_text = 0x7f0f0064;
         public static final int common_signin_button_text_long = 0x7f0f0065;
-        public static final int gcm_fallback_notification_channel_label = 0x7f0f007d;
-        public static final int s1 = 0x7f0f0084;
-        public static final int s2 = 0x7f0f0085;
-        public static final int s3 = 0x7f0f0086;
-        public static final int s4 = 0x7f0f0087;
-        public static final int s5 = 0x7f0f0088;
-        public static final int s6 = 0x7f0f0089;
-        public static final int wallet_buy_button_place_holder = 0x7f0f008e;
+        public static final int gcm_fallback_notification_channel_label = 0x7f0f007e;
+        public static final int s1 = 0x7f0f0085;
+        public static final int s2 = 0x7f0f0086;
+        public static final int s3 = 0x7f0f0087;
+        public static final int s4 = 0x7f0f0088;
+        public static final int s5 = 0x7f0f0089;
+        public static final int s6 = 0x7f0f008a;
+        public static final int wallet_buy_button_place_holder = 0x7f0f008f;
     }
     public static final class style {
         public static final int Theme_IAPTheme = 0x7f10014f;
