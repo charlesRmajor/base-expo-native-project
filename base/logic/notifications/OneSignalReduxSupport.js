@@ -16,10 +16,10 @@ import {
 
 export const linkPermissionsTrackingToStore = ({ dispatch }) => {
   return () => {
-    OneSignal.default.getPermissionSubscriptionState(result => {
+    OneSignal.getPermissionSubscriptionState(result => {
       dispatch(setOneSignalSubscriptionsTo(result));
     });
-    OneSignal.default.checkPermissions(result => {
+    OneSignal.checkPermissions(result => {
       dispatch(setOneSignalIOSPermissionsTo(result));
     });
   };

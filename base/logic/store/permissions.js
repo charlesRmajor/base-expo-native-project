@@ -17,16 +17,24 @@ export const setOneSignalSubscriptionsTo = subscriptions => {
   };
 };
 
-export const setOneSignalIOSPermissionsTo = permissions => {
+export const setOneSignalIOSPermissionsTo = notificationPermissions => {
   return {
     type: 'SET_ONE_SIGNAL_IOS_PERMISSIONS_TO',
-    permissions: permissions
+    notificationPermissions: notificationPermissions
+  };
+};
+
+export const setLocationPermissionsTo = locationPermissions => {
+  return {
+    type: 'SET_LOCATIONS_PERMISSIONS_TO',
+    locationPermissions: locationPermissions
   };
 };
 
 const defaultPermissionsState = {
   oneSignalSubscription: null,
-  permissions: null
+  notificationPermissions: null,
+  locationPermissions: null
 };
 
 const permissionsReducer = (state = defaultPermissionsState, action) => {
@@ -37,7 +45,7 @@ const permissionsReducer = (state = defaultPermissionsState, action) => {
       });
     case setOneSignalIOSPermissionsTo().type:
       return Object.assign({}, state, {
-        permissions: action.permissions
+        notificationPermissions: action.notificationPermissions
       });
   }
   return state;
