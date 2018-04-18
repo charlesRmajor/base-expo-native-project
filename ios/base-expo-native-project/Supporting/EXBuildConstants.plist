@@ -14,6 +14,10 @@
 	<key>STANDALONE_CONTEXT_TYPE</key>
 	<string>user</string>
 	<key>developmentUrl</key>
+<<<<<<< HEAD
 	<string>exp6240bd4aef4c4d429e5d87a9ee39adb0://h2-27w.ariburr.base-expo-native-project.exp.direct:80</string>
+=======
+	<string>exp6240bd4aef4c4d429e5d87a9ee39adb0://3b-mk5.ariburr.base-expo-native-project.exp.direct:80</string>
+>>>>>>> 343df764c231b6b502d0bc3453e2f90e86d5f38a
 </dict>
 </plist>
