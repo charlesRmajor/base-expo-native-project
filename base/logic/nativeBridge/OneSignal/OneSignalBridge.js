@@ -21,8 +21,8 @@ const getOneSignalPackage = () => {
     } else {
         console.log("getOneSignalPackage isNOTCurrentlyRunningInExpoClient - returning NativeOneSignal")
         const NativeOneSignal = require('./OneSignalImport');
-        return NativeOneSignal;
+        return NativeOneSignal.default;
     }
 }
 
-export default OneSignal = getOneSignalPackage().default;
+export default OneSignal = getOneSignalPackage();
