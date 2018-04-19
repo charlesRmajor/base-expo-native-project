@@ -1,7 +1,7 @@
-/* 
+/*
   strings_BettermentLabsLandingPage.js
   Betterment Labs
-  Created by Charles Major on 02/03/18. 
+  Created by Charles Major on 02/03/18.
   Copyright © Betterment Labs 2018. All rights reserved.
 */
 
@@ -28,6 +28,7 @@ export default Strings = new BLocalization( {
     purchasedProductsTitle: "Purchased Products",
     failedPurchasesTitle: "Failed Purchases",
     attemptedPurchasesTitle: "Attempted Purchases",
+    canceledPurchasesTitle: "Canceled Purchases",
     consumedProductsTitle: "Consumed Products"
   },
   es: {

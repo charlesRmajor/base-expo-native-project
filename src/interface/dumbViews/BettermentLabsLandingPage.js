@@ -1,7 +1,7 @@
 /*
   BettermentLabsLandingPage.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component BettermentLabsLandingPage.js
@@ -26,7 +26,7 @@ import BButton, {ButtonView} from '../../../base/interface/components/BButton';
 import getContactCard from '../components/getContactCard';
 import getMarketplaceItemCard from '../components/getMarketplaceItemCard';
 import getProductCard from '../components/getProductCard';
-import BLoadingCircle from '../../../base/interface/components/BLoadingCircle';
+import FullScreenLoading from '../../../base/interface/dumbViews/FullScreenLoading';
 
 // Interface Styling
 const ButtonEnclosingView = styled.View`flex:2`;
@@ -79,7 +79,7 @@ const PageButtons = (PageButtonArray) => {
     })
     return(JSXButtons);
 }
-    
+
 export default BettermentLabsLandingPage = (props) => {
     // console.log(props);
     // console.log("props.marketplace");
@@ -101,7 +101,8 @@ export default BettermentLabsLandingPage = (props) => {
                 getMarketplaceItemCard({
                     marketplaceItem: marketplaceItem,
                     index: index,
-                    purchaseFunction: props.purchaseFunction}))
+                    props: {...props}
+                }))
             : null;
 
     const PurchasedProducts = (props.marketplace && props.marketplace.PurchasedProducts) ?
@@ -132,12 +133,21 @@ export default BettermentLabsLandingPage = (props) => {
                     product: product,
                     index: index}))
         : null;
-    
+
     const AttemptedTransactions = (props.marketplace && props.marketplace.AttemptedTransactions) ?
         props.marketplace.AttemptedTransactions.map(
             (product, index) =>
                 getProductCard({
                     productState: 'attempted',
+                    product: product,
+                    index: index}))
+        : null;
+
+    const CanceledTransactions = (props.marketplace && props.marketplace.CanceledTransactions) ?
+        props.marketplace.CanceledTransactions.map(
+            (product, index) =>
+                getProductCard({
+                    productState: 'canceled',
                     product: product,
                     index: index}))
         : null;
@@ -155,11 +165,11 @@ export default BettermentLabsLandingPage = (props) => {
         (<MarketPlaceSectionView>
             <MarketplaceHeader>{strings.marketplaceLoading}</MarketplaceHeader>
             <MarketplaceLoadingCircleView>
-                <BLoadingCircle circColor={props.styles.color.highlight} isAnimating/>
+                <FullScreenLoading {...props} />
             </MarketplaceLoadingCircleView>
         </MarketPlaceSectionView>)
         :
-        (props.marketplace.MarketPlaceFailedLoading ? 
+        (props.marketplace.MarketPlaceFailedLoading ?
         (
         <MarketPlaceSectionView>
             <MarketplaceHeader>{strings.marketplaceFailedToLoad}</MarketplaceHeader>
@@ -175,11 +185,13 @@ export default BettermentLabsLandingPage = (props) => {
             {FailedTransactions}
             <MarketplaceHeader>{strings.attemptedPurchasesTitle}</MarketplaceHeader>
             {AttemptedTransactions}
+            <MarketplaceHeader>{strings.canceledPurchasesTitle}</MarketplaceHeader>
+            {CanceledTransactions}
             <MarketplaceHeader>{strings.consumedProductsTitle}</MarketplaceHeader>
             {ConsumedProducts}
         </MarketPlaceSectionView>
         ))
-    
+
     const mainView =
         (<MainView>
                 <ScrollView>

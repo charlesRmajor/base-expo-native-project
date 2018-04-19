@@ -1,11 +1,10 @@
 /*
-	FullScreenLoading.js
+	InlineLoading.js
 	BettermentLabs
 
-	Created by Charles Major on 1/12/18.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
-Component FullScreenLoading.js
+Component InlineLoading.js
   Description:
 */
 // IMPORTS
@@ -20,6 +19,7 @@ import hex2rgb from '../../logic/jsExtend/hex2rgb';
 
 // Import Other App UI Elements
 import BLoadingCircle from '../components/BLoadingCircle';
+import BRoundedButton from '../components/BRoundedButton';
 
 const MainView = styled.View`
     position: absolute;
@@ -37,20 +37,31 @@ const MainView = styled.View`
 `
 
 const PageLoadingCircleView = styled.View`
-    width: 75%;
+    width: 50%;
 `
 
-export default FullScreenLoading = (props) => {
+export default InlineLoading = (props) => {
+
+  const cancelFunction =
+    props.cancelFunction != undefined
+      ? props.cancelFunction
+      : () => console.log('no cancel function provided');
+
     const circColor= props.loadingCircColor ? props.loadingCircColor :
         (props.styles ? props.styles.color ? props.styles.color.highlight ? props.styles.color.highlight : null : null : null);
+
     return(
         <MainView>
             <PageLoadingCircleView>
-                <BLoadingCircle
-                    isAnimating={true}
-                    circStrokeWidth={'50'}
-                    circColor={circColor}
-                />
+              <BRoundedButton
+                title={'CANCEL'}
+                onPress={cancelFunction}
+              />
+              <BLoadingCircle
+                isAnimating={true}
+                circStrokeWidth={'25'}
+                circColor={circColor}
+              />
             </PageLoadingCircleView>
         </MainView>)
 }

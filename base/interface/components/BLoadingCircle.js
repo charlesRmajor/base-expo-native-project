@@ -2,7 +2,7 @@
 	BLoadingCircle.js
 	BettermentLabs
 
-	Created by Charles Major on 1/12/18. 
+	Created by Charles Major on 1/12/18.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component BLoadingCircle.js
@@ -71,34 +71,34 @@ class BLoadingCircle extends React.Component {
           y: centerY + (radius * Math.sin(angleInRadians))
         };
       }
-  
+
       myCircleSegment = (x, y, radius, startAngle, endAngle) => {
           let start = this.polarToCartesian(x, y, radius, endAngle);
           let end = this.polarToCartesian(x, y, radius, startAngle);
-  
+
           if ((endAngle - startAngle) > 180) {
               let endFirstSeg = this.polarToCartesian(x, y, radius, (startAngle+180));
-  
+
               let line = [
-                  "M", start.x, start.y, 
+                  "M", start.x, start.y,
                   "A", radius, radius, 0, 0, 0, endFirstSeg.x, endFirstSeg.y,
                   "A", radius, radius, 0, 0, 0, end.x, end.y
                   ].join(" ");
-  
+
               return(line);
           } else {
               let line = [
-                  "M", start.x, start.y, 
+                  "M", start.x, start.y,
                   "A", radius, radius, 0, 0, 0, end.x, end.y
               ].join(" ");
-              return(line);       
+              return(line);
           }
       }
-  
+
       getMyCurrentCircle = (currentAngle) => {
           return this.myCircleSegment(0,0, this.state.layouts.circDia/2, 180, 180+currentAngle)
       }
-  
+
       advanceProgressCircle = () => {
           if (!this.state.isMounted) {return}
           var newState = this.state;
@@ -115,7 +115,7 @@ class BLoadingCircle extends React.Component {
         })
         requestAnimationFrame(this.advanceProgressCircle);
     }
-  
+
       resetProgressCircle = () => {
         if (!this.state.isMounted) {return}
         var newState = this.state;
@@ -125,7 +125,7 @@ class BLoadingCircle extends React.Component {
               newState
           })
       }
-  
+
       startProgressCircle = () => {
         if (!this.state.isMounted) {return}
         this.setState({
@@ -134,7 +134,7 @@ class BLoadingCircle extends React.Component {
                   requestAnimationFrame(this.advanceProgressCircle);
               })
       }
-  
+
     render() {
         return(
             <View
@@ -146,7 +146,7 @@ class BLoadingCircle extends React.Component {
                 }}
                 onLayout={(event) => {this.setLayoutState(event)}}
             >
-        { (this.state.circleAngle != 0) && 
+        { (this.state.circleAngle != 0) &&
             <Svg
                 pointerEvents="none"
                 height={this.state.layouts.circDia}
@@ -158,7 +158,7 @@ class BLoadingCircle extends React.Component {
                 d={this.getMyCurrentCircle(this.state.circleAngle)}
                 stroke={this.props.circColor || defaultCircColor}
                 strokeWidth={this.props.circStrokeWidth || defaultCircStrokeWidth}
-                fill="none" 
+                fill="none"
                 strokeLinecap="round"
                 />
             </Svg>

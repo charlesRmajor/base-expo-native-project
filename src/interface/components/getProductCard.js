@@ -1,13 +1,13 @@
 /*
   getProductCard.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component getProductCard.js
-  Description:  
-  Inputs: 
-  Outputs: 
+  Description:
+  Inputs:
+  Outputs:
 */
 // IMPORTS
 // Import React Modules
@@ -45,6 +45,7 @@ export default getProductCard = ({productState, product, index, productButton}) 
                     <Header>productID: {product.productID}</Header>
                     {product.transactionID && <GeneralText>transactionID: {product.transactionID}</GeneralText>}
                     {product.dateTime && product.dateTime.attempted && <GeneralText>dateTime.attempted: {product.dateTime.attempted}</GeneralText>}
+                    {product.dateTime && product.dateTime.canceled && <GeneralText>dateTime.canceled: {product.dateTime.canceled}</GeneralText>}
                     {product.dateTime && product.dateTime.failed && <GeneralText>dateTime.failed: {product.dateTime.failed}</GeneralText>}
                     {product.dateTime && product.dateTime.purchased && <GeneralText>dateTime.purchased: {product.dateTime.purchased}</GeneralText>}
                     {product.dateTime && product.dateTime.consumed && <GeneralText>dateTime.consumed: {product.dateTime.consumed}</GeneralText>}
@@ -53,7 +54,7 @@ export default getProductCard = ({productState, product, index, productButton}) 
                     <ViewSpacer/>
                 </CardView>
                 <ViewSpacer/>
-            </MainView>            
+            </MainView>
     )
 }
 
