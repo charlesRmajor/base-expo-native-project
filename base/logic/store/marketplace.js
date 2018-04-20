@@ -67,7 +67,7 @@ const marketplaceReducer = (state, action) => {
 
         case transactionFailed().type:
             const resultingFailedArrays = moveProduct({
-                fromArray1: state.AttemptedTransactions.slice(),
+                fromArray1: state.AttemptedTransactions.length ? state.AttemptedTransactions.slice() : state.CanceledTransactions.slice(),
                 toArray2: state.FailedTransactions.slice(),
                 forProductID: action.productID,
                 dateTimeLabel: 'failed'
