@@ -1,7 +1,7 @@
 PODS:
   - Amplitude-iOS (3.14.1)
   - Analytics (3.6.9)
-  - AppAuth (0.92.0)
+  - AppAuth (0.93.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -34,8 +34,8 @@ PODS:
   - CocoaLumberjack/Default (3.2.1)
   - CocoaLumberjack/Extensions (3.2.1):
     - CocoaLumberjack/Default
-  - Crashlytics (3.10.1):
-    - Fabric (~> 1.7.5)
+  - Crashlytics (3.10.3):
+    - Fabric (~> 1.7.8)
   - DoubleConversion (1.1.5)
   - ExpoKit/Core (2.3.3):
     - Amplitude-iOS (~> 3.8)
@@ -57,14 +57,14 @@ PODS:
     - lottie-ios (~> 2.1.3)
   - ExpoKit/CPP (2.3.3):
     - ExpoKit/Core
-  - Fabric (1.7.6)
-  - FBAudienceNetwork (4.28.1)
-  - FBSDKCoreKit (4.32.0):
+  - Fabric (1.7.8)
+  - FBAudienceNetwork (4.99.0)
+  - FBSDKCoreKit (4.34.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.32.0):
+  - FBSDKLoginKit (4.34.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.32.0):
-    - FBSDKCoreKit (~> 4.32.0)
+  - FBSDKShareKit (4.34.0):
+    - FBSDKCoreKit (~> 4.34.0)
   - Folly (2016.09.26.00):
     - boost
     - DoubleConversion
@@ -94,7 +94,7 @@ PODS:
   - GPUImage (0.1.7)
   - JKBigInteger2 (0.0.5)
   - lottie-ios (2.1.5)
-  - OneSignal (2.8.2)
+  - OneSignal (2.8.5)
   - React (0.52.0):
     - React/Core (= 0.52.0)
   - react-native-fbsdk (0.7.0):
@@ -186,24 +186,52 @@ DEPENDENCIES:
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Amplitude-iOS
+    - Analytics
+    - AppAuth
+    - Bolts
+    - boost
+    - Branch
+    - CocoaLumberjack
+    - Crashlytics
+    - Fabric
+    - FBAudienceNetwork
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - Google-Mobile-Ads-SDK
+    - GoogleAppUtilities
+    - GoogleAuthUtilities
+    - GoogleMaps
+    - GoogleNetworkingUtilities
+    - GoogleSignIn
+    - GoogleSymbolUtilities
+    - GoogleUtilities
+    - GPUImage
+    - JKBigInteger2
+    - lottie-ios
+    - OneSignal
+
 EXTERNAL SOURCES:
   DoubleConversion:
-    :podspec: ../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+    :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   ExpoKit:
     :git: http://github.com/expo/expo.git
     :tag: ios/2.3.3
   Folly:
-    :podspec: ../node_modules/react-native/third-party-podspecs/Folly.podspec
+    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   GLog:
-    :podspec: ../node_modules/react-native/third-party-podspecs/GLog.podspec
+    :podspec: "../node_modules/react-native/third-party-podspecs/GLog.podspec"
   React:
-    :path: ../node_modules/react-native
+    :path: "../node_modules/react-native"
   react-native-fbsdk:
-    :path: ../node_modules/react-native-fbsdk/ios
+    :path: "../node_modules/react-native-fbsdk/ios"
   react-native-onesignal:
-    :path: ../node_modules/react-native-onesignal
+    :path: "../node_modules/react-native-onesignal"
   yoga:
-    :path: ../node_modules/react-native/ReactCommon/yoga
+    :path: "../node_modules/react-native/ReactCommon/yoga"
 
 CHECKOUT OPTIONS:
   ExpoKit:
@@ -213,19 +241,19 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Amplitude-iOS: 4a3c8807b2ea5369dc11e87e23825bff01e5a922
   Analytics: 6541ce337e99d9f7a2240a8b3953940a7be5f998
-  AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
+  AppAuth: 1096c2ad48507c4a2a8c85c8a6ff065741ab9931
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   boost: 30a15ffb6d9aa4646dd3caffc960753f4cb4ca4e
   Branch: f63d9cf82ac09747349a73184a0b739d28781c4d
   CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
-  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
   DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
   ExpoKit: b322775eb089a18e60ddc2b785d00a0aa08ad316
-  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
-  FBAudienceNetwork: c0cda151bb2f7b55d1e045e59ebc81f3153989b2
-  FBSDKCoreKit: 55d7f2ac45d9c4b9b6119f4e43900fe84b9b7b1b
-  FBSDKLoginKit: 32ac05c2a59952c363c2e85aafa8f73ba93bcbad
-  FBSDKShareKit: 658780d0d108b8ad590a54afb5ac1427bdc8de28
+  Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
+  FBAudienceNetwork: 80275c0a28574ff5ce820abdc251d05e07e6ae7a
+  FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
+  FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
+  FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
   Folly: b7255b29f1d693c375d642d0f04f0592181156d9
   GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
   Google-Mobile-Ads-SDK: 1bdf1a4244d0553b1840239874c209c01aef055f
@@ -239,7 +267,7 @@ SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   JKBigInteger2: e91672035c42328c48b7dd015b66812ddf40ca9b
   lottie-ios: 836cdbba92f62f3c6a00e37a4ce485321fe317cf
-  OneSignal: ab5c509192ca8390bdd3570a6261e6decf4c79c1
+  OneSignal: 42dae269c7eca517aee34963820e1eb922390031
   React: 43e97926f429d846050880666de1809e22dd5cc5
   react-native-fbsdk: 8a738a123494ae9ba69482a5a8e88aa2108b8245
   react-native-onesignal: 799a5cb9639b476b0f939e1e90eae917711f8bff
@@ -247,4 +275,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d0dffe3cd906b8252e5f49073101a422de2f670e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
