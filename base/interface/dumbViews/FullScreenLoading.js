@@ -2,11 +2,11 @@
 	FullScreenLoading.js
 	BettermentLabs
 
-	Created by Charles Major on 1/12/18. 
+	Created by Charles Major on 1/12/18.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component FullScreenLoading.js
-  Description:  
+  Description:
 */
 // IMPORTS
 // Import React Modules
@@ -30,7 +30,7 @@ const MainView = styled.View`
     justify-content: center;
     align-items: center;
     background-color: ${({theme}) => {
-        const rgbColor = theme.backgroundColor ? 
+        const rgbColor = theme.backgroundColor ?
             hex2rgb(backgroundColor) :
             hex2rgb(theme.color ? theme.color.background ? theme.color.background : '#000000' : '#000000');
         return('rgba('+rgbColor.r+', '+rgbColor.g+', '+rgbColor.b+', '+(theme.opacity ? theme.opacity : '0.75')+')')}};

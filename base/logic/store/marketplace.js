@@ -1,7 +1,7 @@
 /*
   marketplace.js
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component marketplace.js
@@ -16,6 +16,7 @@ export const saveLoadedMarketplaceAction = (productsArray) => {return({type: 'SA
 
 export const isAttemptingToPurchase = (productID) => {return({type: 'IS_ATTEMPTING_TO_PURCHASE', productID: productID})};
 export const transactionFailed = (productID) => {return({type: 'TRANSACTION_FAILED', productID: productID})};
+export const cancelTransaction = (productID) => {return({type: 'CANCEL_TRANSACTION', productID: productID})};
 export const purchaseProduct = ({productID, transactionID}) => { return({type: 'PURCHASE_PRODUCT', productID: productID, transactionID: transactionID})};
 export const consumeProduct = (productID) => {return({type: 'CONSUME_PRODUCT', productID: productID})};
 
@@ -32,6 +33,7 @@ const marketplaceReducer = (state, action) => {
             MarketPlaceProducts: [],
             AttemptedTransactions: [],
             FailedTransactions: [],
+            CanceledTransactions: [],
             PurchasedProducts: [],
             ConsumedProducts: []
         }
@@ -65,7 +67,7 @@ const marketplaceReducer = (state, action) => {
 
         case transactionFailed().type:
             const resultingFailedArrays = moveProduct({
-                fromArray1: state.AttemptedTransactions.slice(),
+                fromArray1: state.AttemptedTransactions.length ? state.AttemptedTransactions.slice() : state.CanceledTransactions.slice(),
                 toArray2: state.FailedTransactions.slice(),
                 forProductID: action.productID,
                 dateTimeLabel: 'failed'
@@ -73,6 +75,17 @@ const marketplaceReducer = (state, action) => {
             return Object.assign({}, state, {
                 AttemptedTransactions: resultingFailedArrays.array1,
                 FailedTransactions: resultingFailedArrays.array2})
+
+        case cancelTransaction().type:
+            const resultingCanceledArrays = moveProduct({
+                fromArray1: state.AttemptedTransactions.slice(),
+                toArray2: state.CanceledTransactions.slice(),
+                forProductID: action.productID,
+                dateTimeLabel: 'canceled'
+                });
+            return Object.assign({}, state, {
+                AttemptedTransactions: resultingCanceledArrays.array1,
+                CanceledTransactions: resultingCanceledArrays.array2})
 
         case purchaseProduct({productID: null, transactionID: null}).type:
             const resultingPurchasedArrays = moveProduct({
@@ -108,7 +121,7 @@ const findKeyValueInArrayOfObjects = ({key, keyValue, array}) => {
     }
 }
 
-const moveProduct = ({fromArray1, toArray2, forProductID, dateTimeLabel}) => {    
+const moveProduct = ({fromArray1, toArray2, forProductID, dateTimeLabel}) => {
     // FIRST: find product position in array1
     const objectIndex = findKeyValueInArrayOfObjects({
         key: 'identifier',

@@ -1,7 +1,7 @@
 /*
   nativeInAppPurchases.js - nativeBridge
     Betterment Labs
-    Created by BettermentLabs. 
+    Created by BettermentLabs.
     Copyright © 2018 Betterment Labs, LLC. All rights reserved.
 
 Component nativeInAppPurchases.js
@@ -26,13 +26,13 @@ export const getMarketplaceFromAppStore = ({callback, productArray}) => {
                         callback({
                             error: true,
                             errorMessage: error
-                          })      
+                          })
                     } else {
                         callback({
                             error: false,
                             errorMessage: '',
                             content: products
-                          })      
+                          })
                     }
                   } else {
                     console.log("No callback function to getMarketplaceFromAppStore provided. Result is: ");
@@ -62,13 +62,13 @@ export const buyMarketplaceProductFromStore = ({productID, callback}) => {
                         callback({
                             error: true,
                             errorMessage: error
-                          })      
+                          })
                     } else {
                         callback({
                             error: false,
                             errorMessage: '',
                             content: response
-                          })      
+                          })
                     }
                   } else {
                     console.log("No callback function to updateMarket provided. Result is: ");
@@ -77,7 +77,7 @@ export const buyMarketplaceProductFromStore = ({productID, callback}) => {
                     console.log("response");
                     console.log(response);
                 }
-			});			
+			});
 		} else {
             console.log('NativeModules.InAppPurchasesModule.loadProducts is not found');
 			}
